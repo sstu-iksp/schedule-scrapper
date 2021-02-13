@@ -10,6 +10,10 @@
 *.iml
 *.ipr
 
+### Gradle ###
+.gradle
+/build/
+
 # BlueJ files
 *.ctxt
 
