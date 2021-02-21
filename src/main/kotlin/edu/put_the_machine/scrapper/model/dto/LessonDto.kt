@@ -1,7 +1,6 @@
 package edu.put_the_machine.scrapper.model.dto
 
 import java.time.LocalTime
-import javax.persistence.*
 
 class LessonDto(
     val subject: String,

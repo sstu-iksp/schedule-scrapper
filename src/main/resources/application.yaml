@@ -3,7 +3,7 @@ server:
 spring:
   jpa:
     hibernate:
-      ddl-auto: create-drop
+      ddl-auto: validate
   datasource:
     url: jdbc:postgresql://${DB_ADDRESS}/schedule_scrapper
     username: ${DB_USER}
