@@ -7,6 +7,5 @@ class ScheduleDayDto(
     val lessons: List<LessonDto>,
     val date: LocalDate,
     val group: GroupDto,
-    val lastCheck: LocalDateTime,
-    val updated: LocalDateTime
+    val lastCheck: LocalDateTime
 )

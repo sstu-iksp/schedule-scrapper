@@ -1,3 +1,7 @@
+params:
+  parsers:
+    urls:
+      sstu: "http://rasp.sstu.ru/"
 server:
   port: 8080
 spring:
