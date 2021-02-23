@@ -54,11 +54,6 @@ public class SstuGroupScheduleScheduleParserTest {
         when(urlToPageResolver.getHtmlTextFromUrl(rawDataPath)).thenReturn(Files.readString(Path.of(rawDataPath)));
 
         List<ScheduleDayDto> returnedScheduleDays = parser.parse(rawDataPath);
-        StringBuilder json = new StringBuilder("[");
-        for (ScheduleDayDto scheduleDayDto : returnedScheduleDays) {
-            json.append(objectMapper.writeValueAsString(scheduleDayDto)).append(",");
-        }
-        json.append("]");
         List<ScheduleDayDto> expectedScheduleDays = getExpectedScheduleDays(jsonResultPath);
 
         assertEquals(expectedScheduleDays, returnedScheduleDays);

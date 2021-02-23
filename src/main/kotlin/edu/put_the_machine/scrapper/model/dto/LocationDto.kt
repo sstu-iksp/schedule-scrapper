@@ -11,6 +11,35 @@ import com.fasterxml.jackson.annotation.JsonTypeInfo
 )
 abstract class LocationDto
 
-class FixedLocationDto(val audience: Int, val building: Int): LocationDto()
+class FixedLocationDto(val audience: Int, val building: Int): LocationDto() {
+    override fun equals(other: Any?): Boolean {
+        if (this === other) return true
+        if (other !is FixedLocationDto) return false
 
-class RawLocationDto(val name: String): LocationDto()
+        if (audience != other.audience) return false
+        if (building != other.building) return false
+
+        return true
+    }
+
+    override fun hashCode(): Int {
+        var result = audience
+        result = 31 * result + building
+        return result
+    }
+}
+
+class RawLocationDto(val name: String): LocationDto() {
+    override fun equals(other: Any?): Boolean {
+        if (this === other) return true
+        if (other !is RawLocationDto) return false
+
+        if (name != other.name) return false
+
+        return true
+    }
+
+    override fun hashCode(): Int {
+        return name.hashCode()
+    }
+}
