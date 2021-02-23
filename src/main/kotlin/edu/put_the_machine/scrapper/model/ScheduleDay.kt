@@ -16,8 +16,7 @@ class ScheduleDay(
     val date: LocalDate,
     @ManyToOne
     val group: Group,
-    val lastCheck: LocalDateTime,
-    val updated: LocalDateTime
+    val lastCheck: LocalDateTime
 ) {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

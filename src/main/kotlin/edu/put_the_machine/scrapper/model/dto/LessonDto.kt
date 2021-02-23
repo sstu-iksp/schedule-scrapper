@@ -7,6 +7,6 @@ class LessonDto(
     val type: String,
     val start: LocalTime,
     val end: LocalTime,
-    val teacher: TeacherDto,
+    val teacher: TeacherDto?,
     val location: LocationDto
 )

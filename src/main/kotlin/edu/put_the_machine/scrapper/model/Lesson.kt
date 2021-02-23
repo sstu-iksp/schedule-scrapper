@@ -16,7 +16,7 @@ class Lesson(
     @Column(name = "`end`")
     val end: LocalTime,
     @ManyToOne
-    val teacher: Teacher,
+    val teacher: Teacher?,
     @ManyToOne
     val location: Location
 ) {

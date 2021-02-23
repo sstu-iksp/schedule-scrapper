@@ -28,6 +28,7 @@ dependencies {
     runtimeOnly("org.springframework.boot:spring-boot-devtools")
     runtimeOnly("org.postgresql:postgresql")
     testImplementation("org.junit.jupiter:junit-jupiter-api")
+    testImplementation("org.springframework.boot:spring-boot-starter-test")
     testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine")
 }
 
