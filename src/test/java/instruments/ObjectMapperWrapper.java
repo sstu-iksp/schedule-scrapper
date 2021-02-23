@@ -3,9 +3,11 @@ package instruments;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.module.SimpleModule;
+import org.springframework.boot.test.context.TestComponent;
 
 import java.io.File;
 
+@TestComponent
 public class ObjectMapperWrapper {
     private final ObjectMapper objectMapper;
 

@@ -1,0 +1,944 @@
+[
+  {
+    "_type_": "GroupScheduleDayDto",
+    "group": {
+      "name": "б-ПИНЖ-31",
+      "university": "SSTU"
+    },
+    "lessons": [
+      {
+        "subject": "Моделирование и анализ бизнес-процессов",
+        "type": "(прак)",
+        "start": [
+          8,
+          0
+        ],
+        "end": [
+          9,
+          30
+        ],
+        "teacher": {
+          "name": "Фомин Игорь Николаевич",
+          "url": "http://www.sstu.ru/teachers/25678-fomin_igor_nikolaevich.html"
+        },
+        "location": {
+          "_type_": "FixedLocationDto",
+          "audience": 464,
+          "building": 1
+        }
+      },
+      {
+        "subject": "Моделирование и анализ бизнес-процессов",
+        "type": "(прак)",
+        "start": [
+          9,
+          45
+        ],
+        "end": [
+          11,
+          15
+        ],
+        "teacher": {
+          "name": "Фомин Игорь Николаевич",
+          "url": "http://www.sstu.ru/teachers/25678-fomin_igor_nikolaevich.html"
+        },
+        "location": {
+          "_type_": "FixedLocationDto",
+          "audience": 464,
+          "building": 1
+        }
+      },
+      {
+        "subject": "Моделирование и анализ бизнес-процессов",
+        "type": "(лекц)",
+        "start": [
+          11,
+          30
+        ],
+        "end": [
+          13,
+          0
+        ],
+        "teacher": {
+          "name": "Фомин Игорь Николаевич",
+          "url": "http://www.sstu.ru/teachers/25678-fomin_igor_nikolaevich.html"
+        },
+        "location": {
+          "_type_": "FixedLocationDto",
+          "audience": 426,
+          "building": 1
+        }
+      },
+      {
+        "subject": "Технологии разработки корпоративных информационных систем",
+        "type": "(лекц)",
+        "start": [
+          13,
+          40
+        ],
+        "end": [
+          15,
+          10
+        ],
+        "teacher": {
+          "name": "Пчелинцева Елена Германовна",
+          "url": "http://www.sstu.ru/teachers/6246-pchelinceva_elena_germanovna.html"
+        },
+        "location": {
+          "_type_": "FixedLocationDto",
+          "audience": 426,
+          "building": 1
+        }
+      }
+    ],
+    "date": [
+      2021,
+      2,
+      15
+    ],
+    "lastCheck": [
+      2021,
+      2,
+      24,
+      1,
+      49,
+      6,
+      113861200
+    ]
+  },
+  {
+    "_type_": "GroupScheduleDayDto",
+    "group": {
+      "name": "б-ПИНЖ-31",
+      "university": "SSTU"
+    },
+    "lessons": [
+      {
+        "subject": "Военная подготовка",
+        "type": "(прак)",
+        "start": [
+          8,
+          0
+        ],
+        "end": [
+          9,
+          30
+        ],
+        "teacher": null,
+        "location": {
+          "_type_": "RawLocationDto",
+          "name": "ВК1"
+        }
+      },
+      {
+        "subject": "Военная подготовка",
+        "type": "(прак)",
+        "start": [
+          9,
+          45
+        ],
+        "end": [
+          11,
+          15
+        ],
+        "teacher": null,
+        "location": {
+          "_type_": "RawLocationDto",
+          "name": "ВК1"
+        }
+      },
+      {
+        "subject": "Военная подготовка",
+        "type": "(прак)",
+        "start": [
+          11,
+          30
+        ],
+        "end": [
+          13,
+          0
+        ],
+        "teacher": null,
+        "location": {
+          "_type_": "RawLocationDto",
+          "name": "ВК1"
+        }
+      }
+    ],
+    "date": [
+      2021,
+      2,
+      16
+    ],
+    "lastCheck": [
+      2021,
+      2,
+      24,
+      1,
+      49,
+      6,
+      118858700
+    ]
+  },
+  {
+    "_type_": "GroupScheduleDayDto",
+    "group": {
+      "name": "б-ПИНЖ-31",
+      "university": "SSTU"
+    },
+    "lessons": [
+      {
+        "subject": "Технологии разработки корпоративных информационных систем",
+        "type": "(прак)",
+        "start": [
+          8,
+          0
+        ],
+        "end": [
+          9,
+          30
+        ],
+        "teacher": {
+          "name": "Пчелинцева Елена Германовна",
+          "url": "http://www.sstu.ru/teachers/6246-pchelinceva_elena_germanovna.html"
+        },
+        "location": {
+          "_type_": "FixedLocationDto",
+          "audience": 464,
+          "building": 1
+        }
+      },
+      {
+        "subject": "Теория автоматов и формальных языков",
+        "type": "(прак)",
+        "start": [
+          9,
+          45
+        ],
+        "end": [
+          11,
+          15
+        ],
+        "teacher": {
+          "name": "Шульга Татьяна Эриковна",
+          "url": "http://www.sstu.ru/teachers/2510-shulga_tatyana_erikovna.html"
+        },
+        "location": {
+          "_type_": "FixedLocationDto",
+          "audience": 463,
+          "building": 1
+        }
+      }
+    ],
+    "date": [
+      2021,
+      2,
+      17
+    ],
+    "lastCheck": [
+      2021,
+      2,
+      24,
+      1,
+      49,
+      6,
+      121857400
+    ]
+  },
+  {
+    "_type_": "GroupScheduleDayDto",
+    "group": {
+      "name": "б-ПИНЖ-31",
+      "university": "SSTU"
+    },
+    "lessons": [
+      {
+        "subject": "Философия науки и техники",
+        "type": "(лекц)",
+        "start": [
+          8,
+          0
+        ],
+        "end": [
+          9,
+          30
+        ],
+        "teacher": {
+          "name": "Филимонова Ольга Федоровна",
+          "url": "http://www.sstu.ru/teachers/2428-filimonova_olga_fedorovna.html"
+        },
+        "location": {
+          "_type_": "FixedLocationDto",
+          "audience": 426,
+          "building": 1
+        }
+      },
+      {
+        "subject": "Технологии разработки корпоративных информационных систем",
+        "type": "(лекц)",
+        "start": [
+          9,
+          45
+        ],
+        "end": [
+          11,
+          15
+        ],
+        "teacher": {
+          "name": "Пчелинцева Елена Германовна",
+          "url": "http://www.sstu.ru/teachers/6246-pchelinceva_elena_germanovna.html"
+        },
+        "location": {
+          "_type_": "FixedLocationDto",
+          "audience": 468,
+          "building": 1
+        }
+      },
+      {
+        "subject": "Семантический веб",
+        "type": "(лекц)",
+        "start": [
+          11,
+          30
+        ],
+        "end": [
+          13,
+          0
+        ],
+        "teacher": {
+          "name": "Вагарина Наталия Сергеевна",
+          "url": "http://www.sstu.ru/teachers/1558-vagarina_nataliya_sergeevna.html"
+        },
+        "location": {
+          "_type_": "FixedLocationDto",
+          "audience": 461,
+          "building": 1
+        }
+      },
+      {
+        "subject": "Семантический веб",
+        "type": "(прак)",
+        "start": [
+          13,
+          40
+        ],
+        "end": [
+          15,
+          10
+        ],
+        "teacher": {
+          "name": "Вагарина Наталия Сергеевна",
+          "url": "http://www.sstu.ru/teachers/1558-vagarina_nataliya_sergeevna.html"
+        },
+        "location": {
+          "_type_": "FixedLocationDto",
+          "audience": 464,
+          "building": 1
+        }
+      }
+    ],
+    "date": [
+      2021,
+      2,
+      18
+    ],
+    "lastCheck": [
+      2021,
+      2,
+      24,
+      1,
+      49,
+      6,
+      123856500
+    ]
+  },
+  {
+    "_type_": "GroupScheduleDayDto",
+    "group": {
+      "name": "б-ПИНЖ-31",
+      "university": "SSTU"
+    },
+    "lessons": [
+      {
+        "subject": "Тестирование программного обеспечения",
+        "type": "(лекц)",
+        "start": [
+          9,
+          45
+        ],
+        "end": [
+          11,
+          15
+        ],
+        "teacher": {
+          "name": "Бочаров Дмитрий Александрович",
+          "url": "http://www.sstu.ru/teachers/39644-bocharov_dmitriy_aleksandrovich.html"
+        },
+        "location": {
+          "_type_": "RawLocationDto",
+          "name": "1/419А"
+        }
+      },
+      {
+        "subject": "Конструирование программного обеспечения",
+        "type": "(лекц)",
+        "start": [
+          11,
+          30
+        ],
+        "end": [
+          13,
+          0
+        ],
+        "teacher": {
+          "name": "Бочаров Дмитрий Александрович",
+          "url": "http://www.sstu.ru/teachers/39644-bocharov_dmitriy_aleksandrovich.html"
+        },
+        "location": {
+          "_type_": "FixedLocationDto",
+          "audience": 461,
+          "building": 1
+        }
+      }
+    ],
+    "date": [
+      2021,
+      2,
+      19
+    ],
+    "lastCheck": [
+      2021,
+      2,
+      24,
+      1,
+      49,
+      6,
+      124855600
+    ]
+  },
+  {
+    "_type_": "GroupScheduleDayDto",
+    "group": {
+      "name": "б-ПИНЖ-31",
+      "university": "SSTU"
+    },
+    "lessons": [
+      {
+        "subject": "Игровые виды спорта (элективная дисциплина)",
+        "type": "(прак)",
+        "start": [
+          11,
+          30
+        ],
+        "end": [
+          13,
+          0
+        ],
+        "teacher": {
+          "name": "Гордеев Игорь Владимирович",
+          "url": "http://www.sstu.ru/teachers/33741-gordeev_igor_vladimirovich.html"
+        },
+        "location": {
+          "_type_": "RawLocationDto",
+          "name": "СЗ-1"
+        }
+      },
+      {
+        "subject": "Тестирование программного обеспечения",
+        "type": "(прак)",
+        "start": [
+          13,
+          40
+        ],
+        "end": [
+          15,
+          10
+        ],
+        "teacher": {
+          "name": "Бочаров Дмитрий Александрович",
+          "url": "http://www.sstu.ru/teachers/39644-bocharov_dmitriy_aleksandrovich.html"
+        },
+        "location": {
+          "_type_": "FixedLocationDto",
+          "audience": 464,
+          "building": 1
+        }
+      }
+    ],
+    "date": [
+      2021,
+      2,
+      20
+    ],
+    "lastCheck": [
+      2021,
+      2,
+      24,
+      1,
+      49,
+      6,
+      125855300
+    ]
+  },
+  {
+    "_type_": "GroupScheduleDayDto",
+    "group": {
+      "name": "б-ПИНЖ-31",
+      "university": "SSTU"
+    },
+    "lessons": [
+      {
+        "subject": "Моделирование и анализ бизнес-процессов",
+        "type": "(лекц)",
+        "start": [
+          8,
+          0
+        ],
+        "end": [
+          9,
+          30
+        ],
+        "teacher": {
+          "name": "Фомин Игорь Николаевич",
+          "url": "http://www.sstu.ru/teachers/25678-fomin_igor_nikolaevich.html"
+        },
+        "location": {
+          "_type_": "FixedLocationDto",
+          "audience": 468,
+          "building": 1
+        }
+      },
+      {
+        "subject": "Конструирование программного обеспечения",
+        "type": "(лекц)",
+        "start": [
+          9,
+          45
+        ],
+        "end": [
+          11,
+          15
+        ],
+        "teacher": {
+          "name": "Бочаров Дмитрий Александрович",
+          "url": "http://www.sstu.ru/teachers/39644-bocharov_dmitriy_aleksandrovich.html"
+        },
+        "location": {
+          "_type_": "FixedLocationDto",
+          "audience": 316,
+          "building": 1
+        }
+      },
+      {
+        "subject": "Семантический веб",
+        "type": "(лекц)",
+        "start": [
+          11,
+          30
+        ],
+        "end": [
+          13,
+          0
+        ],
+        "teacher": {
+          "name": "Вагарина Наталия Сергеевна",
+          "url": "http://www.sstu.ru/teachers/1558-vagarina_nataliya_sergeevna.html"
+        },
+        "location": {
+          "_type_": "FixedLocationDto",
+          "audience": 465,
+          "building": 1
+        }
+      }
+    ],
+    "date": [
+      2021,
+      2,
+      22
+    ],
+    "lastCheck": [
+      2021,
+      2,
+      24,
+      1,
+      49,
+      6,
+      127854000
+    ]
+  },
+  {
+    "_type_": "GroupScheduleDayDto",
+    "group": {
+      "name": "б-ПИНЖ-31",
+      "university": "SSTU"
+    },
+    "lessons": [
+      {
+        "subject": "Военная подготовка",
+        "type": "(прак)",
+        "start": [
+          8,
+          0
+        ],
+        "end": [
+          9,
+          30
+        ],
+        "teacher": null,
+        "location": {
+          "_type_": "RawLocationDto",
+          "name": "ВК1"
+        }
+      },
+      {
+        "subject": "Военная подготовка",
+        "type": "(прак)",
+        "start": [
+          9,
+          45
+        ],
+        "end": [
+          11,
+          15
+        ],
+        "teacher": null,
+        "location": {
+          "_type_": "RawLocationDto",
+          "name": "ВК1"
+        }
+      },
+      {
+        "subject": "Военная подготовка",
+        "type": "(прак)",
+        "start": [
+          11,
+          30
+        ],
+        "end": [
+          13,
+          0
+        ],
+        "teacher": null,
+        "location": {
+          "_type_": "RawLocationDto",
+          "name": "ВК1"
+        }
+      }
+    ],
+    "date": [
+      2021,
+      2,
+      23
+    ],
+    "lastCheck": [
+      2021,
+      2,
+      24,
+      1,
+      49,
+      6,
+      128854500
+    ]
+  },
+  {
+    "_type_": "GroupScheduleDayDto",
+    "group": {
+      "name": "б-ПИНЖ-31",
+      "university": "SSTU"
+    },
+    "lessons": [
+      {
+        "subject": "Теория автоматов и формальных языков",
+        "type": "(лекц)",
+        "start": [
+          11,
+          30
+        ],
+        "end": [
+          13,
+          0
+        ],
+        "teacher": {
+          "name": "Шульга Татьяна Эриковна",
+          "url": "http://www.sstu.ru/teachers/2510-shulga_tatyana_erikovna.html"
+        },
+        "location": {
+          "_type_": "FixedLocationDto",
+          "audience": 418,
+          "building": 1
+        }
+      },
+      {
+        "subject": "Тестирование программного обеспечения",
+        "type": "(лекц)",
+        "start": [
+          13,
+          40
+        ],
+        "end": [
+          15,
+          10
+        ],
+        "teacher": {
+          "name": "Бочаров Дмитрий Александрович",
+          "url": "http://www.sstu.ru/teachers/39644-bocharov_dmitriy_aleksandrovich.html"
+        },
+        "location": {
+          "_type_": "FixedLocationDto",
+          "audience": 427,
+          "building": 1
+        }
+      }
+    ],
+    "date": [
+      2021,
+      2,
+      24
+    ],
+    "lastCheck": [
+      2021,
+      2,
+      24,
+      1,
+      49,
+      6,
+      129853400
+    ]
+  },
+  {
+    "_type_": "GroupScheduleDayDto",
+    "group": {
+      "name": "б-ПИНЖ-31",
+      "university": "SSTU"
+    },
+    "lessons": [
+      {
+        "subject": "Философия науки и техники",
+        "type": "(прак)",
+        "start": [
+          8,
+          0
+        ],
+        "end": [
+          9,
+          30
+        ],
+        "teacher": {
+          "name": "Филимонова Ольга Федоровна",
+          "url": "http://www.sstu.ru/teachers/2428-filimonova_olga_fedorovna.html"
+        },
+        "location": {
+          "_type_": "FixedLocationDto",
+          "audience": 465,
+          "building": 1
+        }
+      },
+      {
+        "subject": "Тестирование программного обеспечения",
+        "type": "(прак)",
+        "start": [
+          9,
+          45
+        ],
+        "end": [
+          11,
+          15
+        ],
+        "teacher": {
+          "name": "Бочаров Дмитрий Александрович",
+          "url": "http://www.sstu.ru/teachers/39644-bocharov_dmitriy_aleksandrovich.html"
+        },
+        "location": {
+          "_type_": "FixedLocationDto",
+          "audience": 464,
+          "building": 1
+        }
+      },
+      {
+        "subject": "Теория автоматов и формальных языков",
+        "type": "(прак)",
+        "start": [
+          11,
+          30
+        ],
+        "end": [
+          13,
+          0
+        ],
+        "teacher": {
+          "name": "Шульга Татьяна Эриковна",
+          "url": "http://www.sstu.ru/teachers/2510-shulga_tatyana_erikovna.html"
+        },
+        "location": {
+          "_type_": "FixedLocationDto",
+          "audience": 409,
+          "building": 1
+        }
+      }
+    ],
+    "date": [
+      2021,
+      2,
+      25
+    ],
+    "lastCheck": [
+      2021,
+      2,
+      24,
+      1,
+      49,
+      6,
+      130852900
+    ]
+  },
+  {
+    "_type_": "GroupScheduleDayDto",
+    "group": {
+      "name": "б-ПИНЖ-31",
+      "university": "SSTU"
+    },
+    "lessons": [
+      {
+        "subject": "Технологии разработки корпоративных информационных систем",
+        "type": "(прак)",
+        "start": [
+          9,
+          45
+        ],
+        "end": [
+          11,
+          15
+        ],
+        "teacher": {
+          "name": "Пчелинцева Елена Германовна",
+          "url": "http://www.sstu.ru/teachers/6246-pchelinceva_elena_germanovna.html"
+        },
+        "location": {
+          "_type_": "FixedLocationDto",
+          "audience": 464,
+          "building": 1
+        }
+      },
+      {
+        "subject": "Конструирование программного обеспечения",
+        "type": "(прак)",
+        "start": [
+          11,
+          30
+        ],
+        "end": [
+          13,
+          0
+        ],
+        "teacher": {
+          "name": "Бочаров Дмитрий Александрович",
+          "url": "http://www.sstu.ru/teachers/39644-bocharov_dmitriy_aleksandrovich.html"
+        },
+        "location": {
+          "_type_": "FixedLocationDto",
+          "audience": 464,
+          "building": 1
+        }
+      },
+      {
+        "subject": "Семантический веб",
+        "type": "(прак)",
+        "start": [
+          13,
+          40
+        ],
+        "end": [
+          15,
+          10
+        ],
+        "teacher": {
+          "name": "Вагарина Наталия Сергеевна",
+          "url": "http://www.sstu.ru/teachers/1558-vagarina_nataliya_sergeevna.html"
+        },
+        "location": {
+          "_type_": "FixedLocationDto",
+          "audience": 463,
+          "building": 1
+        }
+      }
+    ],
+    "date": [
+      2021,
+      2,
+      26
+    ],
+    "lastCheck": [
+      2021,
+      2,
+      24,
+      1,
+      49,
+      6,
+      132851300
+    ]
+  },
+  {
+    "_type_": "GroupScheduleDayDto",
+    "group": {
+      "name": "б-ПИНЖ-31",
+      "university": "SSTU"
+    },
+    "lessons": [
+      {
+        "subject": "Игровые виды спорта (элективная дисциплина)",
+        "type": "(прак)",
+        "start": [
+          11,
+          30
+        ],
+        "end": [
+          13,
+          0
+        ],
+        "teacher": {
+          "name": "Гордеев Игорь Владимирович",
+          "url": "http://www.sstu.ru/teachers/33741-gordeev_igor_vladimirovich.html"
+        },
+        "location": {
+          "_type_": "RawLocationDto",
+          "name": "СЗ-1"
+        }
+      },
+      {
+        "subject": "Конструирование программного обеспечения",
+        "type": "(прак)",
+        "start": [
+          13,
+          40
+        ],
+        "end": [
+          15,
+          10
+        ],
+        "teacher": {
+          "name": "Бочаров Дмитрий Александрович",
+          "url": "http://www.sstu.ru/teachers/39644-bocharov_dmitriy_aleksandrovich.html"
+        },
+        "location": {
+          "_type_": "FixedLocationDto",
+          "audience": 464,
+          "building": 1
+        }
+      }
+    ],
+    "date": [
+      2021,
+      2,
+      27
+    ],
+    "lastCheck": [
+      2021,
+      2,
+      24,
+      1,
+      49,
+      6,
+      133851200
+    ]
+  }
+]

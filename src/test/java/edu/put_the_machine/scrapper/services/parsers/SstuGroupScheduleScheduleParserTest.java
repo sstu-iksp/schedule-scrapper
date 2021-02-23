@@ -1,6 +1,8 @@
 package edu.put_the_machine.scrapper.services.parsers;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
+import com.fasterxml.jackson.module.kotlin.KotlinModule;
 import edu.put_the_machine.scrapper.exceptions.ParserException;
 import edu.put_the_machine.scrapper.model.dto.*;
 import edu.put_the_machine.scrapper.services.UrlToPageResolver;
@@ -12,6 +14,7 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
+import org.springframework.test.util.ReflectionTestUtils;
 
 import java.io.File;
 import java.io.IOException;
@@ -32,8 +35,11 @@ public class SstuGroupScheduleScheduleParserTest {
 
     @BeforeEach
     public void init() {
+        objectMapper.registerModule(new KotlinModule());
+        objectMapper.registerModule(new JavaTimeModule());
         String universityName = "SSTU";
-        parser = new SstuGroupScheduleParser(urlToPageResolver, universityName);
+        parser = new SstuGroupScheduleParser(urlToPageResolver);
+        ReflectionTestUtils.setField(parser, "universityName", universityName);
     }
 
     @Test
@@ -48,6 +54,11 @@ public class SstuGroupScheduleScheduleParserTest {
         when(urlToPageResolver.getHtmlTextFromUrl(rawDataPath)).thenReturn(Files.readString(Path.of(rawDataPath)));
 
         List<ScheduleDayDto> returnedScheduleDays = parser.parse(rawDataPath);
+        StringBuilder json = new StringBuilder("[");
+        for (ScheduleDayDto scheduleDayDto : returnedScheduleDays) {
+            json.append(objectMapper.writeValueAsString(scheduleDayDto)).append(",");
+        }
+        json.append("]");
         List<ScheduleDayDto> expectedScheduleDays = getExpectedScheduleDays(jsonResultPath);
 
         assertEquals(expectedScheduleDays, returnedScheduleDays);
