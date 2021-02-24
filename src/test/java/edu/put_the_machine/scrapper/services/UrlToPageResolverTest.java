@@ -32,7 +32,7 @@ public class UrlToPageResolverTest {
     }
 
     private String getExpectedResult() throws IOException {
-        String rawDataPath = "src/test/recourses/parsers_tests_res/sstu/sstuGroup2Schedule.html";
+        String rawDataPath = "src/test/recourses/parsers_tests_res/sstu/group0/sstuGroup0Schedule.html";
         return Files.readString(Path.of(rawDataPath));
     }
 }

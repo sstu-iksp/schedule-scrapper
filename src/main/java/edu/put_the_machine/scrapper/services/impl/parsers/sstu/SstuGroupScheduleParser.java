@@ -4,9 +4,9 @@ import edu.put_the_machine.scrapper.exceptions.ParserException;
 import edu.put_the_machine.scrapper.model.dto.*;
 import edu.put_the_machine.scrapper.model.parser.LessonTimeInterval;
 import edu.put_the_machine.scrapper.model.parser.RawLessonTimeInterval;
-import edu.put_the_machine.scrapper.services.GroupScheduleParser;
-import edu.put_the_machine.scrapper.services.UrlToPageResolver;
-import org.jsoup.Jsoup;
+import edu.put_the_machine.scrapper.services.interfaces.parser.GroupScheduleParser;
+import edu.put_the_machine.scrapper.services.interfaces.parser.JsoupHelper;
+import org.jetbrains.annotations.NotNull;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
@@ -14,7 +14,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
-import java.io.IOException;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
@@ -24,32 +23,21 @@ import java.util.List;
 
 @Service
 public class SstuGroupScheduleParser implements GroupScheduleParser {
-    private final UrlToPageResolver urlToPageResolver;
+    private final JsoupHelper jsoupHelper;
     private @Value("${parser.university.name.sstu}") String universityName;
 
     @Autowired
-    public SstuGroupScheduleParser(UrlToPageResolver urlToPageResolver) {
-        this.urlToPageResolver = urlToPageResolver;
+    public SstuGroupScheduleParser(JsoupHelper jsoupHelper) {
+        this.jsoupHelper = jsoupHelper;
     }
 
     @Override
     public List<ScheduleDayDto> parse(String path) {
-        Document document = getDocumentFromPath(path);
+        Document document = jsoupHelper.getDocumentFromPath(path);
         Elements scheduleCols = document.select("div.rasp-table-col");
         GroupDto group = createGroup(document);
 
         return getScheduleDaysFromColumns(scheduleCols, group);
-    }
-
-    private Document getDocumentFromPath(String path) {
-        try {
-            String htmlText = urlToPageResolver.getBodyAsString(path);
-            return Jsoup.parse(htmlText);
-        } catch (IOException e) {
-            throw new ParserException("Resource '" + path + "' is unavailable.", e);
-        } catch (IllegalArgumentException e) {
-            throw new ParserException("String '" + path + "' is not a valid path.", e);
-        }
     }
 
     private GroupDto createGroup(Document document) {
@@ -102,10 +90,59 @@ public class SstuGroupScheduleParser implements GroupScheduleParser {
 
         lessonsCells
                 .stream()
-                .filter((el) -> !el.hasClass("empty"))
-                .forEach((el) -> result.add(createLesson(el)));
+                .filter(this::isNotEmpty)
+                .forEach((el) -> {
+                    if (subgroupedLesson(el)) {
+                        result.addAll(createSubgroupLessons(el));
+                    } else {
+                        result.add(createLesson(el));
+                    }
+                });
 
         return result;
+    }
+
+    private boolean isNotEmpty(Element cell) {
+        return !cell.hasClass("empty") &&
+               !cell.select("div.rasp-table-inner-cell")
+                       .last()
+                       .html()
+                       //There is a '&nbsp;' symbol which has to be removed for clean check.
+                       .replaceAll("&nbsp;", "")
+                       .isBlank();
+    }
+
+    private boolean subgroupedLesson(Element lessonElement) {
+        return !lessonElement.select("div.subgroup-info").isEmpty();
+    }
+
+    private List<LessonDto> createSubgroupLessons(Element lessonElement) {
+        List<LessonDto> result = new ArrayList<>();
+
+        String subject = parseSubgroupLessonSubject(lessonElement);
+        String type = getTextByQueryOrThrowException(lessonElement, "span.type");
+        LessonTimeInterval lessonTimeInterval = getLessonTimeInterval(lessonElement);
+
+        for (Element subLessonElement : lessonElement.select("div.subgroup-info")) {
+            result.add(createSubLesson(subLessonElement, subject, type, lessonTimeInterval));
+        }
+
+        return result;
+    }
+
+    @NotNull
+    private String parseSubgroupLessonSubject(Element lessonElement) {
+        String subject = getTextByQueryOrThrowException(lessonElement, "div.subject-m");
+        // subject's div ends with info about type which starts with '(' character
+        int lastSubjectNameIndex = subject.lastIndexOf('(') - 1;
+        subject = subject.substring(0, lastSubjectNameIndex);
+        return subject;
+    }
+
+    private LessonDto createSubLesson(Element subLessonElement, String subject, String type, LessonTimeInterval lessonTimeInterval) {
+        TeacherDto teacher = createTeacherIfExists(subLessonElement);
+        String location = getTextByQueryOrThrowException(subLessonElement, "span.aud");
+        return new LessonDto(subject, type, lessonTimeInterval.getStart(), lessonTimeInterval.getEnd(), teacher, location);
     }
 
     private LessonDto createLesson(Element lessonElement) {
@@ -146,14 +183,17 @@ public class SstuGroupScheduleParser implements GroupScheduleParser {
     }
 
     private TeacherDto createTeacherIfExists(Element lessonElement) {
-        // There are two a tags inside the 'teacher' block. Only the second provides us with useful information.
-        Element teacherElement = lessonElement.select("div.teacher > a").last();
+        Element teacherElement = lessonElement.select("div.teacher").last();
 
-        if (teacherElement == null)
+        if (teacherElement == null || teacherElement.text().isBlank())
             return null;
 
         String name = teacherElement.text();
-        String url = teacherElement.attr("href");
+
+        // There are two 'a' tags inside the 'teacher' block. Only the second provides us with useful information.
+        Element teacherATag = teacherElement.select("a").last();
+
+        String url = (teacherATag == null) ? null : teacherATag.attr("href");
         return new TeacherDto(name, url);
     }
 
@@ -163,6 +203,6 @@ public class SstuGroupScheduleParser implements GroupScheduleParser {
         if (element != null)
             return element.text();
 
-        throw new ParserException("Wrong HTML. There is not tag by query " + query);
+        throw new ParserException("Wrong HTML. There is no tag by query " + query);
     }
 }

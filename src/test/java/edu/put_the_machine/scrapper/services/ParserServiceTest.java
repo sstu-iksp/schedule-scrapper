@@ -6,7 +6,11 @@ import com.fasterxml.jackson.module.kotlin.KotlinModule;
 import edu.put_the_machine.scrapper.model.dto.ScheduleDayDto;
 import instruments.ObjectMapperWrapper;
 import org.jetbrains.annotations.NotNull;
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.extension.ExtendWith;
+import org.mockito.junit.jupiter.MockitoExtension;
 
 import java.io.File;
 import java.io.IOException;
@@ -15,6 +19,7 @@ import java.nio.file.Path;
 import java.util.Arrays;
 import java.util.List;
 
+@ExtendWith(MockitoExtension.class)
 public abstract class ParserServiceTest {
     protected final ObjectMapperWrapper objectMapper = new ObjectMapperWrapper(new ObjectMapper());
 
@@ -34,7 +39,11 @@ public abstract class ParserServiceTest {
         );
     }
 
-    protected String getFileContent(String path) throws IOException {
-        return Files.readString(Path.of(path));
+    protected Document getHtmlDocument(String path) throws IOException {
+        return Jsoup.parse(
+                Files.readString(
+                        Path.of(path)
+                )
+        );
     }
 }

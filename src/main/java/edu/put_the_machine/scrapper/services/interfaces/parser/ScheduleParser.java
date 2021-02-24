@@ -1,4 +1,4 @@
-package edu.put_the_machine.scrapper.services;
+package edu.put_the_machine.scrapper.services.interfaces.parser;
 
 
 import edu.put_the_machine.scrapper.model.dto.ScheduleDayDto;

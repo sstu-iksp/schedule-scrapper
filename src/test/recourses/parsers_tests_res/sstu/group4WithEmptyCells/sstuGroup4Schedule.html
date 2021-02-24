@@ -1,0 +1,1509 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Расписание занятий СГТУ</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <link href="http://rasp.sstu.ru/css/bootstrap.min.css" rel="stylesheet">
+    <link href="http://rasp.sstu.ru/css/common-custom.css" rel="stylesheet">
+    <link href="http://rasp.sstu.ru/css/view.css" rel="stylesheet">
+    <!--[if lt IE 8]>
+    <link href="http://rasp.sstu.ru/css/iefix.css" rel="stylesheet">
+    <![endif]-->
+    <link href="http://rasp.sstu.ru/img/favicon.ico" type="image/vnd.microsoft.icon" rel="icon">
+    <!--[if lt IE 9]>
+    <script src="http://rasp.sstu.ru/js/html5shiv.js"></script>
+    <script src="http://rasp.sstu.ru/js/respond.min.js"></script>
+    <![endif]-->
+    <script src="http://rasp.sstu.ru/js/jquery-1.8.0.min.js"></script>
+    <script src="http://rasp.sstu.ru/js/bootstrap.min.js"></script>
+</head>
+<body>
+<script>
+    function getMore(canSendRequest, toSession) {
+        var week_array = new Array();
+        week_array.push(8);
+        $('.week_number').each(function () {
+            week_array.push(parseInt($(this).text()));
+        });
+        if (week_plus == true) {
+            week_array.push(week_array[week_array.length - 1] + 1);
+            week_plus = false;
+        }
+        //var week_inc = Math.max.apply(null, week_array);
+        var week_inc = week_array[week_array.length - 1];
+        console.log(week_inc, week_max + '<<');
+        if (week_inc == week_max || week_inc == week_max + 1) {
+            console.log('end');
+            if (week_load == false) {
+                week_inc = 0;
+                week_load = true;
+
+            }
+        }
+//            var week_inc = week_array[week_array.length-1];
+        console.log(week_inc, '+++');
+        $.ajax({
+            type: 'POST',
+            url: '/get_ext_rasp',
+            data: {
+                id: 258,
+                type: 'group',
+                week_inc: week_inc
+            },
+            cache: false,
+            beforeSend: function () {
+                canSendRequest.value = false;
+            },
+            success: function (data) {
+                if (data != '') {
+                    $('.more').before(data);
+                    canSendRequest.value = true;
+                    if (toSession && $('#session').length == 0) {
+                        getMore(canSendRequest, toSession);
+                    }
+                } else {
+//                        alert('Пустота');
+//                        $('.more').remove();
+                }
+            },
+            error: function () {
+                console.log(">>", week_plus_count);
+                console.log(">>", week_plus);
+                if (week_plus_count == 1) {
+                    $('.more').remove();
+                    week_plus = true;
+                    $('.more').remove();
+                }
+                if (week_plus == true) {
+                    $('.more').remove();
+                } else {
+                    week_plus = true;
+                    week_plus_count = 1;
+                    getMore(true, true);
+                }
+            }
+        });
+    }
+
+    $(document).ready(function () {
+        Date.prototype.getWeek = function () {
+            var date = new Date(this.getTime());
+            date.setHours(0, 0, 0, 0);
+            // Thursday in current week decides the year.
+            date.setDate(date.getDate() + 3 - (date.getDay() + 6) % 7);
+            // January 4 is always in week 1.
+            var week1 = new Date(date.getFullYear(), 0, 4);
+            // Adjust to Thursday in week 1 and count number of weeks from date to week1.
+            return 1 + Math.round(((date.getTime() - week1.getTime()) / 86400000 - 3 + (week1.getDay() + 6) % 7) / 7);
+        };
+        week_plus = false;
+        week_plus_count = 0;
+        week_load = false;
+        year_current = new Date();
+        week_max = (new Date(year_current.getFullYear(), 11, 28)).getWeek();
+        var canSendRequest = {value: true};
+        $('.more').click(function () {
+            if (canSendRequest.value) {
+                getMore(canSendRequest, false);
+                return false;
+            }
+        });
+        $(window).scroll(function () {
+            if ($(window).scrollTop() + $(window).height() >= $(document).height() - 350 && canSendRequest.value) {
+                getMore(canSendRequest, false);
+            }
+        });
+        $('#tosession').click(function () {
+            if ($('#session').length == 0 && canSendRequest.value) {
+                getMore(canSendRequest, true);
+            }
+        });
+        if ($('.week_number').length == 0 && canSendRequest.value) {
+            getMore(canSendRequest, false);
+        }
+        if ($('.week_number').length == 0 && canSendRequest.value) {
+            getMore(canSendRequest, false);
+        }
+        if ($('.week_number').text() == week_max && canSendRequest.value) {
+            getMore(canSendRequest, false);
+        }
+    });
+</script>
+<div class="wrapper">
+    <div class="row header">
+        <div class="title-link">
+            <div class="clearfix iefix">
+                <img class="pull-left" src="http://rasp.sstu.ru/img/logo.png" title="СГТУ имени Гагарина Ю.А."
+                     alt="Логотип СГТУ имени Гагарина Ю.А."
+                     height="44">
+                <div class="pull-left logo-title">
+                    Саратовский<br/>Государственный<br/>Технический&nbsp;Университет<br/>
+                    <span>имени&nbsp;Гагарина&nbsp;Ю.&nbsp;А.</span>
+                </div>
+            </div>
+        </div>
+        <div class="h2 pull-right">Расписание
+            б-АТПП-21
+        </div>
+    </div>
+    <hr>
+    <a class="btn btn-primary" href="http://rasp.sstu.ru/" role="button">На главную</a>
+    <div class="btn-group pull-right" style="display: none">
+        <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+            Версия для печати <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu" role="menu">
+            <li><a class="pseudo" href="http://rasp.sstu.ru/group/258/rtf/0">С датами</a></li>
+            <li><a class="pseudo" href="http://rasp.sstu.ru/group/258/rtf/1">Без дат</a></li>
+        </ul>
+    </div>
+    <!--        -->
+    <div class="text-center h3">
+        <span class="week_number hidden">8</span></div>
+    <div class="rasp-table chet">
+        <div class="rasp-table-col-first empty">
+            <div class="rasp-table-row-header">
+                <div class="rasp-table-inner-cell">
+                    Пара
+                </div><!--
+             -->
+                <div class="filler"></div>
+            </div>
+            <div class="rasp-table-row">
+                <div class="rasp-table-inner-cell">
+                    1 <br>
+                    8:00 &mdash;
+                    9:30
+                </div><!--
+                 -->
+                <div class="filler">&nbsp;</div>
+            </div>
+            <div class="rasp-table-row">
+                <div class="rasp-table-inner-cell">
+                    2 <br>
+                    9:45 &mdash;
+                    11:15
+                </div><!--
+                 -->
+                <div class="filler">&nbsp;</div>
+            </div>
+            <div class="rasp-table-row">
+                <div class="rasp-table-inner-cell">
+                    3 <br>
+                    11:30 &mdash;
+                    13:00
+                </div><!--
+                 -->
+                <div class="filler">&nbsp;</div>
+            </div>
+            <div class="rasp-table-row">
+                <div class="rasp-table-inner-cell">
+                    4 <br>
+                    13:40 &mdash;
+                    15:10
+                </div><!--
+                 -->
+                <div class="filler">&nbsp;</div>
+            </div>
+            <div class="rasp-table-row">
+                <div class="rasp-table-inner-cell">
+                    5 <br>
+                    15:20 &mdash;
+                    16:50
+                </div><!--
+                 -->
+                <div class="filler">&nbsp;</div>
+            </div>
+        </div><!--
+                -->
+        <div class="rasp-table-col">
+            <div class="rasp-table-row-header">
+                <div class="rasp-table-inner-cell
+                ">
+                    Пн
+                    <div class="date">22.02</div>
+                </div><!--
+                -->
+                <div class="filler"></div>
+            </div>
+            <div class="rasp-table-row  ">
+                <div class="rasp-table-inner-cell-hidden">
+                    1 <br>
+                    8:00 &mdash;
+                    9:30
+                </div>
+                <div class="rasp-table-inner-cell">
+                    <div class="small">
+                        <div class="subject-m">Иностранный язык для профессионального общения<span
+                                class="type"> (прак)</span></div>
+                        <div class="subgroup-info"><span class="subgroup">Подгр. 1: <span
+                                class="aud">5/425</span></span>
+                            <div class="teacher"><a
+                                    href="http://www.sstu.ru/teachers/33802-eremeeva_valentina_dmitrievna.html">Еремеева
+                                Валентина Дмитриевна</a></div>
+                        </div>
+                        <div class="subgroup-info"><span class="subgroup">Подгр. 2: <span
+                                class="aud">5/434</span></span>
+                            <div class="teacher"><a
+                                    href="http://www.sstu.ru/teachers/41886-potapova_anastasiya_sergeevna.html">Потапова
+                                Анастасия Сергеевна</a></div>
+                        </div>
+                    </div>
+                </div><!--
+                    -->
+                <div class="filler"></div>
+            </div>
+            <div class="rasp-table-row  ">
+                <div class="rasp-table-inner-cell-hidden">
+                    2 <br>
+                    9:45 &mdash;
+                    11:15
+                </div>
+                <div class="rasp-table-inner-cell">
+                    <div class="small">
+                        <div class="aud">4/309</div>
+                        <div class="subject">3D-моделирование и основы САПР</div>
+                        <div class="type">(прак)</div>
+                        <div class="teacher"><a href="http://www.sstu.ru/teachers/41887.html"><a
+                                href="http://www.sstu.ru/teachers/41887-ryazanov_sergey_anatolevich.html">Рязанов Сергей
+                            Анатольевич</a></div>
+                    </div>
+                </div><!--
+                    -->
+                <div class="filler"></div>
+            </div>
+            <div class="rasp-table-row  ">
+                <div class="rasp-table-inner-cell-hidden">
+                    3 <br>
+                    11:30 &mdash;
+                    13:00
+                </div>
+                <div class="rasp-table-inner-cell">
+                    <div class="small">
+                        <div class="aud">СЗ-2</div>
+                        <div class="subject">Игровые виды спорта (элективная дисциплина)</div>
+                        <div class="type">(прак)</div>
+                        <div class="teacher"><a href="http://www.sstu.ru/teachers/36285.html"><a
+                                href="http://www.sstu.ru/teachers/36285-pilyushkina_vlada_leonidovna.html">Пилюшкина
+                            Влада Леонидовна</a></div>
+                    </div>
+                </div><!--
+                    -->
+                <div class="filler"></div>
+            </div>
+            <div class="rasp-table-row  ">
+                <div class="rasp-table-inner-cell-hidden">
+                    4 <br>
+                    13:40 &mdash;
+                    15:10
+                </div>
+                <div class="rasp-table-inner-cell">
+                    <div class="small">
+                        <div class="aud">1/261</div>
+                        <div class="subject">Инжиниринг технических систем автоматизированных процессов</div>
+                        <div class="type">(лекц)</div>
+                        <div class="teacher"><a href="http://www.sstu.ru/teachers/1678.html"><a
+                                href="http://www.sstu.ru/teachers/1678-dobryakov_vladimir_anatolevich.html">Добряков
+                            Владимир Анатольевич</a></div>
+                    </div>
+                </div><!--
+                    -->
+                <div class="filler"></div>
+            </div>
+            <div class="rasp-table-row  empty ">
+                <div class="rasp-table-inner-cell-hidden">
+                    5 <br>
+                    15:20 &mdash;
+                    16:50
+                </div>
+                <div class="rasp-table-inner-cell">
+                    &nbsp;
+                </div><!--
+                    -->
+                <div class="filler"></div>
+            </div>
+        </div><!--
+                -->
+        <div class="rasp-table-col">
+            <div class="rasp-table-row-header">
+                <div class="rasp-table-inner-cell
+                ">
+                    Вт
+                    <div class="date">23.02</div>
+                </div><!--
+                -->
+                <div class="filler"></div>
+            </div>
+            <div class="rasp-table-row  empty ">
+                <div class="rasp-table-inner-cell-hidden">
+                    1 <br>
+                    8:00 &mdash;
+                    9:30
+                </div>
+                <div class="rasp-table-inner-cell">
+                    &nbsp;
+                </div><!--
+                    -->
+                <div class="filler"></div>
+            </div>
+            <div class="rasp-table-row  ">
+                <div class="rasp-table-inner-cell-hidden">
+                    2 <br>
+                    9:45 &mdash;
+                    11:15
+                </div>
+                <div class="rasp-table-inner-cell">
+                    <div class="small">
+                        <div class="aud">1/147</div>
+                        <div class="subject">Электротехника и электроника</div>
+                        <div class="type">(лекц)</div>
+                        <div class="teacher"><a href="http://www.sstu.ru/teachers/2279.html"><a
+                                href="http://www.sstu.ru/teachers/2279-plskaya_elena_konstantinovna.html">Пыльская Елена
+                            Константиновна</a></div>
+                    </div>
+                </div><!--
+                    -->
+                <div class="filler"></div>
+            </div>
+            <div class="rasp-table-row  ">
+                <div class="rasp-table-inner-cell-hidden">
+                    3 <br>
+                    11:30 &mdash;
+                    13:00
+                </div>
+                <div class="rasp-table-inner-cell">
+                    <div class="small">
+                        <div class="aud">1/229</div>
+                        <div class="subject">Прикладная механика</div>
+                        <div class="type">(лекц)</div>
+                        <div class="teacher"><a href="http://www.sstu.ru/teachers/25562.html"><a
+                                href="http://www.sstu.ru/teachers/25562-gorbachev_valeriy_olegovich.html">Горбачев
+                            Валерий Олегович</a></div>
+                    </div>
+                </div><!--
+                    -->
+                <div class="filler"></div>
+            </div>
+            <div class="rasp-table-row  ">
+                <div class="rasp-table-inner-cell-hidden">
+                    4 <br>
+                    13:40 &mdash;
+                    15:10
+                </div>
+                <div class="rasp-table-inner-cell">
+                    <div class="small">
+                        <div class="aud">1/337</div>
+                        <div class="subject">Экономика и управление производством</div>
+                        <div class="type">(лекц)</div>
+                        <div class="teacher"><a href="http://www.sstu.ru/teachers/2165.html"><a
+                                href="http://www.sstu.ru/teachers/2165-plotnikov_denis_anatolevich.html">Плотников Денис
+                            Анатольевич</a></div>
+                    </div>
+                </div><!--
+                    -->
+                <div class="filler"></div>
+            </div>
+            <div class="rasp-table-row  ">
+                <div class="rasp-table-inner-cell-hidden">
+                    5 <br>
+                    15:20 &mdash;
+                    16:50
+                </div>
+                <div class="rasp-table-inner-cell">
+                    <div class="small">
+                        <div class="aud">11/405</div>
+                        <div class="subject">Русский язык как иностранный</div>
+                        <div class="type">(прак)</div>
+                        <div class="teacher"><a href="http://www.sstu.ru/teachers/861.html"><a
+                                href="http://www.sstu.ru/teachers/861-taboyakova_yuliya_viktorovna.html">Табоякова Юлия
+                            Викторовна</a></div>
+                    </div>
+                </div><!--
+                    -->
+                <div class="filler"></div>
+            </div>
+        </div><!--
+                -->
+        <div class="rasp-table-col">
+            <div class="rasp-table-row-header">
+                <div class="rasp-table-inner-cell
+                 today" id="today">
+                    Ср
+                    <div class="date">24.02</div>
+                </div><!--
+                -->
+                <div class="filler"></div>
+            </div>
+            <div class="rasp-table-row  today ">
+                <div class="rasp-table-inner-cell-hidden">
+                    1 <br>
+                    8:00 &mdash;
+                    9:30
+                </div>
+                <div class="rasp-table-inner-cell">
+                    <div class="small">
+                        <div class="aud">ВК8</div>
+                        <div class="subject">Военная подготовка</div>
+                        <div class="type">(прак)</div>
+                        <div class="teacher">Сарсенгалиев Айдос Миргенгалиевич</div>
+                    </div>
+                </div><!--
+                    -->
+                <div class="filler"></div>
+            </div>
+            <div class="rasp-table-row  today ">
+                <div class="rasp-table-inner-cell-hidden">
+                    2 <br>
+                    9:45 &mdash;
+                    11:15
+                </div>
+                <div class="rasp-table-inner-cell">
+                    <div class="small">
+                        <div class="aud">ВК8</div>
+                        <div class="subject">Военная подготовка</div>
+                        <div class="type">(прак)</div>
+                        <div class="teacher">Сарсенгалиев Айдос Миргенгалиевич</div>
+                    </div>
+                </div><!--
+                    -->
+                <div class="filler"></div>
+            </div>
+            <div class="rasp-table-row  today ">
+                <div class="rasp-table-inner-cell-hidden">
+                    3 <br>
+                    11:30 &mdash;
+                    13:00
+                </div>
+                <div class="rasp-table-inner-cell">
+                    <div class="small">
+                        <div class="aud">ВК8</div>
+                        <div class="subject">Военная подготовка</div>
+                        <div class="type">(прак)</div>
+                        <div class="teacher">Сарсенгалиев Айдос Миргенгалиевич</div>
+                    </div>
+                </div><!--
+                    -->
+                <div class="filler"></div>
+            </div>
+            <div class="rasp-table-row  empty today ">
+                <div class="rasp-table-inner-cell-hidden">
+                    4 <br>
+                    13:40 &mdash;
+                    15:10
+                </div>
+                <div class="rasp-table-inner-cell">
+                    &nbsp;
+                </div><!--
+                    -->
+                <div class="filler"></div>
+            </div>
+            <div class="rasp-table-row  empty today ">
+                <div class="rasp-table-inner-cell-hidden">
+                    5 <br>
+                    15:20 &mdash;
+                    16:50
+                </div>
+                <div class="rasp-table-inner-cell">
+                    &nbsp;
+                </div><!--
+                    -->
+                <div class="filler"></div>
+            </div>
+        </div><!--
+                -->
+        <div class="rasp-table-col">
+            <div class="rasp-table-row-header">
+                <div class="rasp-table-inner-cell
+                ">
+                    Чт
+                    <div class="date">25.02</div>
+                </div><!--
+                -->
+                <div class="filler"></div>
+            </div>
+            <div class="rasp-table-row  empty ">
+                <div class="rasp-table-inner-cell-hidden">
+                    1 <br>
+                    8:00 &mdash;
+                    9:30
+                </div>
+                <div class="rasp-table-inner-cell">
+                    &nbsp;
+                </div><!--
+                    -->
+                <div class="filler"></div>
+            </div>
+            <div class="rasp-table-row  ">
+                <div class="rasp-table-inner-cell-hidden">
+                    2 <br>
+                    9:45 &mdash;
+                    11:15
+                </div>
+                <div class="rasp-table-inner-cell">
+                    <div class="small">
+                        <div class="aud">СЗ-2</div>
+                        <div class="subject">Игровые виды спорта (элективная дисциплина)</div>
+                        <div class="type">(прак)</div>
+                        <div class="teacher"><a href="http://www.sstu.ru/teachers/36285.html"><a
+                                href="http://www.sstu.ru/teachers/36285-pilyushkina_vlada_leonidovna.html">Пилюшкина
+                            Влада Леонидовна</a></div>
+                    </div>
+                </div><!--
+                    -->
+                <div class="filler"></div>
+            </div>
+            <div class="rasp-table-row  ">
+                <div class="rasp-table-inner-cell-hidden">
+                    3 <br>
+                    11:30 &mdash;
+                    13:00
+                </div>
+                <div class="rasp-table-inner-cell">
+                    <div class="small">
+                        <div class="aud">1/262</div>
+                        <div class="subject">Прикладная механика</div>
+                        <div class="type">(прак)</div>
+                        <div class="teacher"><a href="http://www.sstu.ru/teachers/25562.html"><a
+                                href="http://www.sstu.ru/teachers/25562-gorbachev_valeriy_olegovich.html">Горбачев
+                            Валерий Олегович</a></div>
+                    </div>
+                </div><!--
+                    -->
+                <div class="filler"></div>
+            </div>
+            <div class="rasp-table-row  ">
+                <div class="rasp-table-inner-cell-hidden">
+                    4 <br>
+                    13:40 &mdash;
+                    15:10
+                </div>
+                <div class="rasp-table-inner-cell">
+                    <div class="small">
+                        <div class="aud">1/261</div>
+                        <div class="subject">Инжиниринг технических систем автоматизированных процессов</div>
+                        <div class="type">(лаб)</div>
+                        <div class="teacher"><a href="http://www.sstu.ru/teachers/1678.html"><a
+                                href="http://www.sstu.ru/teachers/1678-dobryakov_vladimir_anatolevich.html">Добряков
+                            Владимир Анатольевич</a></div>
+                    </div>
+                </div><!--
+                    -->
+                <div class="filler"></div>
+            </div>
+            <div class="rasp-table-row  empty ">
+                <div class="rasp-table-inner-cell-hidden">
+                    5 <br>
+                    15:20 &mdash;
+                    16:50
+                </div>
+                <div class="rasp-table-inner-cell">
+                    &nbsp;
+                </div><!--
+                    -->
+                <div class="filler"></div>
+            </div>
+        </div><!--
+                -->
+        <div class="rasp-table-col">
+            <div class="rasp-table-row-header">
+                <div class="rasp-table-inner-cell
+                ">
+                    Пт
+                    <div class="date">26.02</div>
+                </div><!--
+                -->
+                <div class="filler"></div>
+            </div>
+            <div class="rasp-table-row  empty ">
+                <div class="rasp-table-inner-cell-hidden">
+                    1 <br>
+                    8:00 &mdash;
+                    9:30
+                </div>
+                <div class="rasp-table-inner-cell">
+                    &nbsp;
+                </div><!--
+                    -->
+                <div class="filler"></div>
+            </div>
+            <div class="rasp-table-row  ">
+                <div class="rasp-table-inner-cell-hidden">
+                    2 <br>
+                    9:45 &mdash;
+                    11:15
+                </div>
+                <div class="rasp-table-inner-cell">
+                    <div class="small">
+                        <div class="aud">1/011</div>
+                        <div class="subject">Технические средства автоматизации</div>
+                        <div class="type">(лекц)</div>
+                        <div class="teacher"><a href="http://www.sstu.ru/teachers/1678.html"><a
+                                href="http://www.sstu.ru/teachers/1678-dobryakov_vladimir_anatolevich.html">Добряков
+                            Владимир Анатольевич</a></div>
+                    </div>
+                </div><!--
+                    -->
+                <div class="filler"></div>
+            </div>
+            <div class="rasp-table-row  ">
+                <div class="rasp-table-inner-cell-hidden">
+                    3 <br>
+                    11:30 &mdash;
+                    13:00
+                </div>
+                <div class="rasp-table-inner-cell">
+                    <div class="small">
+                        <div class="aud">1/011</div>
+                        <div class="subject">Технические средства автоматизации</div>
+                        <div class="type">(лекц)</div>
+                        <div class="teacher"><a href="http://www.sstu.ru/teachers/1678.html"><a
+                                href="http://www.sstu.ru/teachers/1678-dobryakov_vladimir_anatolevich.html">Добряков
+                            Владимир Анатольевич</a></div>
+                    </div>
+                </div><!--
+                    -->
+                <div class="filler"></div>
+            </div>
+            <div class="rasp-table-row  ">
+                <div class="rasp-table-inner-cell-hidden">
+                    4 <br>
+                    13:40 &mdash;
+                    15:10
+                </div>
+                <div class="rasp-table-inner-cell">
+                    <div class="small">
+                        <div class="aud">1/011</div>
+                        <div class="subject">Технические средства автоматизации</div>
+                        <div class="type">(лаб)</div>
+                        <div class="teacher"><a href="http://www.sstu.ru/teachers/1678.html"><a
+                                href="http://www.sstu.ru/teachers/1678-dobryakov_vladimir_anatolevich.html">Добряков
+                            Владимир Анатольевич</a></div>
+                    </div>
+                </div><!--
+                    -->
+                <div class="filler"></div>
+            </div>
+            <div class="rasp-table-row  empty ">
+                <div class="rasp-table-inner-cell-hidden">
+                    5 <br>
+                    15:20 &mdash;
+                    16:50
+                </div>
+                <div class="rasp-table-inner-cell">
+                    &nbsp;
+                </div><!--
+                    -->
+                <div class="filler"></div>
+            </div>
+        </div><!--
+                -->
+        <div class="rasp-table-col">
+            <div class="rasp-table-row-header">
+                <div class="rasp-table-inner-cell
+                ">
+                    Сб
+                    <div class="date">27.02</div>
+                </div><!--
+                -->
+                <div class="filler"></div>
+            </div>
+            <div class="rasp-table-row  ">
+                <div class="rasp-table-inner-cell-hidden">
+                    1 <br>
+                    8:00 &mdash;
+                    9:30
+                </div>
+                <div class="rasp-table-inner-cell">
+                    <div class="small">
+                        <div class="aud">1/337</div>
+                        <div class="subject">Экономика и управление производством</div>
+                        <div class="type">(прак)</div>
+                        <div class="teacher"><a href="http://www.sstu.ru/teachers/2165.html"><a
+                                href="http://www.sstu.ru/teachers/2165-plotnikov_denis_anatolevich.html">Плотников Денис
+                            Анатольевич</a></div>
+                    </div>
+                </div><!--
+                    -->
+                <div class="filler"></div>
+            </div>
+            <div class="rasp-table-row  ">
+                <div class="rasp-table-inner-cell-hidden">
+                    2 <br>
+                    9:45 &mdash;
+                    11:15
+                </div>
+                <div class="rasp-table-inner-cell">
+                    <div class="small">
+                        <div class="aud">1/003</div>
+                        <div class="subject">Математическое моделирование информационно-управляющих систем</div>
+                        <div class="type">(лекц)</div>
+                        <div class="teacher"><a href="http://www.sstu.ru/teachers/2300.html"><a
+                                href="http://www.sstu.ru/teachers/2300-slesarev_sergey_valentinovich.html">Слесарев
+                            Сергей Валентинович</a></div>
+                    </div>
+                </div><!--
+                    -->
+                <div class="filler"></div>
+            </div>
+            <div class="rasp-table-row  ">
+                <div class="rasp-table-inner-cell-hidden">
+                    3 <br>
+                    11:30 &mdash;
+                    13:00
+                </div>
+                <div class="rasp-table-inner-cell">
+                    <div class="small">
+                        <div class="aud">1/003</div>
+                        <div class="subject">Математическое моделирование информационно-управляющих систем</div>
+                        <div class="type">(прак)</div>
+                        <div class="teacher"><a href="http://www.sstu.ru/teachers/2300.html"><a
+                                href="http://www.sstu.ru/teachers/2300-slesarev_sergey_valentinovich.html">Слесарев
+                            Сергей Валентинович</a></div>
+                    </div>
+                </div><!--
+                    -->
+                <div class="filler"></div>
+            </div>
+            <div class="rasp-table-row  empty ">
+                <div class="rasp-table-inner-cell-hidden">
+                    4 <br>
+                    13:40 &mdash;
+                    15:10
+                </div>
+                <div class="rasp-table-inner-cell">
+                    &nbsp;
+                </div><!--
+                    -->
+                <div class="filler"></div>
+            </div>
+            <div class="rasp-table-row  empty ">
+                <div class="rasp-table-inner-cell-hidden">
+                    5 <br>
+                    15:20 &mdash;
+                    16:50
+                </div>
+                <div class="rasp-table-inner-cell">
+                    &nbsp;
+                </div><!--
+                    -->
+                <div class="filler"></div>
+            </div>
+        </div><!--
+            --></div>
+    <div class="text-center h3">
+        <span class="week_number hidden">9</span></div>
+    <div class="rasp-table nechet">
+        <div class="rasp-table-col-first empty">
+            <div class="rasp-table-row-header">
+                <div class="rasp-table-inner-cell">
+                    Пара
+                </div><!--
+             -->
+                <div class="filler"></div>
+            </div>
+            <div class="rasp-table-row">
+                <div class="rasp-table-inner-cell">
+                    1 <br>
+                    8:00 &mdash;
+                    9:30
+                </div><!--
+                 -->
+                <div class="filler">&nbsp;</div>
+            </div>
+            <div class="rasp-table-row">
+                <div class="rasp-table-inner-cell">
+                    2 <br>
+                    9:45 &mdash;
+                    11:15
+                </div><!--
+                 -->
+                <div class="filler">&nbsp;</div>
+            </div>
+            <div class="rasp-table-row">
+                <div class="rasp-table-inner-cell">
+                    3 <br>
+                    11:30 &mdash;
+                    13:00
+                </div><!--
+                 -->
+                <div class="filler">&nbsp;</div>
+            </div>
+            <div class="rasp-table-row">
+                <div class="rasp-table-inner-cell">
+                    4 <br>
+                    13:40 &mdash;
+                    15:10
+                </div><!--
+                 -->
+                <div class="filler">&nbsp;</div>
+            </div>
+            <div class="rasp-table-row">
+                <div class="rasp-table-inner-cell">
+                    5 <br>
+                    15:20 &mdash;
+                    16:50
+                </div><!--
+                 -->
+                <div class="filler">&nbsp;</div>
+            </div>
+        </div><!--
+                -->
+        <div class="rasp-table-col">
+            <div class="rasp-table-row-header">
+                <div class="rasp-table-inner-cell
+                ">
+                    Пн
+                    <div class="date">01.03</div>
+                </div><!--
+                -->
+                <div class="filler"></div>
+            </div>
+            <div class="rasp-table-row  ">
+                <div class="rasp-table-inner-cell-hidden">
+                    1 <br>
+                    8:00 &mdash;
+                    9:30
+                </div>
+                <div class="rasp-table-inner-cell">
+                    <div class="small">
+                        <div class="aud">1/220</div>
+                        <div class="subject">Электротехника и электроника</div>
+                        <div class="type">(прак)</div>
+                        <div class="teacher"><a href="http://www.sstu.ru/teachers/41888.html"><a
+                                href="http://www.sstu.ru/teachers/41888-sivak_anton_sergeevich.html">Сивак Антон
+                            Сергеевич</a></div>
+                    </div>
+                </div><!--
+                    -->
+                <div class="filler"></div>
+            </div>
+            <div class="rasp-table-row  ">
+                <div class="rasp-table-inner-cell-hidden">
+                    2 <br>
+                    9:45 &mdash;
+                    11:15
+                </div>
+                <div class="rasp-table-inner-cell">
+                    <div class="small">
+                        <div class="aud">1/337</div>
+                        <div class="subject">Экономика и управление производством</div>
+                        <div class="type">(прак)</div>
+                        <div class="teacher"><a href="http://www.sstu.ru/teachers/2165.html"><a
+                                href="http://www.sstu.ru/teachers/2165-plotnikov_denis_anatolevich.html">Плотников Денис
+                            Анатольевич</a></div>
+                    </div>
+                </div><!--
+                    -->
+                <div class="filler"></div>
+            </div>
+            <div class="rasp-table-row  ">
+                <div class="rasp-table-inner-cell-hidden">
+                    3 <br>
+                    11:30 &mdash;
+                    13:00
+                </div>
+                <div class="rasp-table-inner-cell">
+                    <div class="small">
+                        <div class="aud">СЗ-2</div>
+                        <div class="subject">Игровые виды спорта (элективная дисциплина)</div>
+                        <div class="type">(прак)</div>
+                        <div class="teacher"><a href="http://www.sstu.ru/teachers/36285.html"><a
+                                href="http://www.sstu.ru/teachers/36285-pilyushkina_vlada_leonidovna.html">Пилюшкина
+                            Влада Леонидовна</a></div>
+                    </div>
+                </div><!--
+                    -->
+                <div class="filler"></div>
+            </div>
+            <div class="rasp-table-row  ">
+                <div class="rasp-table-inner-cell-hidden">
+                    4 <br>
+                    13:40 &mdash;
+                    15:10
+                </div>
+                <div class="rasp-table-inner-cell">
+                    <div class="small">
+                        <div class="subject-m">Иностранный язык для профессионального общения<span
+                                class="type"> (прак)</span></div>
+                        <div class="subgroup-info"><span class="subgroup">Подгр. 1: <span
+                                class="aud">5/435</span></span>
+                            <div class="teacher"><a
+                                    href="http://www.sstu.ru/teachers/41886-potapova_anastasiya_sergeevna.html">Потапова
+                                Анастасия Сергеевна</a></div>
+                        </div>
+                        <div class="subgroup-info"><span class="subgroup">Подгр. 2: <span
+                                class="aud">5/425</span></span>
+                            <div class="teacher"><a
+                                    href="http://www.sstu.ru/teachers/33802-eremeeva_valentina_dmitrievna.html">Еремеева
+                                Валентина Дмитриевна</a></div>
+                        </div>
+                    </div>
+                </div><!--
+                    -->
+                <div class="filler"></div>
+            </div>
+            <div class="rasp-table-row  empty ">
+                <div class="rasp-table-inner-cell-hidden">
+                    5 <br>
+                    15:20 &mdash;
+                    16:50
+                </div>
+                <div class="rasp-table-inner-cell">
+                    &nbsp;
+                </div><!--
+                    -->
+                <div class="filler"></div>
+            </div>
+        </div><!--
+                -->
+        <div class="rasp-table-col">
+            <div class="rasp-table-row-header">
+                <div class="rasp-table-inner-cell
+                ">
+                    Вт
+                    <div class="date">02.03</div>
+                </div><!--
+                -->
+                <div class="filler"></div>
+            </div>
+            <div class="rasp-table-row  ">
+                <div class="rasp-table-inner-cell-hidden">
+                    1 <br>
+                    8:00 &mdash;
+                    9:30
+                </div>
+                <div class="rasp-table-inner-cell">
+                    <div class="small">
+                        <div class="aud">1/261</div>
+                        <div class="subject">Инжиниринг технических систем автоматизированных процессов</div>
+                        <div class="type">(прак)</div>
+                        <div class="teacher"><a href="http://www.sstu.ru/teachers/1678.html"><a
+                                href="http://www.sstu.ru/teachers/1678-dobryakov_vladimir_anatolevich.html">Добряков
+                            Владимир Анатольевич</a></div>
+                    </div>
+                </div><!--
+                    -->
+                <div class="filler"></div>
+            </div>
+            <div class="rasp-table-row  ">
+                <div class="rasp-table-inner-cell-hidden">
+                    2 <br>
+                    9:45 &mdash;
+                    11:15
+                </div>
+                <div class="rasp-table-inner-cell">
+                    <div class="small">
+                        <div class="aud">1/220</div>
+                        <div class="subject">Электротехника и электроника</div>
+                        <div class="type">(лекц)</div>
+                        <div class="teacher"><a href="http://www.sstu.ru/teachers/2279.html"><a
+                                href="http://www.sstu.ru/teachers/2279-plskaya_elena_konstantinovna.html">Пыльская Елена
+                            Константиновна</a></div>
+                    </div>
+                </div><!--
+                    -->
+                <div class="filler"></div>
+            </div>
+            <div class="rasp-table-row  empty ">
+                <div class="rasp-table-inner-cell-hidden">
+                    3 <br>
+                    11:30 &mdash;
+                    13:00
+                </div>
+                <div class="rasp-table-inner-cell">
+                    &nbsp;
+                </div><!--
+                    -->
+                <div class="filler"></div>
+            </div>
+            <div class="rasp-table-row  empty ">
+                <div class="rasp-table-inner-cell-hidden">
+                    4 <br>
+                    13:40 &mdash;
+                    15:10
+                </div>
+                <div class="rasp-table-inner-cell">
+                    &nbsp;
+                </div><!--
+                    -->
+                <div class="filler"></div>
+            </div>
+            <div class="rasp-table-row  empty ">
+                <div class="rasp-table-inner-cell-hidden">
+                    5 <br>
+                    15:20 &mdash;
+                    16:50
+                </div>
+                <div class="rasp-table-inner-cell">
+                    &nbsp;
+                </div><!--
+                    -->
+                <div class="filler"></div>
+            </div>
+        </div><!--
+                -->
+        <div class="rasp-table-col">
+            <div class="rasp-table-row-header">
+                <div class="rasp-table-inner-cell
+                ">
+                    Ср
+                    <div class="date">03.03</div>
+                </div><!--
+                -->
+                <div class="filler"></div>
+            </div>
+            <div class="rasp-table-row  ">
+                <div class="rasp-table-inner-cell-hidden">
+                    1 <br>
+                    8:00 &mdash;
+                    9:30
+                </div>
+                <div class="rasp-table-inner-cell">
+                    <div class="small">
+                        <div class="aud">ВК8</div>
+                        <div class="subject">Военная подготовка</div>
+                        <div class="type">(прак)</div>
+                        <div class="teacher">Сарсенгалиев Айдос Миргенгалиевич</div>
+                    </div>
+                </div><!--
+                    -->
+                <div class="filler"></div>
+            </div>
+            <div class="rasp-table-row  ">
+                <div class="rasp-table-inner-cell-hidden">
+                    2 <br>
+                    9:45 &mdash;
+                    11:15
+                </div>
+                <div class="rasp-table-inner-cell">
+                    <div class="small">
+                        <div class="aud">ВК8</div>
+                        <div class="subject">Военная подготовка</div>
+                        <div class="type">(прак)</div>
+                        <div class="teacher">Сарсенгалиев Айдос Миргенгалиевич</div>
+                    </div>
+                </div><!--
+                    -->
+                <div class="filler"></div>
+            </div>
+            <div class="rasp-table-row  ">
+                <div class="rasp-table-inner-cell-hidden">
+                    3 <br>
+                    11:30 &mdash;
+                    13:00
+                </div>
+                <div class="rasp-table-inner-cell">
+                    <div class="small">
+                        <div class="aud">ВК8</div>
+                        <div class="subject">Военная подготовка</div>
+                        <div class="type">(прак)</div>
+                        <div class="teacher">Сарсенгалиев Айдос Миргенгалиевич</div>
+                    </div>
+                </div><!--
+                    -->
+                <div class="filler"></div>
+            </div>
+            <div class="rasp-table-row  ">
+                <div class="rasp-table-inner-cell-hidden">
+                    4 <br>
+                    13:40 &mdash;
+                    15:10
+                </div>
+                <div class="rasp-table-inner-cell">
+                    &nbsp;
+                </div><!--
+                    -->
+                <div class="filler"></div>
+            </div>
+            <div class="rasp-table-row  ">
+                <div class="rasp-table-inner-cell-hidden">
+                    5 <br>
+                    15:20 &mdash;
+                    16:50
+                </div>
+                <div class="rasp-table-inner-cell">
+                    <div class="small">
+                        <div class="aud">11/405</div>
+                        <div class="subject">Русский язык как иностранный</div>
+                        <div class="type">(прак)</div>
+                        <div class="teacher"><a href="http://www.sstu.ru/teachers/861.html"><a
+                                href="http://www.sstu.ru/teachers/861-taboyakova_yuliya_viktorovna.html">Табоякова Юлия
+                            Викторовна</a></div>
+                    </div>
+                </div><!--
+                    -->
+                <div class="filler"></div>
+            </div>
+        </div><!--
+                -->
+        <div class="rasp-table-col">
+            <div class="rasp-table-row-header">
+                <div class="rasp-table-inner-cell
+                ">
+                    Чт
+                    <div class="date">04.03</div>
+                </div><!--
+                -->
+                <div class="filler"></div>
+            </div>
+            <div class="rasp-table-row  empty ">
+                <div class="rasp-table-inner-cell-hidden">
+                    1 <br>
+                    8:00 &mdash;
+                    9:30
+                </div>
+                <div class="rasp-table-inner-cell">
+                    &nbsp;
+                </div><!--
+                    -->
+                <div class="filler"></div>
+            </div>
+            <div class="rasp-table-row  ">
+                <div class="rasp-table-inner-cell-hidden">
+                    2 <br>
+                    9:45 &mdash;
+                    11:15
+                </div>
+                <div class="rasp-table-inner-cell">
+                    <div class="small">
+                        <div class="aud">СЗ-2</div>
+                        <div class="subject">Игровые виды спорта (элективная дисциплина)</div>
+                        <div class="type">(прак)</div>
+                        <div class="teacher"><a href="http://www.sstu.ru/teachers/36285.html"><a
+                                href="http://www.sstu.ru/teachers/36285-pilyushkina_vlada_leonidovna.html">Пилюшкина
+                            Влада Леонидовна</a></div>
+                    </div>
+                </div><!--
+                    -->
+                <div class="filler"></div>
+            </div>
+            <div class="rasp-table-row  ">
+                <div class="rasp-table-inner-cell-hidden">
+                    3 <br>
+                    11:30 &mdash;
+                    13:00
+                </div>
+                <div class="rasp-table-inner-cell">
+                    <div class="small">
+                        <div class="aud">1/259</div>
+                        <div class="subject">Прикладная механика</div>
+                        <div class="type">(прак)</div>
+                        <div class="teacher"><a href="http://www.sstu.ru/teachers/25562.html"><a
+                                href="http://www.sstu.ru/teachers/25562-gorbachev_valeriy_olegovich.html">Горбачев
+                            Валерий Олегович</a></div>
+                    </div>
+                </div><!--
+                    -->
+                <div class="filler"></div>
+            </div>
+            <div class="rasp-table-row  ">
+                <div class="rasp-table-inner-cell-hidden">
+                    4 <br>
+                    13:40 &mdash;
+                    15:10
+                </div>
+                <div class="rasp-table-inner-cell">
+                    <div class="small">
+                        <div class="aud">4/309</div>
+                        <div class="subject">3D-моделирование и основы САПР</div>
+                        <div class="type">(прак)</div>
+                        <div class="teacher"><a href="http://www.sstu.ru/teachers/41887.html"><a
+                                href="http://www.sstu.ru/teachers/41887-ryazanov_sergey_anatolevich.html">Рязанов Сергей
+                            Анатольевич</a></div>
+                    </div>
+                </div><!--
+                    -->
+                <div class="filler"></div>
+            </div>
+            <div class="rasp-table-row  empty ">
+                <div class="rasp-table-inner-cell-hidden">
+                    5 <br>
+                    15:20 &mdash;
+                    16:50
+                </div>
+                <div class="rasp-table-inner-cell">
+                    &nbsp;
+                </div><!--
+                    -->
+                <div class="filler"></div>
+            </div>
+        </div><!--
+                -->
+        <div class="rasp-table-col">
+            <div class="rasp-table-row-header">
+                <div class="rasp-table-inner-cell
+                ">
+                    Пт
+                    <div class="date">05.03</div>
+                </div><!--
+                -->
+                <div class="filler"></div>
+            </div>
+            <div class="rasp-table-row  ">
+                <div class="rasp-table-inner-cell-hidden">
+                    1 <br>
+                    8:00 &mdash;
+                    9:30
+                </div>
+                <div class="rasp-table-inner-cell">
+                    <div class="small">
+                        <div class="aud">1/011</div>
+                        <div class="subject">Технические средства автоматизации</div>
+                        <div class="type">(лаб)</div>
+                        <div class="teacher"><a href="http://www.sstu.ru/teachers/1678.html"><a
+                                href="http://www.sstu.ru/teachers/1678-dobryakov_vladimir_anatolevich.html">Добряков
+                            Владимир Анатольевич</a></div>
+                    </div>
+                </div><!--
+                    -->
+                <div class="filler"></div>
+            </div>
+            <div class="rasp-table-row  ">
+                <div class="rasp-table-inner-cell-hidden">
+                    2 <br>
+                    9:45 &mdash;
+                    11:15
+                </div>
+                <div class="rasp-table-inner-cell">
+                    <div class="small">
+                        <div class="aud">1/220</div>
+                        <div class="subject">Электротехника и электроника</div>
+                        <div class="type">(лаб)</div>
+                        <div class="teacher"><a href="http://www.sstu.ru/teachers/41888.html"><a
+                                href="http://www.sstu.ru/teachers/41888-sivak_anton_sergeevich.html">Сивак Антон
+                            Сергеевич</a></div>
+                    </div>
+                </div><!--
+                    -->
+                <div class="filler"></div>
+            </div>
+            <div class="rasp-table-row  ">
+                <div class="rasp-table-inner-cell-hidden">
+                    3 <br>
+                    11:30 &mdash;
+                    13:00
+                </div>
+                <div class="rasp-table-inner-cell">
+                    <div class="small">
+                        <div class="aud">1/220</div>
+                        <div class="subject">Электротехника и электроника</div>
+                        <div class="type">(лаб)</div>
+                        <div class="teacher"><a href="http://www.sstu.ru/teachers/41888.html"><a
+                                href="http://www.sstu.ru/teachers/41888-sivak_anton_sergeevich.html">Сивак Антон
+                            Сергеевич</a></div>
+                    </div>
+                </div><!--
+                    -->
+                <div class="filler"></div>
+            </div>
+            <div class="rasp-table-row  empty ">
+                <div class="rasp-table-inner-cell-hidden">
+                    4 <br>
+                    13:40 &mdash;
+                    15:10
+                </div>
+                <div class="rasp-table-inner-cell">
+                    &nbsp;
+                </div><!--
+                    -->
+                <div class="filler"></div>
+            </div>
+            <div class="rasp-table-row  empty ">
+                <div class="rasp-table-inner-cell-hidden">
+                    5 <br>
+                    15:20 &mdash;
+                    16:50
+                </div>
+                <div class="rasp-table-inner-cell">
+                    &nbsp;
+                </div><!--
+                    -->
+                <div class="filler"></div>
+            </div>
+        </div><!--
+                -->
+        <div class="rasp-table-col">
+            <div class="rasp-table-row-header">
+                <div class="rasp-table-inner-cell
+                ">
+                    Сб
+                    <div class="date">06.03</div>
+                </div><!--
+                -->
+                <div class="filler"></div>
+            </div>
+            <div class="rasp-table-row  ">
+                <div class="rasp-table-inner-cell-hidden">
+                    1 <br>
+                    8:00 &mdash;
+                    9:30
+                </div>
+                <div class="rasp-table-inner-cell">
+                    <div class="small">
+                        <div class="aud">Д-114</div>
+                        <div class="subject">Основы технологии машиностроения</div>
+                        <div class="type">(прак)</div>
+                        <div class="teacher"><a href="http://www.sstu.ru/teachers/1567.html"><a
+                                href="http://www.sstu.ru/teachers/1567-vasin_aleksey_nikolaevich.html">Васин Алексей
+                            Николаевич</a></div>
+                    </div>
+                </div><!--
+                    -->
+                <div class="filler"></div>
+            </div>
+            <div class="rasp-table-row  ">
+                <div class="rasp-table-inner-cell-hidden">
+                    2 <br>
+                    9:45 &mdash;
+                    11:15
+                </div>
+                <div class="rasp-table-inner-cell">
+                    <div class="small">
+                        <div class="aud">Д-124</div>
+                        <div class="subject">Основы технологии машиностроения</div>
+                        <div class="type">(прак)</div>
+                        <div class="teacher"><a href="http://www.sstu.ru/teachers/1567.html"><a
+                                href="http://www.sstu.ru/teachers/1567-vasin_aleksey_nikolaevich.html">Васин Алексей
+                            Николаевич</a></div>
+                    </div>
+                </div><!--
+                    -->
+                <div class="filler"></div>
+            </div>
+            <div class="rasp-table-row  ">
+                <div class="rasp-table-inner-cell-hidden">
+                    3 <br>
+                    11:30 &mdash;
+                    13:00
+                </div>
+                <div class="rasp-table-inner-cell">
+                    <div class="small">
+                        <div class="aud">Д-120</div>
+                        <div class="subject">Основы технологии машиностроения</div>
+                        <div class="type">(лекц)</div>
+                        <div class="teacher"><a href="http://www.sstu.ru/teachers/1567.html"><a
+                                href="http://www.sstu.ru/teachers/1567-vasin_aleksey_nikolaevich.html">Васин Алексей
+                            Николаевич</a></div>
+                    </div>
+                </div><!--
+                    -->
+                <div class="filler"></div>
+            </div>
+            <div class="rasp-table-row  ">
+                <div class="rasp-table-inner-cell-hidden">
+                    4 <br>
+                    13:40 &mdash;
+                    15:10
+                </div>
+                <div class="rasp-table-inner-cell">
+                    <div class="small">
+                        <div class="aud">Д-122</div>
+                        <div class="subject">Основы технологии машиностроения</div>
+                        <div class="type">(лекц)</div>
+                        <div class="teacher"><a href="http://www.sstu.ru/teachers/1567.html"><a
+                                href="http://www.sstu.ru/teachers/1567-vasin_aleksey_nikolaevich.html">Васин Алексей
+                            Николаевич</a></div>
+                    </div>
+                </div><!--
+                    -->
+                <div class="filler"></div>
+            </div>
+            <div class="rasp-table-row  empty ">
+                <div class="rasp-table-inner-cell-hidden">
+                    5 <br>
+                    15:20 &mdash;
+                    16:50
+                </div>
+                <div class="rasp-table-inner-cell">
+                    &nbsp;
+                </div><!--
+                    -->
+                <div class="filler"></div>
+            </div>
+        </div><!--
+            --></div>
+    <button class="btn btn-success center-block more">Далее</button>
+</div>
+<div class="center-block text-center">
+    <!-- Rating@Mail.ru counter -->
+    <script type="text/javascript">
+        var _tmr = window._tmr || (window._tmr = []);
+        _tmr.push({id: "1091255", type: "pageView", start: (new Date()).getTime()});
+        (function (d, w, id) {
+            if (d.getElementById(id)) return;
+            var ts = d.createElement("script");
+            ts.type = "text/javascript";
+            ts.async = true;
+            ts.id = id;
+            ts.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//top-fwz1.mail.ru/js/code.js";
+            var f = function () {
+                var s = d.getElementsByTagName("script")[0];
+                s.parentNode.insertBefore(ts, s);
+            };
+            if (w.opera == "[object Opera]") {
+                d.addEventListener("DOMContentLoaded", f, false);
+            } else {
+                f();
+            }
+        })(document, window, "topmailru-code");
+    </script>
+    <noscript>
+        <div style="position:absolute;left:-10000px;"><img src="//top-fwz1.mail.ru/counter?id=1091255;js=na"
+                                                           style="border:0;" height="1" width="1"
+                                                           alt="Рейтинг@Mail.ru"/></div>
+    </noscript>
+    <!-- //Rating@Mail.ru counter -->
+
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript"> (function (d, w, c) {
+        (w[c] = w[c] || []).push(function () {
+            try {
+                w.yaCounter1913527 = new Ya.Metrika({
+                    id: 1913527,
+                    clickmap: true,
+                    trackLinks: true,
+                    accurateTrackBounce: true,
+                    webvisor: true,
+                    trackHash: true
+                });
+            } catch (e) {
+            }
+        });
+        var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () {
+            n.parentNode.insertBefore(s, n);
+        };
+        s.type = "text/javascript";
+        s.async = true;
+        s.src = "https://mc.yandex.ru/metrika/watch.js";
+        if (w.opera == "[object Opera]") {
+            d.addEventListener("DOMContentLoaded", f, false);
+        } else {
+            f();
+        }
+    })(document, window, "yandex_metrika_callbacks"); </script>
+    <noscript>
+        <div><img src="https://mc.yandex.ru/watch/1913527" style="position:absolute; left:-9999px;" alt=""/></div>
+    </noscript> <!-- /Yandex.Metrika counter -->
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-12093472-1', 'auto');
+        ga('send', 'pageview');
+
+    </script>
+</div>
+</body>
+</html>
+
