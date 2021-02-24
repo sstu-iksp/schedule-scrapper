@@ -48,16 +48,30 @@ public class SstuGroupScheduleScheduleParserTest {
     }
 
     @Test
-    public void parse() throws IOException {
-        String jsonResultPath = "src/test/recourses/parsers_tests_res/sstu/sstuGroup0ScheduleJson.json";
-        String rawDataPath = "src/test/recourses/parsers_tests_res/sstu/sstuGroup0Schedule.html";
-        when(urlToPageResolver.getHtmlTextFromUrl(rawDataPath)).thenReturn(Files.readString(Path.of(rawDataPath)));
+    public void parseGroup0() throws IOException {
+        String jsonResultPath = "src/test/recourses/parsers_tests_res/sstu/group0/sstuGroup0ScheduleJson.json";
+        String rawDataPath = "src/test/recourses/parsers_tests_res/sstu/group0/sstuGroup0Schedule.html";
+        when(urlToPageResolver.getBodyAsString(rawDataPath)).thenReturn(Files.readString(Path.of(rawDataPath)));
 
         List<ScheduleDayDto> returnedScheduleDays = parser.parse(rawDataPath);
         List<ScheduleDayDto> expectedScheduleDays = getExpectedScheduleDays(jsonResultPath);
 
         assertEquals(expectedScheduleDays, returnedScheduleDays);
     }
+
+    @Test
+    public void parseGroup1() throws IOException {
+        String jsonResultPath = "src/test/recourses/parsers_tests_res/sstu/group1/sstuGroup1ScheduleJson.json";
+        String rawDataPath = "src/test/recourses/parsers_tests_res/sstu/group1/sstuGroup1Schedule.html";
+        when(urlToPageResolver.getBodyAsString(rawDataPath)).thenReturn(Files.readString(Path.of(rawDataPath)));
+
+        List<ScheduleDayDto> returnedScheduleDays = parser.parse(rawDataPath);
+        List<ScheduleDayDto> expectedScheduleDays = getExpectedScheduleDays(jsonResultPath);
+
+        assertEquals(expectedScheduleDays, returnedScheduleDays);
+    }
+
+
 
     @NotNull
     private List<ScheduleDayDto> getExpectedScheduleDays(String jsonResultPath) {

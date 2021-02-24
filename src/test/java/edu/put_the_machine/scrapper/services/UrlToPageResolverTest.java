@@ -27,12 +27,12 @@ public class UrlToPageResolverTest {
         String expectedResult = getExpectedResult();
         when(restTemplate.getForObject(url, String.class)).thenReturn(expectedResult);
 
-        String returnedResult = urlToPageResolver.getHtmlTextFromUrl(url);
+        String returnedResult = urlToPageResolver.getBodyAsString(url);
         assertEquals(expectedResult, returnedResult);
     }
 
     private String getExpectedResult() throws IOException {
-        String rawDataPath = "src/test/recourses/parsers_tests_res/sstu/sstuGroup0Schedule.html";
+        String rawDataPath = "src/test/recourses/parsers_tests_res/sstu/sstuGroup1Schedule.html";
         return Files.readString(Path.of(rawDataPath));
     }
 }

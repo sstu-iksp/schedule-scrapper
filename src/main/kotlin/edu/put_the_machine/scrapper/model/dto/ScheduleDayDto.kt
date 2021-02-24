@@ -55,7 +55,7 @@ class GroupScheduleDayDto(val group: GroupDto,
     }
 }
 
-class LocationScheduleDayDto(val location: LocationDto,
+class LocationScheduleDayDto(val location: String,
                              lessons: List<LessonDto>, date: LocalDate, lastCheck: LocalDateTime) : ScheduleDayDto(lessons, date, lastCheck)
 
 class TeacherScheduleDayDto(val teacher: TeacherDto,

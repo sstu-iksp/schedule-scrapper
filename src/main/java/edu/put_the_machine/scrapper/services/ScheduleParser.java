@@ -1,6 +1,10 @@
 package edu.put_the_machine.scrapper.services;
 
 
-public interface ScheduleParser {
+import edu.put_the_machine.scrapper.model.dto.ScheduleDayDto;
 
+import java.util.List;
+
+public interface ScheduleParser {
+    List<ScheduleDayDto> parse();
 }

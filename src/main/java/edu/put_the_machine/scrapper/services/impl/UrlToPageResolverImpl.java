@@ -13,7 +13,7 @@ public class UrlToPageResolverImpl implements UrlToPageResolver {
     }
 
     @Override
-    public String getHtmlTextFromUrl(String url) {
+    public String getBodyAsString(String url) {
         return restTemplate.getForObject(url, String.class);
     }
 }

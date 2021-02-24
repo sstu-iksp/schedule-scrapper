@@ -21,11 +21,7 @@
           "name": "Фомин Игорь Николаевич",
           "url": "http://www.sstu.ru/teachers/25678-fomin_igor_nikolaevich.html"
         },
-        "location": {
-          "_type_": "FixedLocationDto",
-          "audience": 464,
-          "building": 1
-        }
+        "location": "1/464"
       },
       {
         "subject": "Моделирование и анализ бизнес-процессов",
@@ -42,11 +38,7 @@
           "name": "Фомин Игорь Николаевич",
           "url": "http://www.sstu.ru/teachers/25678-fomin_igor_nikolaevich.html"
         },
-        "location": {
-          "_type_": "FixedLocationDto",
-          "audience": 464,
-          "building": 1
-        }
+        "location": "1/464"
       },
       {
         "subject": "Моделирование и анализ бизнес-процессов",
@@ -63,11 +55,7 @@
           "name": "Фомин Игорь Николаевич",
           "url": "http://www.sstu.ru/teachers/25678-fomin_igor_nikolaevich.html"
         },
-        "location": {
-          "_type_": "FixedLocationDto",
-          "audience": 426,
-          "building": 1
-        }
+        "location": "1/426"
       },
       {
         "subject": "Технологии разработки корпоративных информационных систем",
@@ -84,11 +72,7 @@
           "name": "Пчелинцева Елена Германовна",
           "url": "http://www.sstu.ru/teachers/6246-pchelinceva_elena_germanovna.html"
         },
-        "location": {
-          "_type_": "FixedLocationDto",
-          "audience": 426,
-          "building": 1
-        }
+        "location": "1/426"
       }
     ],
     "date": [
@@ -100,10 +84,10 @@
       2021,
       2,
       24,
-      1,
-      49,
-      6,
-      113861200
+      13,
+      30,
+      53,
+      166879200
     ]
   },
   {
@@ -125,10 +109,7 @@
           30
         ],
         "teacher": null,
-        "location": {
-          "_type_": "RawLocationDto",
-          "name": "ВК1"
-        }
+        "location": "ВК1"
       },
       {
         "subject": "Военная подготовка",
@@ -142,10 +123,7 @@
           15
         ],
         "teacher": null,
-        "location": {
-          "_type_": "RawLocationDto",
-          "name": "ВК1"
-        }
+        "location": "ВК1"
       },
       {
         "subject": "Военная подготовка",
@@ -159,10 +137,7 @@
           0
         ],
         "teacher": null,
-        "location": {
-          "_type_": "RawLocationDto",
-          "name": "ВК1"
-        }
+        "location": "ВК1"
       }
     ],
     "date": [
@@ -174,10 +149,10 @@
       2021,
       2,
       24,
-      1,
-      49,
-      6,
-      118858700
+      13,
+      30,
+      53,
+      168878000
     ]
   },
   {
@@ -202,11 +177,7 @@
           "name": "Пчелинцева Елена Германовна",
           "url": "http://www.sstu.ru/teachers/6246-pchelinceva_elena_germanovna.html"
         },
-        "location": {
-          "_type_": "FixedLocationDto",
-          "audience": 464,
-          "building": 1
-        }
+        "location": "1/464"
       },
       {
         "subject": "Теория автоматов и формальных языков",
@@ -223,11 +194,7 @@
           "name": "Шульга Татьяна Эриковна",
           "url": "http://www.sstu.ru/teachers/2510-shulga_tatyana_erikovna.html"
         },
-        "location": {
-          "_type_": "FixedLocationDto",
-          "audience": 463,
-          "building": 1
-        }
+        "location": "1/463"
       }
     ],
     "date": [
@@ -239,10 +206,10 @@
       2021,
       2,
       24,
-      1,
-      49,
-      6,
-      121857400
+      13,
+      30,
+      53,
+      169877500
     ]
   },
   {
@@ -267,11 +234,7 @@
           "name": "Филимонова Ольга Федоровна",
           "url": "http://www.sstu.ru/teachers/2428-filimonova_olga_fedorovna.html"
         },
-        "location": {
-          "_type_": "FixedLocationDto",
-          "audience": 426,
-          "building": 1
-        }
+        "location": "1/426"
       },
       {
         "subject": "Технологии разработки корпоративных информационных систем",
@@ -288,11 +251,7 @@
           "name": "Пчелинцева Елена Германовна",
           "url": "http://www.sstu.ru/teachers/6246-pchelinceva_elena_germanovna.html"
         },
-        "location": {
-          "_type_": "FixedLocationDto",
-          "audience": 468,
-          "building": 1
-        }
+        "location": "1/468"
       },
       {
         "subject": "Семантический веб",
@@ -309,11 +268,7 @@
           "name": "Вагарина Наталия Сергеевна",
           "url": "http://www.sstu.ru/teachers/1558-vagarina_nataliya_sergeevna.html"
         },
-        "location": {
-          "_type_": "FixedLocationDto",
-          "audience": 461,
-          "building": 1
-        }
+        "location": "1/461"
       },
       {
         "subject": "Семантический веб",
@@ -330,11 +285,7 @@
           "name": "Вагарина Наталия Сергеевна",
           "url": "http://www.sstu.ru/teachers/1558-vagarina_nataliya_sergeevna.html"
         },
-        "location": {
-          "_type_": "FixedLocationDto",
-          "audience": 464,
-          "building": 1
-        }
+        "location": "1/464"
       }
     ],
     "date": [
@@ -346,10 +297,10 @@
       2021,
       2,
       24,
-      1,
-      49,
-      6,
-      123856500
+      13,
+      30,
+      53,
+      170876700
     ]
   },
   {
@@ -374,10 +325,7 @@
           "name": "Бочаров Дмитрий Александрович",
           "url": "http://www.sstu.ru/teachers/39644-bocharov_dmitriy_aleksandrovich.html"
         },
-        "location": {
-          "_type_": "RawLocationDto",
-          "name": "1/419А"
-        }
+        "location": "1/419А"
       },
       {
         "subject": "Конструирование программного обеспечения",
@@ -394,11 +342,7 @@
           "name": "Бочаров Дмитрий Александрович",
           "url": "http://www.sstu.ru/teachers/39644-bocharov_dmitriy_aleksandrovich.html"
         },
-        "location": {
-          "_type_": "FixedLocationDto",
-          "audience": 461,
-          "building": 1
-        }
+        "location": "1/461"
       }
     ],
     "date": [
@@ -410,10 +354,10 @@
       2021,
       2,
       24,
-      1,
-      49,
-      6,
-      124855600
+      13,
+      30,
+      53,
+      172875800
     ]
   },
   {
@@ -438,10 +382,7 @@
           "name": "Гордеев Игорь Владимирович",
           "url": "http://www.sstu.ru/teachers/33741-gordeev_igor_vladimirovich.html"
         },
-        "location": {
-          "_type_": "RawLocationDto",
-          "name": "СЗ-1"
-        }
+        "location": "СЗ-1"
       },
       {
         "subject": "Тестирование программного обеспечения",
@@ -458,11 +399,7 @@
           "name": "Бочаров Дмитрий Александрович",
           "url": "http://www.sstu.ru/teachers/39644-bocharov_dmitriy_aleksandrovich.html"
         },
-        "location": {
-          "_type_": "FixedLocationDto",
-          "audience": 464,
-          "building": 1
-        }
+        "location": "1/464"
       }
     ],
     "date": [
@@ -474,10 +411,10 @@
       2021,
       2,
       24,
-      1,
-      49,
-      6,
-      125855300
+      13,
+      30,
+      53,
+      173875400
     ]
   },
   {
@@ -502,11 +439,7 @@
           "name": "Фомин Игорь Николаевич",
           "url": "http://www.sstu.ru/teachers/25678-fomin_igor_nikolaevich.html"
         },
-        "location": {
-          "_type_": "FixedLocationDto",
-          "audience": 468,
-          "building": 1
-        }
+        "location": "1/468"
       },
       {
         "subject": "Конструирование программного обеспечения",
@@ -523,11 +456,7 @@
           "name": "Бочаров Дмитрий Александрович",
           "url": "http://www.sstu.ru/teachers/39644-bocharov_dmitriy_aleksandrovich.html"
         },
-        "location": {
-          "_type_": "FixedLocationDto",
-          "audience": 316,
-          "building": 1
-        }
+        "location": "1/316"
       },
       {
         "subject": "Семантический веб",
@@ -544,11 +473,7 @@
           "name": "Вагарина Наталия Сергеевна",
           "url": "http://www.sstu.ru/teachers/1558-vagarina_nataliya_sergeevna.html"
         },
-        "location": {
-          "_type_": "FixedLocationDto",
-          "audience": 465,
-          "building": 1
-        }
+        "location": "1/465"
       }
     ],
     "date": [
@@ -560,10 +485,10 @@
       2021,
       2,
       24,
-      1,
-      49,
-      6,
-      127854000
+      13,
+      30,
+      53,
+      174874600
     ]
   },
   {
@@ -585,10 +510,7 @@
           30
         ],
         "teacher": null,
-        "location": {
-          "_type_": "RawLocationDto",
-          "name": "ВК1"
-        }
+        "location": "ВК1"
       },
       {
         "subject": "Военная подготовка",
@@ -602,10 +524,7 @@
           15
         ],
         "teacher": null,
-        "location": {
-          "_type_": "RawLocationDto",
-          "name": "ВК1"
-        }
+        "location": "ВК1"
       },
       {
         "subject": "Военная подготовка",
@@ -619,10 +538,7 @@
           0
         ],
         "teacher": null,
-        "location": {
-          "_type_": "RawLocationDto",
-          "name": "ВК1"
-        }
+        "location": "ВК1"
       }
     ],
     "date": [
@@ -634,10 +550,10 @@
       2021,
       2,
       24,
-      1,
-      49,
-      6,
-      128854500
+      13,
+      30,
+      53,
+      175874000
     ]
   },
   {
@@ -662,11 +578,7 @@
           "name": "Шульга Татьяна Эриковна",
           "url": "http://www.sstu.ru/teachers/2510-shulga_tatyana_erikovna.html"
         },
-        "location": {
-          "_type_": "FixedLocationDto",
-          "audience": 418,
-          "building": 1
-        }
+        "location": "1/418"
       },
       {
         "subject": "Тестирование программного обеспечения",
@@ -683,11 +595,7 @@
           "name": "Бочаров Дмитрий Александрович",
           "url": "http://www.sstu.ru/teachers/39644-bocharov_dmitriy_aleksandrovich.html"
         },
-        "location": {
-          "_type_": "FixedLocationDto",
-          "audience": 427,
-          "building": 1
-        }
+        "location": "1/427"
       }
     ],
     "date": [
@@ -699,10 +607,10 @@
       2021,
       2,
       24,
-      1,
-      49,
-      6,
-      129853400
+      13,
+      30,
+      53,
+      176873300
     ]
   },
   {
@@ -727,11 +635,7 @@
           "name": "Филимонова Ольга Федоровна",
           "url": "http://www.sstu.ru/teachers/2428-filimonova_olga_fedorovna.html"
         },
-        "location": {
-          "_type_": "FixedLocationDto",
-          "audience": 465,
-          "building": 1
-        }
+        "location": "1/465"
       },
       {
         "subject": "Тестирование программного обеспечения",
@@ -748,11 +652,7 @@
           "name": "Бочаров Дмитрий Александрович",
           "url": "http://www.sstu.ru/teachers/39644-bocharov_dmitriy_aleksandrovich.html"
         },
-        "location": {
-          "_type_": "FixedLocationDto",
-          "audience": 464,
-          "building": 1
-        }
+        "location": "1/464"
       },
       {
         "subject": "Теория автоматов и формальных языков",
@@ -769,11 +669,7 @@
           "name": "Шульга Татьяна Эриковна",
           "url": "http://www.sstu.ru/teachers/2510-shulga_tatyana_erikovna.html"
         },
-        "location": {
-          "_type_": "FixedLocationDto",
-          "audience": 409,
-          "building": 1
-        }
+        "location": "1/409"
       }
     ],
     "date": [
@@ -785,10 +681,10 @@
       2021,
       2,
       24,
-      1,
-      49,
-      6,
-      130852900
+      13,
+      30,
+      53,
+      179872400
     ]
   },
   {
@@ -813,11 +709,7 @@
           "name": "Пчелинцева Елена Германовна",
           "url": "http://www.sstu.ru/teachers/6246-pchelinceva_elena_germanovna.html"
         },
-        "location": {
-          "_type_": "FixedLocationDto",
-          "audience": 464,
-          "building": 1
-        }
+        "location": "1/464"
       },
       {
         "subject": "Конструирование программного обеспечения",
@@ -834,11 +726,7 @@
           "name": "Бочаров Дмитрий Александрович",
           "url": "http://www.sstu.ru/teachers/39644-bocharov_dmitriy_aleksandrovich.html"
         },
-        "location": {
-          "_type_": "FixedLocationDto",
-          "audience": 464,
-          "building": 1
-        }
+        "location": "1/464"
       },
       {
         "subject": "Семантический веб",
@@ -855,11 +743,7 @@
           "name": "Вагарина Наталия Сергеевна",
           "url": "http://www.sstu.ru/teachers/1558-vagarina_nataliya_sergeevna.html"
         },
-        "location": {
-          "_type_": "FixedLocationDto",
-          "audience": 463,
-          "building": 1
-        }
+        "location": "1/463"
       }
     ],
     "date": [
@@ -871,10 +755,10 @@
       2021,
       2,
       24,
-      1,
-      49,
-      6,
-      132851300
+      13,
+      30,
+      53,
+      181870900
     ]
   },
   {
@@ -899,10 +783,7 @@
           "name": "Гордеев Игорь Владимирович",
           "url": "http://www.sstu.ru/teachers/33741-gordeev_igor_vladimirovich.html"
         },
-        "location": {
-          "_type_": "RawLocationDto",
-          "name": "СЗ-1"
-        }
+        "location": "СЗ-1"
       },
       {
         "subject": "Конструирование программного обеспечения",
@@ -919,11 +800,7 @@
           "name": "Бочаров Дмитрий Александрович",
           "url": "http://www.sstu.ru/teachers/39644-bocharov_dmitriy_aleksandrovich.html"
         },
-        "location": {
-          "_type_": "FixedLocationDto",
-          "audience": 464,
-          "building": 1
-        }
+        "location": "1/464"
       }
     ],
     "date": [
@@ -935,10 +812,10 @@
       2021,
       2,
       24,
-      1,
-      49,
-      6,
-      133851200
+      13,
+      30,
+      53,
+      182870300
     ]
   }
 ]

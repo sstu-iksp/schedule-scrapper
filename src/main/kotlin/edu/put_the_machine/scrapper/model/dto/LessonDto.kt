@@ -8,7 +8,7 @@ class LessonDto(
     val start: LocalTime,
     val end: LocalTime,
     val teacher: TeacherDto?,
-    val location: LocationDto
+    val location: String
 
 ) {
     override fun equals(other: Any?): Boolean {

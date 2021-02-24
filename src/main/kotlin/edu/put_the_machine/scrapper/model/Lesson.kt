@@ -17,8 +17,7 @@ class Lesson(
     val end: LocalTime,
     @ManyToOne
     val teacher: Teacher?,
-    @ManyToOne
-    val location: Location
+    val location: String
 ) {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

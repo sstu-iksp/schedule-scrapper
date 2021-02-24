@@ -21,7 +21,6 @@ import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.regex.Pattern;
 
 @Service
 public class SstuGroupScheduleParser implements GroupScheduleParser {
@@ -44,7 +43,7 @@ public class SstuGroupScheduleParser implements GroupScheduleParser {
 
     private Document getDocumentFromPath(String path) {
         try {
-            String htmlText = urlToPageResolver.getHtmlTextFromUrl(path);
+            String htmlText = urlToPageResolver.getBodyAsString(path);
             return Jsoup.parse(htmlText);
         } catch (IOException e) {
             throw new ParserException("Resource '" + path + "' is unavailable.", e);
@@ -114,7 +113,7 @@ public class SstuGroupScheduleParser implements GroupScheduleParser {
         String type = getTextByQueryOrThrowException(lessonElement, "div.type");
         LessonTimeInterval lessonTimeInterval = getLessonTimeInterval(lessonElement);
         TeacherDto teacher = createTeacherIfExists(lessonElement);
-        LocationDto location = createLocation(lessonElement);
+        String location = getTextByQueryOrThrowException(lessonElement, "div.aud");
 
         return new LessonDto(subject, type, lessonTimeInterval.getStart(), lessonTimeInterval.getEnd(), teacher, location);
     }
@@ -156,31 +155,6 @@ public class SstuGroupScheduleParser implements GroupScheduleParser {
         String name = teacherElement.text();
         String url = teacherElement.attr("href");
         return new TeacherDto(name, url);
-    }
-
-    private LocationDto createLocation(Element lessonElement) {
-        String rawLocation = getTextByQueryOrThrowException(lessonElement, "div.aud");
-
-        if (matchesFixedLocation(rawLocation))
-            return parseFixedLocation(rawLocation);
-
-        return new RawLocationDto(rawLocation);
-    }
-
-    private boolean matchesFixedLocation(String rawLocation) {
-        //Example: 1/418
-        String pattern = "\\d{1,2}/\\d{3}";
-        return Pattern.matches(pattern, rawLocation);
-    }
-
-    private LocationDto parseFixedLocation(String rawLocation) {
-        String[] numbers = rawLocation.split("/");
-
-        assert numbers.length == 2;
-
-        int building = Integer.parseInt(numbers[0]);
-        int audience = Integer.parseInt(numbers[1]);
-        return new FixedLocationDto(audience, building);
     }
 
     private String getTextByQueryOrThrowException(Element cell, String query) {
