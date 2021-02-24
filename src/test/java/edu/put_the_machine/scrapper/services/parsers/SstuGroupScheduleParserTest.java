@@ -2,28 +2,32 @@ package edu.put_the_machine.scrapper.services.parsers;
 
 import edu.put_the_machine.scrapper.model.dto.ScheduleDayDto;
 import edu.put_the_machine.scrapper.services.ParserServiceTest;
+import edu.put_the_machine.scrapper.services.impl.parsers.JsoupHelperImpl;
+import edu.put_the_machine.scrapper.services.impl.parsers.sstu.SstuDateTimeParser;
 import edu.put_the_machine.scrapper.services.impl.parsers.sstu.SstuGroupScheduleParser;
-import edu.put_the_machine.scrapper.services.interfaces.parser.JsoupHelper;
+import edu.put_the_machine.scrapper.services.interfaces.UrlToPageResolver;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
-import org.springframework.test.util.ReflectionTestUtils;
 
 import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.mockito.Mockito.when;
 
 public class SstuGroupScheduleParserTest extends ParserServiceTest {
-    private @Mock JsoupHelper jsoupHelper;
-    private @InjectMocks SstuGroupScheduleParser parser;
+    private @Mock UrlToPageResolver urlToPageResolver;
+    private @InjectMocks JsoupHelperImpl jsoupHelper;
+    private SstuGroupScheduleParser parser;
 
     @BeforeEach
     public void init() {
-        String universityName = "SSTU";
-        ReflectionTestUtils.setField(parser, "universityName", universityName);
+        SstuDateTimeParser dateTimeParser = new SstuDateTimeParser(jsoupHelper);
+        parser = new SstuGroupScheduleParser(jsoupHelper, dateTimeParser, "SSTU");
     }
 
     @Test
@@ -62,7 +66,7 @@ public class SstuGroupScheduleParserTest extends ParserServiceTest {
     }
 
     private void parseTest(String jsonResultPath, String rawDataPath) throws IOException {
-        when(jsoupHelper.getDocumentFromPath(rawDataPath)).thenReturn(getHtmlDocument(rawDataPath));
+        when(urlToPageResolver.getBodyAsString(rawDataPath)).thenReturn(Files.readString(Path.of(rawDataPath)));
 
         List<ScheduleDayDto> returnedScheduleDays = parser.parse(rawDataPath);
         List<ScheduleDayDto> expectedScheduleDays = getExpectedScheduleDaysFromJsonFile(jsonResultPath);

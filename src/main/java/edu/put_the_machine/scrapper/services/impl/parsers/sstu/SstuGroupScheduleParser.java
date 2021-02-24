@@ -3,7 +3,7 @@ package edu.put_the_machine.scrapper.services.impl.parsers.sstu;
 import edu.put_the_machine.scrapper.exceptions.ParserException;
 import edu.put_the_machine.scrapper.model.dto.*;
 import edu.put_the_machine.scrapper.model.parser.LessonTimeInterval;
-import edu.put_the_machine.scrapper.model.parser.RawLessonTimeInterval;
+import edu.put_the_machine.scrapper.services.interfaces.parser.DateTimeParser;
 import edu.put_the_machine.scrapper.services.interfaces.parser.GroupScheduleParser;
 import edu.put_the_machine.scrapper.services.interfaces.parser.JsoupHelper;
 import org.jetbrains.annotations.NotNull;
@@ -16,19 +16,21 @@ import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
-import java.time.LocalTime;
-import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 
 @Service
 public class SstuGroupScheduleParser implements GroupScheduleParser {
     private final JsoupHelper jsoupHelper;
-    private @Value("${parser.university.name.sstu}") String universityName;
+    private final DateTimeParser sstuDateTimeParser;
+    private final String universityName;
 
     @Autowired
-    public SstuGroupScheduleParser(JsoupHelper jsoupHelper) {
+    public SstuGroupScheduleParser(JsoupHelper jsoupHelper, DateTimeParser sstuDateTimeParser,
+                                   @Value("${parser.university.name.sstu}") String universityName) {
         this.jsoupHelper = jsoupHelper;
+        this.sstuDateTimeParser = sstuDateTimeParser;
+        this.universityName = universityName;
     }
 
     @Override
@@ -50,33 +52,11 @@ public class SstuGroupScheduleParser implements GroupScheduleParser {
         List<ScheduleDayDto> scheduleDays = new ArrayList<>();
 
         for (Element col : scheduleCols) {
-            LocalDate date = getDateByColumn(col);
+            LocalDate date = sstuDateTimeParser.getDateByColumn(col);
             Elements lessonsCells = col.select("div.rasp-table-row");
             scheduleDays.add(createNewScheduleDay(lessonsCells, date, group));
         }
         return scheduleDays;
-    }
-
-    private LocalDate getDateByColumn(Element col) throws ParserException {
-        String rawDate = getRawDate(col);
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd.MM.yyyy");
-        return LocalDate.parse(rawDate, formatter);
-    }
-
-    /**
-     *
-     * @param scheduleColumn column in schedule which represents one day
-     * @return Date string in format: dd.MM.yyyy
-     */
-    private String getRawDate(Element scheduleColumn) {
-        int currentYear = getCurrentYear();
-        Element dayInfo = scheduleColumn.select("div.rasp-table-row-header").first();
-        String monthAndDay = getTextByQueryOrThrowException(dayInfo, "div.date");
-        return monthAndDay + "." + currentYear;
-    }
-
-    private int getCurrentYear() {
-        return LocalDateTime.now().getYear();
     }
 
     private ScheduleDayDto createNewScheduleDay(Elements lessonsCells, LocalDate date, GroupDto group) {
@@ -121,7 +101,7 @@ public class SstuGroupScheduleParser implements GroupScheduleParser {
 
         String subject = parseSubgroupLessonSubject(lessonElement);
         String type = getTextByQueryOrThrowException(lessonElement, "span.type");
-        LessonTimeInterval lessonTimeInterval = getLessonTimeInterval(lessonElement);
+        LessonTimeInterval lessonTimeInterval = sstuDateTimeParser.getLessonTimeInterval(lessonElement);
 
         for (Element subLessonElement : lessonElement.select("div.subgroup-info")) {
             result.add(createSubLesson(subLessonElement, subject, type, lessonTimeInterval));
@@ -148,38 +128,11 @@ public class SstuGroupScheduleParser implements GroupScheduleParser {
     private LessonDto createLesson(Element lessonElement) {
         String subject = getTextByQueryOrThrowException(lessonElement, "div.subject");
         String type = getTextByQueryOrThrowException(lessonElement, "div.type");
-        LessonTimeInterval lessonTimeInterval = getLessonTimeInterval(lessonElement);
+        LessonTimeInterval lessonTimeInterval = sstuDateTimeParser.getLessonTimeInterval(lessonElement);
         TeacherDto teacher = createTeacherIfExists(lessonElement);
         String location = getTextByQueryOrThrowException(lessonElement, "div.aud");
 
         return new LessonDto(subject, type, lessonTimeInterval.getStart(), lessonTimeInterval.getEnd(), teacher, location);
-    }
-
-    private LessonTimeInterval getLessonTimeInterval(Element lessonElement) {
-        RawLessonTimeInterval rawLessonTimeInterval = getLessonRawTime(lessonElement);
-        LocalTime start = parseLessonTime(rawLessonTimeInterval.getStart());
-        LocalTime end = parseLessonTime(rawLessonTimeInterval.getEnd());
-        return new LessonTimeInterval(start, end);
-    }
-
-    /**
-     *
-     * @param lessonElement lesson div block
-     * @return RawLessonTimeInterval with start and end string values by format: hh:mm
-     */
-    private RawLessonTimeInterval getLessonRawTime(Element lessonElement) {
-        // Text has next format: "lessonNumber hh:mm - hh:mm".
-        // Example: "1 8:00 - 9:30"
-        String[] lessonRawTime = getTextByQueryOrThrowException(lessonElement, "div.rasp-table-inner-cell-hidden").split(" ");
-
-        assert lessonRawTime.length == 4;
-
-        return new RawLessonTimeInterval(lessonRawTime[1], lessonRawTime[3]);
-    }
-
-    private LocalTime parseLessonTime(String lessonTime) {
-        DateTimeFormatter timeFormatter = DateTimeFormatter.ofPattern("H:m");
-        return LocalTime.parse(lessonTime, timeFormatter);
     }
 
     private TeacherDto createTeacherIfExists(Element lessonElement) {

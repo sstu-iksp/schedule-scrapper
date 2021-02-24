@@ -19,12 +19,14 @@ import java.util.List;
 public class SstuScheduleParser implements ScheduleParser {
     private final JsoupHelper jsoupHelper;
     private final GroupScheduleParser sstuGroupScheduleParser;
-    private @Value("${parser.university.url.sstu}") String pathToSchedulePage;
+    private final String pathToSchedulePage;
 
     @Autowired
-    public SstuScheduleParser(JsoupHelper jsoupHelper, GroupScheduleParser sstuGroupScheduleParser) {
+    public SstuScheduleParser(JsoupHelper jsoupHelper, GroupScheduleParser sstuGroupScheduleParser,
+                              @Value("${parser.university.url.sstu}") String pathToSchedulePage) {
         this.jsoupHelper = jsoupHelper;
         this.sstuGroupScheduleParser = sstuGroupScheduleParser;
+        this.pathToSchedulePage = pathToSchedulePage;
     }
 
     @Override

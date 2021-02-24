@@ -5,6 +5,7 @@ import edu.put_the_machine.scrapper.services.interfaces.parser.JsoupHelper;
 import edu.put_the_machine.scrapper.services.interfaces.UrlToPageResolver;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
+import org.jsoup.nodes.Element;
 import org.springframework.stereotype.Service;
 
 import java.io.IOException;
@@ -27,5 +28,15 @@ public class JsoupHelperImpl implements JsoupHelper {
         } catch (IllegalArgumentException e) {
             throw new ParserException("String '" + path + "' is not a valid path.", e);
         }
+    }
+
+    @Override
+    public String getTextByQueryOrThrowException(Element cell, String query) {
+        Element element = cell.select(query).first();
+
+        if (element != null)
+            return element.text();
+
+        throw new ParserException("Wrong HTML. There is no tag by query " + query);
     }
 }

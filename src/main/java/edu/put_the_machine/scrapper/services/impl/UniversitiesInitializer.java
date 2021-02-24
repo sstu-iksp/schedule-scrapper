@@ -1,6 +1,5 @@
 package edu.put_the_machine.scrapper.services.impl;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
 import edu.put_the_machine.scrapper.model.University;
 import edu.put_the_machine.scrapper.repo.UniversityRepo;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,7 +20,7 @@ public class UniversitiesInitializer implements CommandLineRunner {
     }
 
     @Override
-    public void run(String... args) throws JsonProcessingException {
+    public void run(String... args) {
         for (String name : universitiesNames.values()) {
             saveIfNotExist(name);
         }

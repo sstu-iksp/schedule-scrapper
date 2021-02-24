@@ -8,9 +8,7 @@ import edu.put_the_machine.scrapper.services.interfaces.parser.JsoupHelper;
 import org.jetbrains.annotations.NotNull;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.mockito.InjectMocks;
 import org.mockito.Mock;
-import org.springframework.test.util.ReflectionTestUtils;
 
 import java.io.IOException;
 import java.util.Collection;
@@ -19,7 +17,6 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.*;
-import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.ArgumentMatchers.contains;
 import static org.mockito.Mockito.*;
 
@@ -28,7 +25,7 @@ public class SstuScheduleParserTest extends ParserServiceTest {
     private final String pathToSchedulePage = "src/test/recourses/parsers_tests_res/sstu/groupsPageHtml.html";
     private @Mock JsoupHelper jsoupHelper;
     private @Mock GroupScheduleParser sstuGroupScheduleParser;
-    private @InjectMocks SstuScheduleParser sstuScheduleParser;
+    private SstuScheduleParser sstuScheduleParser;
     private List<ScheduleDayDto> group0ScheduleDays;
     private List<ScheduleDayDto> group1ScheduleDays;
     private List<ScheduleDayDto> group2ScheduleDays;
@@ -49,7 +46,7 @@ public class SstuScheduleParserTest extends ParserServiceTest {
         group3ScheduleDays = getExpectedScheduleDaysFromJsonFile(jsonResultPath3);
         group4ScheduleDays = getExpectedScheduleDaysFromJsonFile(jsonResultPath4);
 
-        ReflectionTestUtils.setField(sstuScheduleParser, "pathToSchedulePage", pathToSchedulePage);
+        sstuScheduleParser = new SstuScheduleParser(jsoupHelper, sstuGroupScheduleParser, pathToSchedulePage);
     }
 
     @Test
