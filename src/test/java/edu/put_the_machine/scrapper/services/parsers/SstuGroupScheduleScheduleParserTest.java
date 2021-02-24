@@ -1,26 +1,21 @@
 package edu.put_the_machine.scrapper.services.parsers;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
-import com.fasterxml.jackson.module.kotlin.KotlinModule;
 import edu.put_the_machine.scrapper.exceptions.ParserException;
 import edu.put_the_machine.scrapper.model.dto.*;
+import edu.put_the_machine.scrapper.services.ParserServiceTest;
 import edu.put_the_machine.scrapper.services.UrlToPageResolver;
 import edu.put_the_machine.scrapper.services.impl.parsers.sstu.SstuGroupScheduleParser;
-import instruments.ObjectMapperWrapper;
-import org.jetbrains.annotations.NotNull;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
+import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 import org.springframework.test.util.ReflectionTestUtils;
 
-import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
-import java.util.Arrays;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -28,17 +23,13 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.mockito.Mockito.when;
 
 @ExtendWith({MockitoExtension.class})
-public class SstuGroupScheduleScheduleParserTest {
-    private final ObjectMapperWrapper objectMapper = new ObjectMapperWrapper(new ObjectMapper());
+public class SstuGroupScheduleScheduleParserTest extends ParserServiceTest {
     private @Mock UrlToPageResolver urlToPageResolver;
-    private SstuGroupScheduleParser parser;
+    private @InjectMocks SstuGroupScheduleParser parser;
 
     @BeforeEach
     public void init() {
-        objectMapper.registerModule(new KotlinModule());
-        objectMapper.registerModule(new JavaTimeModule());
         String universityName = "SSTU";
-        parser = new SstuGroupScheduleParser(urlToPageResolver);
         ReflectionTestUtils.setField(parser, "universityName", universityName);
     }
 
@@ -51,10 +42,10 @@ public class SstuGroupScheduleScheduleParserTest {
     public void parseGroup0() throws IOException {
         String jsonResultPath = "src/test/recourses/parsers_tests_res/sstu/group0/sstuGroup0ScheduleJson.json";
         String rawDataPath = "src/test/recourses/parsers_tests_res/sstu/group0/sstuGroup0Schedule.html";
-        when(urlToPageResolver.getBodyAsString(rawDataPath)).thenReturn(Files.readString(Path.of(rawDataPath)));
+        when(urlToPageResolver.getBodyAsString(rawDataPath)).thenReturn(getFileContent(rawDataPath));
 
         List<ScheduleDayDto> returnedScheduleDays = parser.parse(rawDataPath);
-        List<ScheduleDayDto> expectedScheduleDays = getExpectedScheduleDays(jsonResultPath);
+        List<ScheduleDayDto> expectedScheduleDays = getExpectedScheduleDaysFromJsonFile(jsonResultPath);
 
         assertEquals(expectedScheduleDays, returnedScheduleDays);
     }
@@ -63,23 +54,23 @@ public class SstuGroupScheduleScheduleParserTest {
     public void parseGroup1() throws IOException {
         String jsonResultPath = "src/test/recourses/parsers_tests_res/sstu/group1/sstuGroup1ScheduleJson.json";
         String rawDataPath = "src/test/recourses/parsers_tests_res/sstu/group1/sstuGroup1Schedule.html";
-        when(urlToPageResolver.getBodyAsString(rawDataPath)).thenReturn(Files.readString(Path.of(rawDataPath)));
+        when(urlToPageResolver.getBodyAsString(rawDataPath)).thenReturn(getFileContent(rawDataPath));
 
         List<ScheduleDayDto> returnedScheduleDays = parser.parse(rawDataPath);
-        List<ScheduleDayDto> expectedScheduleDays = getExpectedScheduleDays(jsonResultPath);
+        List<ScheduleDayDto> expectedScheduleDays = getExpectedScheduleDaysFromJsonFile(jsonResultPath);
 
         assertEquals(expectedScheduleDays, returnedScheduleDays);
     }
 
+    @Test
+    public void parseGroup2() throws IOException {
+        String jsonResultPath = "src/test/recourses/parsers_tests_res/sstu/group2/sstuGroup2ScheduleJson.json";
+        String rawDataPath = "src/test/recourses/parsers_tests_res/sstu/group2/sstuGroup2Schedule.html";
+        when(urlToPageResolver.getBodyAsString(rawDataPath)).thenReturn(getFileContent(rawDataPath));
 
+        List<ScheduleDayDto> returnedScheduleDays = parser.parse(rawDataPath);
+        List<ScheduleDayDto> expectedScheduleDays = getExpectedScheduleDaysFromJsonFile(jsonResultPath);
 
-    @NotNull
-    private List<ScheduleDayDto> getExpectedScheduleDays(String jsonResultPath) {
-        return Arrays.asList(
-                objectMapper.readValue(
-                        new File(jsonResultPath),
-                        ScheduleDayDto[].class
-                )
-        );
+        assertEquals(expectedScheduleDays, returnedScheduleDays);
     }
 }

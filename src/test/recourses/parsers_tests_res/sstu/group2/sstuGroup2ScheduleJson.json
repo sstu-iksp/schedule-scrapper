@@ -1,0 +1,803 @@
+[
+  {
+    "_type_": "GroupScheduleDayDto",
+    "group": {
+      "name": "б-МХРТ-41",
+      "university": "SSTU"
+    },
+    "lessons": [
+      {
+        "subject": "Искусственный интеллект и нейрокомпьютеры",
+        "type": "(лекц)",
+        "start": [
+          9,
+          45
+        ],
+        "end": [
+          11,
+          15
+        ],
+        "teacher": {
+          "name": "Пчелинцева Светлана Вячеславовна",
+          "url": "http://www.sstu.ru/teachers/2204-pchelinceva_svetlana_vyacheslavovna.html"
+        },
+        "location": "2/322"
+      },
+      {
+        "subject": "Методы обработки сигналов",
+        "type": "(лекц)",
+        "start": [
+          11,
+          30
+        ],
+        "end": [
+          13,
+          0
+        ],
+        "teacher": {
+          "name": "Пчелинцева Светлана Вячеславовна",
+          "url": "http://www.sstu.ru/teachers/2204-pchelinceva_svetlana_vyacheslavovna.html"
+        },
+        "location": "2/322"
+      },
+      {
+        "subject": "Мобильные робототехнические системы",
+        "type": "(лекц)",
+        "start": [
+          13,
+          40
+        ],
+        "end": [
+          15,
+          10
+        ],
+        "teacher": {
+          "name": "Мусатов Вячеслав Юрьевич",
+          "url": "http://www.sstu.ru/teachers/2051-musatov_vyacheslav_yurevich.html"
+        },
+        "location": "2/321"
+      }
+    ],
+    "date": [
+      2021,
+      2,
+      22
+    ],
+    "lastCheck": [
+      2021,
+      2,
+      24,
+      16,
+      3,
+      51,
+      580552700
+    ]
+  },
+  {
+    "_type_": "GroupScheduleDayDto",
+    "group": {
+      "name": "б-МХРТ-41",
+      "university": "SSTU"
+    },
+    "lessons": [
+      {
+        "subject": "Военная подготовка",
+        "type": "(прак)",
+        "start": [
+          8,
+          0
+        ],
+        "end": [
+          9,
+          30
+        ],
+        "teacher": null,
+        "location": "ВК9"
+      },
+      {
+        "subject": "Военная подготовка",
+        "type": "(прак)",
+        "start": [
+          9,
+          45
+        ],
+        "end": [
+          11,
+          15
+        ],
+        "teacher": null,
+        "location": "ВК9"
+      },
+      {
+        "subject": "Военная подготовка",
+        "type": "(прак)",
+        "start": [
+          11,
+          30
+        ],
+        "end": [
+          13,
+          0
+        ],
+        "teacher": null,
+        "location": "ВК9"
+      }
+    ],
+    "date": [
+      2021,
+      2,
+      23
+    ],
+    "lastCheck": [
+      2021,
+      2,
+      24,
+      16,
+      3,
+      51,
+      582551300
+    ]
+  },
+  {
+    "_type_": "GroupScheduleDayDto",
+    "group": {
+      "name": "б-МХРТ-41",
+      "university": "SSTU"
+    },
+    "lessons": [
+      {
+        "subject": "Мобильные робототехнические системы",
+        "type": "(прак)",
+        "start": [
+          9,
+          45
+        ],
+        "end": [
+          11,
+          15
+        ],
+        "teacher": {
+          "name": "Мусатов Вячеслав Юрьевич",
+          "url": "http://www.sstu.ru/teachers/2051-musatov_vyacheslav_yurevich.html"
+        },
+        "location": "2/321"
+      },
+      {
+        "subject": "Параллельные и облачные вычисления",
+        "type": "(прак)",
+        "start": [
+          11,
+          30
+        ],
+        "end": [
+          13,
+          0
+        ],
+        "teacher": {
+          "name": "Грепечук Юрий Николаевич",
+          "url": "http://www.sstu.ru/teachers/41971-grepechuk_yuriy_nikolaevich.html"
+        },
+        "location": "2/322"
+      },
+      {
+        "subject": "Искусственный интеллект и нейрокомпьютеры",
+        "type": "(прак)",
+        "start": [
+          13,
+          40
+        ],
+        "end": [
+          15,
+          10
+        ],
+        "teacher": {
+          "name": "Пчелинцева Светлана Вячеславовна",
+          "url": "http://www.sstu.ru/teachers/2204-pchelinceva_svetlana_vyacheslavovna.html"
+        },
+        "location": "2/321"
+      }
+    ],
+    "date": [
+      2021,
+      2,
+      24
+    ],
+    "lastCheck": [
+      2021,
+      2,
+      24,
+      16,
+      3,
+      51,
+      584549800
+    ]
+  },
+  {
+    "_type_": "GroupScheduleDayDto",
+    "group": {
+      "name": "б-МХРТ-41",
+      "university": "SSTU"
+    },
+    "lessons": [
+      {
+        "subject": "Искусственный интеллект и нейрокомпьютеры",
+        "type": "(лекц)",
+        "start": [
+          9,
+          45
+        ],
+        "end": [
+          11,
+          15
+        ],
+        "teacher": {
+          "name": "Пчелинцева Светлана Вячеславовна",
+          "url": "http://www.sstu.ru/teachers/2204-pchelinceva_svetlana_vyacheslavovna.html"
+        },
+        "location": "2/321"
+      },
+      {
+        "subject": "Мобильные робототехнические системы",
+        "type": "(лекц)",
+        "start": [
+          11,
+          30
+        ],
+        "end": [
+          13,
+          0
+        ],
+        "teacher": {
+          "name": "Мусатов Вячеслав Юрьевич",
+          "url": "http://www.sstu.ru/teachers/2051-musatov_vyacheslav_yurevich.html"
+        },
+        "location": "2/321"
+      },
+      {
+        "subject": "Искусственный интеллект и нейрокомпьютеры",
+        "type": "(лекц)",
+        "start": [
+          13,
+          40
+        ],
+        "end": [
+          15,
+          10
+        ],
+        "teacher": {
+          "name": "Пчелинцева Светлана Вячеславовна",
+          "url": "http://www.sstu.ru/teachers/2204-pchelinceva_svetlana_vyacheslavovna.html"
+        },
+        "location": "5/322"
+      }
+    ],
+    "date": [
+      2021,
+      2,
+      25
+    ],
+    "lastCheck": [
+      2021,
+      2,
+      24,
+      16,
+      3,
+      51,
+      585549800
+    ]
+  },
+  {
+    "_type_": "GroupScheduleDayDto",
+    "group": {
+      "name": "б-МХРТ-41",
+      "university": "SSTU"
+    },
+    "lessons": [
+      {
+        "subject": "Искусственный интеллект и нейрокомпьютеры",
+        "type": "(прак)",
+        "start": [
+          11,
+          30
+        ],
+        "end": [
+          13,
+          0
+        ],
+        "teacher": {
+          "name": "Пчелинцева Светлана Вячеславовна",
+          "url": "http://www.sstu.ru/teachers/2204-pchelinceva_svetlana_vyacheslavovna.html"
+        },
+        "location": "2/322"
+      },
+      {
+        "subject": "Методы обработки сигналов",
+        "type": "(прак)",
+        "start": [
+          13,
+          40
+        ],
+        "end": [
+          15,
+          10
+        ],
+        "teacher": {
+          "name": "Пчелинцева Светлана Вячеславовна",
+          "url": "http://www.sstu.ru/teachers/2204-pchelinceva_svetlana_vyacheslavovna.html"
+        },
+        "location": "2/322"
+      }
+    ],
+    "date": [
+      2021,
+      2,
+      26
+    ],
+    "lastCheck": [
+      2021,
+      2,
+      24,
+      16,
+      3,
+      51,
+      586549000
+    ]
+  },
+  {
+    "_type_": "GroupScheduleDayDto",
+    "group": {
+      "name": "б-МХРТ-41",
+      "university": "SSTU"
+    },
+    "lessons": [
+      {
+        "subject": "Параллельные и облачные вычисления",
+        "type": "(лекц)",
+        "start": [
+          9,
+          45
+        ],
+        "end": [
+          11,
+          15
+        ],
+        "teacher": {
+          "name": "Грепечук Юрий Николаевич",
+          "url": "http://www.sstu.ru/teachers/41971-grepechuk_yuriy_nikolaevich.html"
+        },
+        "location": "2/321"
+      },
+      {
+        "subject": "Параллельные и облачные вычисления",
+        "type": "(прак)",
+        "start": [
+          11,
+          30
+        ],
+        "end": [
+          13,
+          0
+        ],
+        "teacher": {
+          "name": "Грепечук Юрий Николаевич",
+          "url": "http://www.sstu.ru/teachers/41971-grepechuk_yuriy_nikolaevich.html"
+        },
+        "location": "2/322"
+      },
+      {
+        "subject": "Параллельные и облачные вычисления",
+        "type": "(лекц)",
+        "start": [
+          13,
+          40
+        ],
+        "end": [
+          15,
+          10
+        ],
+        "teacher": {
+          "name": "Грепечук Юрий Николаевич",
+          "url": "http://www.sstu.ru/teachers/41971-grepechuk_yuriy_nikolaevich.html"
+        },
+        "location": "2/322"
+      }
+    ],
+    "date": [
+      2021,
+      2,
+      27
+    ],
+    "lastCheck": [
+      2021,
+      2,
+      24,
+      16,
+      3,
+      51,
+      588547900
+    ]
+  },
+  {
+    "_type_": "GroupScheduleDayDto",
+    "group": {
+      "name": "б-МХРТ-41",
+      "university": "SSTU"
+    },
+    "lessons": [
+      {
+        "subject": "Мобильные робототехнические системы",
+        "type": "(лекц)",
+        "start": [
+          9,
+          45
+        ],
+        "end": [
+          11,
+          15
+        ],
+        "teacher": {
+          "name": "Мусатов Вячеслав Юрьевич",
+          "url": "http://www.sstu.ru/teachers/2051-musatov_vyacheslav_yurevich.html"
+        },
+        "location": "2/322"
+      },
+      {
+        "subject": "Методы обработки сигналов",
+        "type": "(прак)",
+        "start": [
+          11,
+          30
+        ],
+        "end": [
+          13,
+          0
+        ],
+        "teacher": {
+          "name": "Пчелинцева Светлана Вячеславовна",
+          "url": "http://www.sstu.ru/teachers/2204-pchelinceva_svetlana_vyacheslavovna.html"
+        },
+        "location": "2/322"
+      },
+      {
+        "subject": "Искусственный интеллект и нейрокомпьютеры",
+        "type": "(лекц)",
+        "start": [
+          13,
+          40
+        ],
+        "end": [
+          15,
+          10
+        ],
+        "teacher": {
+          "name": "Пчелинцева Светлана Вячеславовна",
+          "url": "http://www.sstu.ru/teachers/2204-pchelinceva_svetlana_vyacheslavovna.html"
+        },
+        "location": "2/322"
+      }
+    ],
+    "date": [
+      2021,
+      3,
+      1
+    ],
+    "lastCheck": [
+      2021,
+      2,
+      24,
+      16,
+      3,
+      51,
+      589547300
+    ]
+  },
+  {
+    "_type_": "GroupScheduleDayDto",
+    "group": {
+      "name": "б-МХРТ-41",
+      "university": "SSTU"
+    },
+    "lessons": [
+      {
+        "subject": "Военная подготовка",
+        "type": "(прак)",
+        "start": [
+          8,
+          0
+        ],
+        "end": [
+          9,
+          30
+        ],
+        "teacher": null,
+        "location": "ВК9"
+      },
+      {
+        "subject": "Военная подготовка",
+        "type": "(прак)",
+        "start": [
+          9,
+          45
+        ],
+        "end": [
+          11,
+          15
+        ],
+        "teacher": null,
+        "location": "ВК9"
+      },
+      {
+        "subject": "Военная подготовка",
+        "type": "(прак)",
+        "start": [
+          11,
+          30
+        ],
+        "end": [
+          13,
+          0
+        ],
+        "teacher": null,
+        "location": "ВК9"
+      }
+    ],
+    "date": [
+      2021,
+      3,
+      2
+    ],
+    "lastCheck": [
+      2021,
+      2,
+      24,
+      16,
+      3,
+      51,
+      590546800
+    ]
+  },
+  {
+    "_type_": "GroupScheduleDayDto",
+    "group": {
+      "name": "б-МХРТ-41",
+      "university": "SSTU"
+    },
+    "lessons": [],
+    "date": [
+      2021,
+      3,
+      3
+    ],
+    "lastCheck": [
+      2021,
+      2,
+      24,
+      16,
+      3,
+      51,
+      590546800
+    ]
+  },
+  {
+    "_type_": "GroupScheduleDayDto",
+    "group": {
+      "name": "б-МХРТ-41",
+      "university": "SSTU"
+    },
+    "lessons": [
+      {
+        "subject": "Мобильные робототехнические системы",
+        "type": "(прак)",
+        "start": [
+          8,
+          0
+        ],
+        "end": [
+          9,
+          30
+        ],
+        "teacher": {
+          "name": "Мусатов Вячеслав Юрьевич",
+          "url": "http://www.sstu.ru/teachers/2051-musatov_vyacheslav_yurevich.html"
+        },
+        "location": "2/321"
+      },
+      {
+        "subject": "Искусственный интеллект и нейрокомпьютеры",
+        "type": "(прак)",
+        "start": [
+          9,
+          45
+        ],
+        "end": [
+          11,
+          15
+        ],
+        "teacher": {
+          "name": "Пчелинцева Светлана Вячеславовна",
+          "url": "http://www.sstu.ru/teachers/2204-pchelinceva_svetlana_vyacheslavovna.html"
+        },
+        "location": "2/321"
+      },
+      {
+        "subject": "Искусственный интеллект и нейрокомпьютеры",
+        "type": "(прак)",
+        "start": [
+          11,
+          30
+        ],
+        "end": [
+          13,
+          0
+        ],
+        "teacher": {
+          "name": "Пчелинцева Светлана Вячеславовна",
+          "url": "http://www.sstu.ru/teachers/2204-pchelinceva_svetlana_vyacheslavovna.html"
+        },
+        "location": "2/321"
+      }
+    ],
+    "date": [
+      2021,
+      3,
+      4
+    ],
+    "lastCheck": [
+      2021,
+      2,
+      24,
+      16,
+      3,
+      51,
+      591545900
+    ]
+  },
+  {
+    "_type_": "GroupScheduleDayDto",
+    "group": {
+      "name": "б-МХРТ-41",
+      "university": "SSTU"
+    },
+    "lessons": [
+      {
+        "subject": "Методы обработки сигналов",
+        "type": "(лекц)",
+        "start": [
+          11,
+          30
+        ],
+        "end": [
+          13,
+          0
+        ],
+        "teacher": {
+          "name": "Пчелинцева Светлана Вячеславовна",
+          "url": "http://www.sstu.ru/teachers/2204-pchelinceva_svetlana_vyacheslavovna.html"
+        },
+        "location": "2/322"
+      },
+      {
+        "subject": "Мобильные робототехнические системы",
+        "type": "(лекц)",
+        "start": [
+          13,
+          40
+        ],
+        "end": [
+          15,
+          10
+        ],
+        "teacher": {
+          "name": "Мусатов Вячеслав Юрьевич",
+          "url": "http://www.sstu.ru/teachers/2051-musatov_vyacheslav_yurevich.html"
+        },
+        "location": "2/322"
+      }
+    ],
+    "date": [
+      2021,
+      3,
+      5
+    ],
+    "lastCheck": [
+      2021,
+      2,
+      24,
+      16,
+      3,
+      51,
+      592545900
+    ]
+  },
+  {
+    "_type_": "GroupScheduleDayDto",
+    "group": {
+      "name": "б-МХРТ-41",
+      "university": "SSTU"
+    },
+    "lessons": [
+      {
+        "subject": "Параллельные и облачные вычисления",
+        "type": "(лекц)",
+        "start": [
+          8,
+          0
+        ],
+        "end": [
+          9,
+          30
+        ],
+        "teacher": {
+          "name": "Грепечук Юрий Николаевич",
+          "url": "http://www.sstu.ru/teachers/41971-grepechuk_yuriy_nikolaevich.html"
+        },
+        "location": "1/253"
+      },
+      {
+        "subject": "Параллельные и облачные вычисления",
+        "type": "(лекц)",
+        "start": [
+          9,
+          45
+        ],
+        "end": [
+          11,
+          15
+        ],
+        "teacher": {
+          "name": "Грепечук Юрий Николаевич",
+          "url": "http://www.sstu.ru/teachers/41971-grepechuk_yuriy_nikolaevich.html"
+        },
+        "location": "1/253"
+      },
+      {
+        "subject": "Параллельные и облачные вычисления",
+        "type": "(прак)",
+        "start": [
+          11,
+          30
+        ],
+        "end": [
+          13,
+          0
+        ],
+        "teacher": {
+          "name": "Грепечук Юрий Николаевич",
+          "url": "http://www.sstu.ru/teachers/41971-grepechuk_yuriy_nikolaevich.html"
+        },
+        "location": "2/321"
+      },
+      {
+        "subject": "Параллельные и облачные вычисления",
+        "type": "(прак)",
+        "start": [
+          13,
+          40
+        ],
+        "end": [
+          15,
+          10
+        ],
+        "teacher": {
+          "name": "Грепечук Юрий Николаевич",
+          "url": "http://www.sstu.ru/teachers/41971-grepechuk_yuriy_nikolaevich.html"
+        },
+        "location": "2/322"
+      }
+    ],
+    "date": [
+      2021,
+      3,
+      6
+    ],
+    "lastCheck": [
+      2021,
+      2,
+      24,
+      16,
+      3,
+      51,
+      593545300
+    ]
+  }
+]

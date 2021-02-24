@@ -15,7 +15,6 @@ public class SstuScheduleParser implements ScheduleParser {
     private final UrlToPageResolver urlToPageResolver;
     private final GroupScheduleParser sstuGroupScheduleParser;
     private @Value("${parser.university.url.sstu}") String pathToSchedulePage;
-    private @Value("${parser.university.name.sstu}") String universityName;
 
     @Autowired
     public SstuScheduleParser(UrlToPageResolver urlToPageResolver, SstuGroupScheduleParser sstuGroupScheduleParser) {
