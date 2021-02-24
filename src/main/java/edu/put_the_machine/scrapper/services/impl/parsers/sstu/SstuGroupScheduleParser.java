@@ -42,12 +42,6 @@ public class SstuGroupScheduleParser implements GroupScheduleParser {
         return getScheduleDaysFromColumns(scheduleCols, group);
     }
 
-    private GroupDto createGroup(Document document) {
-        //Format: Расписание GroupName
-        String groupName = getTextByQueryOrThrowException(document, "div.h2").substring(11);
-        return new GroupDto(groupName, universityName);
-    }
-
     private Document getDocumentFromPath(String path) {
         try {
             String htmlText = urlToPageResolver.getHtmlTextFromUrl(path);
@@ -59,6 +53,12 @@ public class SstuGroupScheduleParser implements GroupScheduleParser {
         }
     }
 
+    private GroupDto createGroup(Document document) {
+        //Format: Расписание GroupName
+        String groupName = getTextByQueryOrThrowException(document, "div.h2").substring(11);
+        return new GroupDto(groupName, universityName);
+    }
+
     private List<ScheduleDayDto> getScheduleDaysFromColumns(Elements scheduleCols, GroupDto group) {
         List<ScheduleDayDto> scheduleDays = new ArrayList<>();
 
@@ -68,6 +68,28 @@ public class SstuGroupScheduleParser implements GroupScheduleParser {
             scheduleDays.add(createNewScheduleDay(lessonsCells, date, group));
         }
         return scheduleDays;
+    }
+
+    private LocalDate getDateByColumn(Element col) throws ParserException {
+        String rawDate = getRawDate(col);
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd.MM.yyyy");
+        return LocalDate.parse(rawDate, formatter);
+    }
+
+    /**
+     *
+     * @param scheduleColumn column in schedule which represents one day
+     * @return Date string in format: dd.MM.yyyy
+     */
+    private String getRawDate(Element scheduleColumn) {
+        int currentYear = getCurrentYear();
+        Element dayInfo = scheduleColumn.select("div.rasp-table-row-header").first();
+        String monthAndDay = getTextByQueryOrThrowException(dayInfo, "div.date");
+        return monthAndDay + "." + currentYear;
+    }
+
+    private int getCurrentYear() {
+        return LocalDateTime.now().getYear();
     }
 
     private ScheduleDayDto createNewScheduleDay(Elements lessonsCells, LocalDate date, GroupDto group) {
@@ -107,7 +129,7 @@ public class SstuGroupScheduleParser implements GroupScheduleParser {
     /**
      *
      * @param lessonElement lesson div block
-     * @return RawLessonTimeInterval with start and end string values with format: hh:mm
+     * @return RawLessonTimeInterval with start and end string values by format: hh:mm
      */
     private RawLessonTimeInterval getLessonRawTime(Element lessonElement) {
         // Text has next format: "lessonNumber hh:mm - hh:mm".
@@ -168,22 +190,5 @@ public class SstuGroupScheduleParser implements GroupScheduleParser {
             return element.text();
 
         throw new ParserException("Wrong HTML. There is not tag by query " + query);
-    }
-
-    private LocalDate getDateByColumn(Element col) throws ParserException {
-        String rawDate = getRawDate(col);
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd.MM.yyyy");
-        return LocalDate.parse(rawDate, formatter);
-    }
-
-    private String getRawDate(Element col) {
-        int currentYear = getCurrentYear();
-        Element dayInfo = col.select("div.rasp-table-row-header").first();
-        String monthAndDay = dayInfo.select("div.date").text();
-        return monthAndDay + "." + currentYear;
-    }
-
-    private int getCurrentYear() {
-        return LocalDateTime.now().getYear();
     }
 }
