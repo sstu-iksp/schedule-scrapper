@@ -13,6 +13,7 @@ class Lesson(
     val subject: String,
     val type: String,
     val start: LocalTime,
+    //TODO: change 'end' name to 'finish' after ScheduleParser branch merge
     @Column(name = "`end`")
     val end: LocalTime,
     @ManyToOne

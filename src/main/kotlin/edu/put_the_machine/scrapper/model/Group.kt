@@ -6,7 +6,7 @@ import javax.persistence.GenerationType
 import javax.persistence.Id
 import javax.persistence.ManyToOne
 
-@Entity(name = "`group`")
+@Entity(name = "UniversityGroup")
 class Group(
     val name: String,
     @ManyToOne

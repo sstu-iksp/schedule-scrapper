@@ -28,6 +28,8 @@ dependencies {
     runtimeOnly("org.springframework.boot:spring-boot-devtools")
     runtimeOnly("org.postgresql:postgresql")
     testImplementation("org.junit.jupiter:junit-jupiter-api")
+    testImplementation("org.springframework.boot:spring-boot-starter-test")
+    testImplementation("org.hamcrest:hamcrest-library:2.1")
     testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine")
 }
 
