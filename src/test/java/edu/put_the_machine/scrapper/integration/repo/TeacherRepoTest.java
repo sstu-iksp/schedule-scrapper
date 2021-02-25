@@ -6,6 +6,7 @@ import edu.put_the_machine.scrapper.repo.TeacherRepo;
 import instruments.factory.interfaces.EntitiesDbFactory;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Pageable;
 
 import java.util.List;
 
@@ -25,7 +26,7 @@ public class TeacherRepoTest extends RepositoryTest {
         Teacher expectedTeacher2 = entitiesDbFactory.createTeacher("Вагарина Наталия Сергеевна", university);
         entitiesDbFactory.createTeacher("another university teacher");
 
-        List<Teacher> returnedTeachers = teacherRepo.findByUniversityId(university.getId());
+        List<Teacher> returnedTeachers = teacherRepo.findByUniversityId(university.getId(), Pageable.unpaged());
 
         assertAll(
                 () -> assertEquals( 2, returnedTeachers.size()),

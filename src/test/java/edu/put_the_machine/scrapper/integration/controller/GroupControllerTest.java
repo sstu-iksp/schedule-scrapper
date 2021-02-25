@@ -2,10 +2,8 @@ package edu.put_the_machine.scrapper.integration.controller;
 
 import edu.put_the_machine.scrapper.model.Group;
 import edu.put_the_machine.scrapper.model.University;
-import instruments.factory.interfaces.EntitiesDbFactory;
 import instruments.helper.interfaces.MockMvcHelper;
 import org.junit.jupiter.api.Test;
-import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.Arrays;
 import java.util.List;
@@ -16,23 +14,11 @@ import static org.junit.jupiter.api.Assertions.*;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 
 class GroupControllerTest extends ControllerTest {
-    @SuppressWarnings("SpringJavaInjectionPointsAutowiringInspection")
-    private @Autowired
-    EntitiesDbFactory entitiesDbFactory;
-
     @Test
     public void getById() {
         Group expectedGroup = entitiesDbFactory.createGroup("б-ПИНЖ-31");
 
-        Group returnedGroup = mockMvc.sendRequest(
-                get("/api/groups/" + expectedGroup.getId()),
-                MockMvcHelper.expectJsonAndOkStatus()
-        ).readBodyAsJsonByType(Group.class);
-
-        assertAll(
-                () -> assertNotNull(returnedGroup),
-                () -> assertEquals(expectedGroup.getName(), returnedGroup.getName())
-        );
+        getByIdTest("groups", () -> expectedGroup, expectedGroup.getId(), Group.class);
     }
 
     @Test
