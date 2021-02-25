@@ -1,8 +1,9 @@
-package edu.put_the_machine.scrapper.repo;
+package edu.put_the_machine.scrapper.integration.repo;
 
 import edu.put_the_machine.scrapper.model.Group;
 import edu.put_the_machine.scrapper.model.University;
-import instruments.factory.interfaces.UniversityDbFactory;
+import edu.put_the_machine.scrapper.repo.GroupRepo;
+import instruments.factory.interfaces.EntitiesDbFactory;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Pageable;
@@ -16,17 +17,19 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 
 class GroupRepoTest extends RepositoryTest {
-    private @Autowired GroupRepo groupRepo;
+    private @Autowired
+    GroupRepo groupRepo;
     @SuppressWarnings("SpringJavaInjectionPointsAutowiringInspection")
-    private @Autowired UniversityDbFactory universityDbFactory;
+    private @Autowired
+    EntitiesDbFactory entitiesDbFactory;
 
     @Test
     public void findByUniversityId() {
-        University universitySearchCriteria = universityDbFactory.createUniversity("SSTU");
-        University anotherUniversity = universityDbFactory.createUniversity("SGU");
-        Group expectedGroup1 = universityDbFactory.createGroup("Б-ПИНЖ-31", universitySearchCriteria);
-        Group expectedGroup2 = universityDbFactory.createGroup("Б2-ИФСТ-31", universitySearchCriteria);
-        universityDbFactory.createGroup("some SGU group", anotherUniversity);
+        University universitySearchCriteria = entitiesDbFactory.createUniversity("SSTU");
+        University anotherUniversity = entitiesDbFactory.createUniversity("SGU");
+        Group expectedGroup1 = entitiesDbFactory.createGroup("Б-ПИНЖ-31", universitySearchCriteria);
+        Group expectedGroup2 = entitiesDbFactory.createGroup("Б2-ИФСТ-31", universitySearchCriteria);
+        entitiesDbFactory.createGroup("some SGU group", anotherUniversity);
 
         List<Group> returnedGroups = groupRepo.findByUniversityId(universitySearchCriteria.getId(), Pageable.unpaged());
 

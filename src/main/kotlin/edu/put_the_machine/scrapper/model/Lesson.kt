@@ -1,7 +1,6 @@
 package edu.put_the_machine.scrapper.model
 
 import java.time.LocalTime
-import javax.persistence.Column
 import javax.persistence.Entity
 import javax.persistence.GeneratedValue
 import javax.persistence.GenerationType
@@ -13,13 +12,10 @@ class Lesson(
     val subject: String,
     val type: String,
     val start: LocalTime,
-    //TODO: change 'end' name to 'finish' after ScheduleParser branch merge
-    @Column(name = "`end`")
-    val end: LocalTime,
+    val finish: LocalTime,
     @ManyToOne
     val teacher: Teacher,
-    @ManyToOne
-    val location: Location
+    val location: String
 ) {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

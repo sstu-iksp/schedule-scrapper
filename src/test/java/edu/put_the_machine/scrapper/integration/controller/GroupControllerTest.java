@@ -1,8 +1,8 @@
-package edu.put_the_machine.scrapper.controller;
+package edu.put_the_machine.scrapper.integration.controller;
 
 import edu.put_the_machine.scrapper.model.Group;
 import edu.put_the_machine.scrapper.model.University;
-import instruments.factory.interfaces.UniversityDbFactory;
+import instruments.factory.interfaces.EntitiesDbFactory;
 import instruments.helper.interfaces.MockMvcHelper;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,11 +17,12 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 
 class GroupControllerTest extends ControllerTest {
     @SuppressWarnings("SpringJavaInjectionPointsAutowiringInspection")
-    private @Autowired UniversityDbFactory universityDbFactory;
+    private @Autowired
+    EntitiesDbFactory entitiesDbFactory;
 
     @Test
     public void getById() {
-        Group expectedGroup = universityDbFactory.createGroup("б-ПИНЖ-31");
+        Group expectedGroup = entitiesDbFactory.createGroup("б-ПИНЖ-31");
 
         Group returnedGroup = mockMvc.sendRequest(
                 get("/api/groups/" + expectedGroup.getId()),
@@ -36,12 +37,12 @@ class GroupControllerTest extends ControllerTest {
 
     @Test
     public void getByUniversityId() {
-        University university = universityDbFactory.createUniversity("SSTU");
-        Group expectedGroup1 = universityDbFactory.createGroup("б-ПИНЖ-31", university);
-        Group expectedGroup2 = universityDbFactory.createGroup("б2-ИФСТ-31", university);
-        Group expectedGroup3 = universityDbFactory.createGroup("б-ПИНЖ-11", university);
-        universityDbFactory.createGroup("another group from another university");
-        universityDbFactory.createGroup("another another group from another university");
+        University university = entitiesDbFactory.createUniversity("SSTU");
+        Group expectedGroup1 = entitiesDbFactory.createGroup("б-ПИНЖ-31", university);
+        Group expectedGroup2 = entitiesDbFactory.createGroup("б2-ИФСТ-31", university);
+        Group expectedGroup3 = entitiesDbFactory.createGroup("б-ПИНЖ-11", university);
+        entitiesDbFactory.createGroup("another group from another university");
+        entitiesDbFactory.createGroup("another another group from another university");
 
         List<Group> returnedGroups = Arrays.asList(
                 mockMvc.sendRequest(

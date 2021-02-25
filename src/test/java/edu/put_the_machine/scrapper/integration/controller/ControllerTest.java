@@ -1,4 +1,4 @@
-package edu.put_the_machine.scrapper.controller;
+package edu.put_the_machine.scrapper.integration.controller;
 
 import instruments.ObjectMapperWrapper;
 import instruments.helper.interfaces.MockMvcHelper;

@@ -1,4 +1,4 @@
-package edu.put_the_machine.scrapper.repo;
+package edu.put_the_machine.scrapper.integration.repo;
 
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabase;
