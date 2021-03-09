@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("api")
+@RequestMapping("/api")
 public class UniversityController {
     private final UniversityService universityService;
 
@@ -15,7 +15,7 @@ public class UniversityController {
         this.universityService = universityService;
     }
 
-    @GetMapping("universities")
+    @GetMapping("/universities")
     public Iterable<University> getUniversities() {
         return universityService.getUniversities();
     }

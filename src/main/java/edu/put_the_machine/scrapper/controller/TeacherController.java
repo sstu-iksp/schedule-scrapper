@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
-@RequestMapping("api")
+@RequestMapping("/api")
 public class TeacherController {
     private final TeacherService teacherService;
 
@@ -19,12 +19,12 @@ public class TeacherController {
         this.teacherService = teacherService;
     }
 
-    @GetMapping("teachers/{teacherId}")
+    @GetMapping("/teachers/{teacherId}")
     public Teacher getTeacherById(@PathVariable("teacherId") Teacher teacher) {
         return teacher;
     }
 
-    @GetMapping("universities/{universityId}/teachers")
+    @GetMapping("/universities/{universityId}/teachers")
     public List<Teacher> getTeachersByUniversity(@PathVariable("universityId") Long universityId, Pageable pageable) {
         return teacherService.getTeachersByUniversityId(universityId, pageable);
     }

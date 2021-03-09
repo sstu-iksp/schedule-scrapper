@@ -1,4 +1,4 @@
-package edu.put_the_machine.scrapper.repo;
+package edu.put_the_machine.scrapper.repository;
 
 
 import edu.put_the_machine.scrapper.model.University;
@@ -12,7 +12,8 @@ import static org.junit.jupiter.api.Assertions.*;
 @DataJpaTest
 @AutoConfigureTestDatabase(replace = AutoConfigureTestDatabase.Replace.NONE)
 public class UniversityRepoTest {
-    private @Autowired UniversityRepo universityRepo;
+    private @Autowired
+    UniversityRepository universityRepository;
 
     @Test
     public void existsByName() {
@@ -20,11 +21,11 @@ public class UniversityRepoTest {
         createUniversity(name);
         createUniversity("SGU");
 
-        assertTrue(universityRepo.existsByName(name));
+        assertTrue(universityRepository.existsByName(name));
     }
 
     private University createUniversity(String name) {
         University university = new University(name);
-        return universityRepo.save(university);
+        return universityRepository.save(university);
     }
 }

@@ -4,7 +4,7 @@ import java.time.LocalTime;
 
 public class LessonTimeInterval {
     private final LocalTime start;
-    private final  LocalTime end;
+    private final LocalTime end;
 
     public LessonTimeInterval(LocalTime start, LocalTime end) {
         this.start = start;
