@@ -14,7 +14,7 @@ class Lesson(
     val start: LocalTime,
     val finish: LocalTime,
     @ManyToOne
-    val teacher: Teacher,
+    val teacher: Teacher?,
     val location: String
 ) {
     @Id

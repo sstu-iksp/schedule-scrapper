@@ -1,10 +1,15 @@
+parser:
+    university:
+      name:
+        sstu: "Yuri Gagarin State Technical University of Saratov"
+      url:
+        sstu: "http://rasp.sstu.ru/"
 server:
   port: 8080
 spring:
   jpa:
     hibernate:
       ddl-auto: create-drop
-
     show-sql: true
   datasource:
     url: jdbc:postgresql://${DB_ADDRESS}/schedule_scrapper

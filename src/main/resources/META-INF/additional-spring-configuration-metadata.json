@@ -1,0 +1,13 @@
+{
+  "properties": [
+    {
+      "name": "parser.university.name.sstu",
+      "type": "java.lang.String",
+      "description": "The name of SSTU university."
+    },
+    {
+      "name": "parser.university.url.sstu",
+      "type": "java.lang.String",
+      "description": "The url of SSTU university schedule."
+    }
+  ] }
