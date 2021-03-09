@@ -1,7 +1,7 @@
 package edu.put_the_machine.scrapper.services.impl;
 
 import edu.put_the_machine.scrapper.model.University;
-import edu.put_the_machine.scrapper.repo.UniversityRepo;
+import edu.put_the_machine.scrapper.repository.UniversityRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Service;
@@ -10,12 +10,12 @@ import java.util.Map;
 
 @Service
 public class UniversitiesInitializer implements CommandLineRunner {
-    private final UniversityRepo universityRepo;
+    private final UniversityRepository universityRepository;
     private final Map<String, String> universitiesNames;
 
     @Autowired
-    public UniversitiesInitializer(UniversityRepo universityRepo, Map<String, String> universitiesNames) {
-        this.universityRepo = universityRepo;
+    public UniversitiesInitializer(UniversityRepository universityRepository, Map<String, String> universitiesNames) {
+        this.universityRepository = universityRepository;
         this.universitiesNames = universitiesNames;
     }
 
@@ -27,9 +27,9 @@ public class UniversitiesInitializer implements CommandLineRunner {
     }
 
     private void saveIfNotExist(String name) {
-        if (!universityRepo.existsByName(name)) {
+        if (!universityRepository.existsByName(name)) {
             University university = new University(name);
-            universityRepo.save(university);
+            universityRepository.save(university);
         }
     }
 }
