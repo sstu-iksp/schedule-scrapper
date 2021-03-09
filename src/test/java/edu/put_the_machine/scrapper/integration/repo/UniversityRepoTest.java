@@ -1,7 +1,8 @@
-package edu.put_the_machine.scrapper.repository;
+package edu.put_the_machine.scrapper.integration.repo;
 
 
 import edu.put_the_machine.scrapper.model.University;
+import edu.put_the_machine.scrapper.repository.UniversityRepository;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabase;
@@ -24,8 +25,8 @@ public class UniversityRepoTest {
         assertTrue(universityRepository.existsByName(name));
     }
 
-    private University createUniversity(String name) {
+    private void createUniversity(String name) {
         University university = new University(name);
-        return universityRepository.save(university);
+        universityRepository.save(university);
     }
 }

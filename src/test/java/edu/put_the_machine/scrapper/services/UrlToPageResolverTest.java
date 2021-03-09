@@ -7,7 +7,7 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 import org.springframework.web.client.RestTemplate;
-import edu.put_the_machine.scrapper.services.impl.UrlToPageResolverImpl;
+import edu.put_the_machine.scrapper.service.impl.UrlToPageResolverImpl;
 
 import java.io.IOException;
 import java.nio.file.Files;

@@ -1,4 +1,4 @@
-package edu.put_the_machine.scrapper.services.interfaces.parser;
+package edu.put_the_machine.scrapper.service.interfaces.parser;
 
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;

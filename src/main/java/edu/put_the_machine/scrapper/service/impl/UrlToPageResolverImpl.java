@@ -1,8 +1,8 @@
-package edu.put_the_machine.scrapper.services.impl;
+package edu.put_the_machine.scrapper.service.impl;
 
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
-import edu.put_the_machine.scrapper.services.interfaces.UrlToPageResolver;
+import edu.put_the_machine.scrapper.service.interfaces.UrlToPageResolver;
 
 @Service
 public class UrlToPageResolverImpl implements UrlToPageResolver {

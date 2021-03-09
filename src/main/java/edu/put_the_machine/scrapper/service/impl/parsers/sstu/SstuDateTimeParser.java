@@ -1,10 +1,10 @@
-package edu.put_the_machine.scrapper.services.impl.parsers.sstu;
+package edu.put_the_machine.scrapper.service.impl.parsers.sstu;
 
 import edu.put_the_machine.scrapper.exceptions.ParserException;
-import edu.put_the_machine.scrapper.model.parser.LessonTimeInterval;
-import edu.put_the_machine.scrapper.model.parser.RawLessonTimeInterval;
-import edu.put_the_machine.scrapper.services.interfaces.parser.DateTimeParser;
-import edu.put_the_machine.scrapper.services.interfaces.parser.JsoupHelper;
+import edu.put_the_machine.scrapper.model.parser_dto.LessonTimeInterval;
+import edu.put_the_machine.scrapper.model.parser_dto.RawLessonTimeInterval;
+import edu.put_the_machine.scrapper.service.interfaces.parser.DateTimeParser;
+import edu.put_the_machine.scrapper.service.interfaces.parser.JsoupHelper;
 import org.jsoup.nodes.Element;
 import org.springframework.stereotype.Service;
 
@@ -62,11 +62,11 @@ public class SstuDateTimeParser implements DateTimeParser {
     }
 
     @Override
-    public LessonTimeInterval getLessonTimeInterval(Element lessonElement) throws ParserException {
+    public LessonTimeInterval getLessonTimeInterval(Element lessonElement, LocalDate date) throws ParserException {
         RawLessonTimeInterval rawLessonTimeInterval = getLessonRawTime(lessonElement);
         LocalTime start = parseLessonTime(rawLessonTimeInterval.getStart());
         LocalTime end = parseLessonTime(rawLessonTimeInterval.getEnd());
-        return new LessonTimeInterval(start, end);
+        return new LessonTimeInterval(start, end, date);
     }
 
     /**
