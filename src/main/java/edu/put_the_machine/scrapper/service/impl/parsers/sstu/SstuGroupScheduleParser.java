@@ -1,81 +1,77 @@
-package edu.put_the_machine.scrapper.services.impl.parsers.sstu;
+package edu.put_the_machine.scrapper.service.impl.parsers.sstu;
 
 import edu.put_the_machine.scrapper.exceptions.ParserException;
 import edu.put_the_machine.scrapper.model.dto.*;
-import edu.put_the_machine.scrapper.model.parser.LessonTimeInterval;
-import edu.put_the_machine.scrapper.services.interfaces.parser.DateTimeParser;
-import edu.put_the_machine.scrapper.services.interfaces.parser.GroupScheduleParser;
-import edu.put_the_machine.scrapper.services.interfaces.parser.JsoupHelper;
+import edu.put_the_machine.scrapper.model.parser_dto.GroupLessons;
+import edu.put_the_machine.scrapper.model.parser_dto.LessonParserDto;
+import edu.put_the_machine.scrapper.model.parser_dto.LessonTimeInterval;
+import edu.put_the_machine.scrapper.model.parser_dto.TeacherParserDto;
+import edu.put_the_machine.scrapper.service.interfaces.parser.DateTimeParser;
+import edu.put_the_machine.scrapper.service.interfaces.parser.GroupScheduleParser;
+import edu.put_the_machine.scrapper.service.interfaces.parser.JsoupHelper;
 import org.jetbrains.annotations.NotNull;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
-import java.time.LocalDateTime;
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 
 @Service
 public class SstuGroupScheduleParser implements GroupScheduleParser {
     private final JsoupHelper jsoupHelper;
     private final DateTimeParser sstuDateTimeParser;
-    private final String universityName;
 
     @Autowired
-    public SstuGroupScheduleParser(JsoupHelper jsoupHelper, DateTimeParser sstuDateTimeParser,
-                                   @Value("${parser.university.name.sstu}") String universityName) {
+    public SstuGroupScheduleParser(JsoupHelper jsoupHelper, DateTimeParser sstuDateTimeParser) {
         this.jsoupHelper = jsoupHelper;
         this.sstuDateTimeParser = sstuDateTimeParser;
-        this.universityName = universityName;
     }
 
     @Override
-    public List<ScheduleDayDto> parse(String path) {
+    public GroupLessons parse(String path) {
         Document document = jsoupHelper.getDocumentFromPath(path);
         Elements scheduleCols = document.select("div.rasp-table-col");
-        GroupDto group = createGroup(document);
+        String groupName = getGroupName(document);
+        List<LessonParserDto> lessons = getLessonsFromColumns(scheduleCols);
+        LocalDate start = getLessonsStartDate(lessons);
+        LocalDate end = getLessonsEndDate(lessons);
 
-        return getScheduleDaysFromColumns(scheduleCols, group);
+        return new GroupLessons(groupName, lessons, start, end);
     }
 
-    private GroupDto createGroup(Document document) {
+    @NotNull
+    private String getGroupName(Document document) {
         //Format: Расписание GroupName
-        String groupName = getTextByQueryOrThrowException(document, "div.h2").substring(11);
-        return new GroupDto(groupName, universityName);
+        return getTextByQueryOrThrowException(document, "div.h2").substring(11);
     }
 
-    private List<ScheduleDayDto> getScheduleDaysFromColumns(Elements scheduleCols, GroupDto group) {
-        List<ScheduleDayDto> scheduleDays = new ArrayList<>();
+    private List<LessonParserDto> getLessonsFromColumns(Elements scheduleCols) {
+        List<LessonParserDto> lessons = new ArrayList<>();
 
         for (Element col : scheduleCols) {
             LocalDate date = sstuDateTimeParser.getDateByColumn(col);
             Elements lessonsCells = col.select("div.rasp-table-row");
-            scheduleDays.add(createNewScheduleDay(lessonsCells, date, group));
+            lessons.addAll(createLessons(lessonsCells, date));
         }
-        return scheduleDays;
+        return lessons;
     }
 
-    private ScheduleDayDto createNewScheduleDay(Elements lessonsCells, LocalDate date, GroupDto group) {
-        List<LessonDto> lessons = createLessonsFromCells(lessonsCells);
-
-        return new GroupScheduleDayDto(group, lessons, date, LocalDateTime.now());
-    }
-
-    private List<LessonDto> createLessonsFromCells(Elements lessonsCells) {
-        List<LessonDto> result = new ArrayList<>();
+    private List<LessonParserDto> createLessons(Elements lessonsCells, LocalDate date) {
+        List<LessonParserDto> result = new ArrayList<>();
 
         lessonsCells
                 .stream()
                 .filter(this::isNotEmpty)
                 .forEach((el) -> {
                     if (subgroupedLesson(el)) {
-                        result.addAll(createSubgroupLessons(el));
+                        result.addAll(createSubgroupLessons(el, date));
                     } else {
-                        result.add(createLesson(el));
+                        result.add(createLesson(el, date));
                     }
                 });
 
@@ -96,12 +92,12 @@ public class SstuGroupScheduleParser implements GroupScheduleParser {
         return !lessonElement.select("div.subgroup-info").isEmpty();
     }
 
-    private List<LessonDto> createSubgroupLessons(Element lessonElement) {
-        List<LessonDto> result = new ArrayList<>();
+    private List<LessonParserDto> createSubgroupLessons(Element lessonElement, LocalDate date) {
+        List<LessonParserDto> result = new ArrayList<>();
 
         String subject = parseSubgroupLessonSubject(lessonElement);
         String type = getTextByQueryOrThrowException(lessonElement, "span.type");
-        LessonTimeInterval lessonTimeInterval = sstuDateTimeParser.getLessonTimeInterval(lessonElement);
+        LessonTimeInterval lessonTimeInterval = sstuDateTimeParser.getLessonTimeInterval(lessonElement, date);
 
         for (Element subLessonElement : lessonElement.select("div.subgroup-info")) {
             result.add(createSubLesson(subLessonElement, subject, type, lessonTimeInterval));
@@ -119,23 +115,23 @@ public class SstuGroupScheduleParser implements GroupScheduleParser {
         return subject;
     }
 
-    private LessonDto createSubLesson(Element subLessonElement, String subject, String type, LessonTimeInterval lessonTimeInterval) {
-        TeacherDto teacher = createTeacherIfExists(subLessonElement);
+    private LessonParserDto createSubLesson(Element subLessonElement, String subject, String type, LessonTimeInterval lessonTimeInterval) {
+        TeacherParserDto teacher = createTeacherIfExists(subLessonElement);
         String location = getTextByQueryOrThrowException(subLessonElement, "span.aud");
-        return new LessonDto(subject, type, lessonTimeInterval.getStart(), lessonTimeInterval.getEnd(), teacher, location);
+        return new LessonParserDto(subject, type, location, teacher, lessonTimeInterval);
     }
 
-    private LessonDto createLesson(Element lessonElement) {
+    private LessonParserDto createLesson(Element lessonElement, LocalDate date) {
         String subject = getTextByQueryOrThrowException(lessonElement, "div.subject");
         String type = getTextByQueryOrThrowException(lessonElement, "div.type");
-        LessonTimeInterval lessonTimeInterval = sstuDateTimeParser.getLessonTimeInterval(lessonElement);
-        TeacherDto teacher = createTeacherIfExists(lessonElement);
+        LessonTimeInterval lessonTimeInterval = sstuDateTimeParser.getLessonTimeInterval(lessonElement, date);
+        TeacherParserDto teacher = createTeacherIfExists(lessonElement);
         String location = getTextByQueryOrThrowException(lessonElement, "div.aud");
 
-        return new LessonDto(subject, type, lessonTimeInterval.getStart(), lessonTimeInterval.getEnd(), teacher, location);
+        return new LessonParserDto(subject, type, location, teacher, lessonTimeInterval);
     }
 
-    private TeacherDto createTeacherIfExists(Element lessonElement) {
+    private TeacherParserDto createTeacherIfExists(Element lessonElement) {
         Element teacherElement = lessonElement.select("div.teacher").last();
 
         if (teacherElement == null || teacherElement.text().isBlank())
@@ -147,7 +143,8 @@ public class SstuGroupScheduleParser implements GroupScheduleParser {
         Element teacherATag = teacherElement.select("a").last();
 
         String url = (teacherATag == null) ? null : teacherATag.attr("href");
-        return new TeacherDto(name, url);
+
+        return new TeacherParserDto(name, url);
     }
 
     private String getTextByQueryOrThrowException(Element cell, String query) {
@@ -157,5 +154,21 @@ public class SstuGroupScheduleParser implements GroupScheduleParser {
             return element.text();
 
         throw new ParserException("Wrong HTML. There is no tag by query " + query);
+    }
+
+    private LocalDate getLessonsStartDate(List<LessonParserDto> lessons) {
+        return lessons
+                .stream()
+                .min(Comparator.comparing(les -> les.getLessonTimeInterval().getWhen()))
+                .map((les) -> les.getLessonTimeInterval().getWhen())
+                .orElse(null);
+    }
+
+    private LocalDate getLessonsEndDate(List<LessonParserDto> lessons) {
+        return lessons
+                .stream()
+                .max(Comparator.comparing(les -> les.getLessonTimeInterval().getWhen()))
+                .map((les) -> les.getLessonTimeInterval().getWhen())
+                .orElse(null);
     }
 }

@@ -1,9 +1,10 @@
-package edu.put_the_machine.scrapper.services.impl.parsers.sstu;
+package edu.put_the_machine.scrapper.service.impl.parsers.sstu;
 
-import edu.put_the_machine.scrapper.model.dto.ScheduleDayDto;
-import edu.put_the_machine.scrapper.services.interfaces.parser.GroupScheduleParser;
-import edu.put_the_machine.scrapper.services.interfaces.parser.JsoupHelper;
-import edu.put_the_machine.scrapper.services.interfaces.parser.ScheduleParser;
+import edu.put_the_machine.scrapper.model.parser_dto.GroupLessons;
+import edu.put_the_machine.scrapper.model.parser_dto.UniversityLessons;
+import edu.put_the_machine.scrapper.service.interfaces.parser.GroupScheduleParser;
+import edu.put_the_machine.scrapper.service.interfaces.parser.JsoupHelper;
+import edu.put_the_machine.scrapper.service.interfaces.parser.ScheduleParser;
 import org.jetbrains.annotations.NotNull;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
@@ -20,45 +21,47 @@ public class SstuScheduleParser implements ScheduleParser {
     private final JsoupHelper jsoupHelper;
     private final GroupScheduleParser sstuGroupScheduleParser;
     private final String pathToSchedulePage;
+    private final String universityName;
 
     @Autowired
     public SstuScheduleParser(JsoupHelper jsoupHelper, GroupScheduleParser sstuGroupScheduleParser,
-                              @Value("${parser.university.url.sstu}") String pathToSchedulePage) {
+                              @Value("${parser.university.url.sstu}") String pathToSchedulePage,
+                              @Value("${parser.university.name.sstu}") String universityName) {
         this.jsoupHelper = jsoupHelper;
         this.sstuGroupScheduleParser = sstuGroupScheduleParser;
         this.pathToSchedulePage = pathToSchedulePage;
+        this.universityName = universityName;
     }
 
     @Override
-    public List<ScheduleDayDto> parse() {
+    public UniversityLessons parse() {
         Document document = jsoupHelper.getDocumentFromPath(pathToSchedulePage);
         Elements blocksWithLinks = document.select("div.panel-collapse.collapse");
 
-        return parseScheduleDays(blocksWithLinks);
+        return new UniversityLessons(universityName, parseLessons(blocksWithLinks));
     }
 
     @NotNull
-    private List<ScheduleDayDto> parseScheduleDays(Elements blocksWithLinks) {
-        List<ScheduleDayDto> scheduleDays = new ArrayList<>();
-
+    private List<GroupLessons> parseLessons(Elements blocksWithLinks) {
+        List<GroupLessons> lessons = new ArrayList<>();
         for (Element blockWithLink : blocksWithLinks) {
-            scheduleDays.addAll(getBlockGroupsScheduleDays(blockWithLink));
+            lessons.addAll(getBlockGroupsLessons(blockWithLink));
         }
 
-        return scheduleDays;
+        return lessons;
     }
 
-    private List<ScheduleDayDto> getBlockGroupsScheduleDays(Element blockWithLink) {
-        List<ScheduleDayDto> scheduleDays = new ArrayList<>();
+    private List<GroupLessons> getBlockGroupsLessons(Element blockWithLink) {
+        List<GroupLessons> lessons = new ArrayList<>();
         for (Element link : blockWithLink.getElementsByTag("a")) {
             if (link.attr("href").contains("group")) {
-                scheduleDays.addAll(getGroupScheduleDays(link));
+                lessons.add(getGroupLessons(link));
             }
         }
-        return scheduleDays;
+        return lessons;
     }
 
-    private List<ScheduleDayDto> getGroupScheduleDays(Element link) {
+    private GroupLessons getGroupLessons(Element link) {
         String path = resolvePath(link.attr("href"));
         return sstuGroupScheduleParser.parse(path);
     }

@@ -1,4 +1,4 @@
-package edu.put_the_machine.scrapper.services.impl;
+package edu.put_the_machine.scrapper.service.impl;
 
 import edu.put_the_machine.scrapper.model.University;
 import edu.put_the_machine.scrapper.repository.UniversityRepository;

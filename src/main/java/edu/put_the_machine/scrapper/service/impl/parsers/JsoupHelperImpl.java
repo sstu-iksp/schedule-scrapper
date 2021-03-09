@@ -1,8 +1,8 @@
-package edu.put_the_machine.scrapper.services.impl.parsers;
+package edu.put_the_machine.scrapper.service.impl.parsers;
 
 import edu.put_the_machine.scrapper.exceptions.ParserException;
-import edu.put_the_machine.scrapper.services.interfaces.parser.JsoupHelper;
-import edu.put_the_machine.scrapper.services.interfaces.UrlToPageResolver;
+import edu.put_the_machine.scrapper.service.interfaces.parser.JsoupHelper;
+import edu.put_the_machine.scrapper.service.interfaces.UrlToPageResolver;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;

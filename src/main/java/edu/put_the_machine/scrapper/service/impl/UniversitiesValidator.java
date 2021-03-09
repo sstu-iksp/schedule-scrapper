@@ -1,4 +1,4 @@
-package edu.put_the_machine.scrapper.services.impl;
+package edu.put_the_machine.scrapper.service.impl;
 
 import edu.put_the_machine.scrapper.exceptions.PropertiesValidationException;
 import org.springframework.beans.factory.annotation.Autowired;

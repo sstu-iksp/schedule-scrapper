@@ -1,4 +1,4 @@
-package edu.put_the_machine.scrapper.model.parser;
+package edu.put_the_machine.scrapper.model.parser_dto;
 
 public class RawLessonTimeInterval {
     private final String start;

@@ -1,4 +1,4 @@
-package edu.put_the_machine.scrapper.services.interfaces;
+package edu.put_the_machine.scrapper.service.interfaces;
 
 import java.io.IOException;
 
