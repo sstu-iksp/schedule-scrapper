@@ -28,7 +28,10 @@ dependencies {
     runtimeOnly("org.springframework.boot:spring-boot-devtools")
     runtimeOnly("org.postgresql:postgresql")
     testImplementation("org.junit.jupiter:junit-jupiter-api")
+    testImplementation("org.springframework.boot:spring-boot-starter-test")
+    testImplementation("com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.9.4")
     testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine")
+
 }
 
 allOpen {
