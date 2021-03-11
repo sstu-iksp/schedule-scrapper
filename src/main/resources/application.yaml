@@ -1,3 +1,11 @@
+scrapper:
+  schedule:
+    seconds: 0
+    minutes: 0
+    hour: 18
+    month-day: "*"
+    month: "*"
+    week-day: "*"
 parser:
     university:
       name:
