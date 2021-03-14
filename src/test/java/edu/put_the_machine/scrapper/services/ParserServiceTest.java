@@ -3,7 +3,7 @@ package edu.put_the_machine.scrapper.services;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 import com.fasterxml.jackson.module.kotlin.KotlinModule;
-import edu.put_the_machine.scrapper.model.parser_dto.GroupLessons;
+import edu.put_the_machine.scrapper.model.dto.parser.dto.GroupLessons;
 import instruments.ObjectMapperWrapper;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;

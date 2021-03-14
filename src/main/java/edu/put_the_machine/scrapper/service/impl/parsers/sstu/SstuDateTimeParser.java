@@ -1,8 +1,8 @@
 package edu.put_the_machine.scrapper.service.impl.parsers.sstu;
 
 import edu.put_the_machine.scrapper.exceptions.ParserException;
-import edu.put_the_machine.scrapper.model.parser_dto.LessonTimeInterval;
-import edu.put_the_machine.scrapper.model.parser_dto.RawLessonTimeInterval;
+import edu.put_the_machine.scrapper.model.dto.parser.dto.LessonTimeInterval;
+import edu.put_the_machine.scrapper.model.dto.parser.dto.RawLessonTimeInterval;
 import edu.put_the_machine.scrapper.service.interfaces.parser.DateTimeParser;
 import edu.put_the_machine.scrapper.service.interfaces.parser.JsoupHelper;
 import org.jsoup.nodes.Element;

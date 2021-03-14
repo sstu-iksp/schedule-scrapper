@@ -1,7 +1,7 @@
 package edu.put_the_machine.scrapper.service.impl.parsers.sstu;
 
-import edu.put_the_machine.scrapper.model.parser_dto.GroupLessons;
-import edu.put_the_machine.scrapper.model.parser_dto.UniversityLessons;
+import edu.put_the_machine.scrapper.model.dto.parser.dto.GroupLessons;
+import edu.put_the_machine.scrapper.model.dto.parser.dto.UniversityLessons;
 import edu.put_the_machine.scrapper.service.interfaces.parser.GroupScheduleParser;
 import edu.put_the_machine.scrapper.service.interfaces.parser.JsoupHelper;
 import edu.put_the_machine.scrapper.service.interfaces.parser.ScheduleParser;
@@ -13,8 +13,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Service
 public class SstuScheduleParser implements ScheduleParser {
@@ -43,22 +43,16 @@ public class SstuScheduleParser implements ScheduleParser {
 
     @NotNull
     private List<GroupLessons> parseLessons(Elements blocksWithLinks) {
-        List<GroupLessons> lessons = new ArrayList<>();
-        for (Element blockWithLink : blocksWithLinks) {
-            lessons.addAll(getBlockGroupsLessons(blockWithLink));
-        }
-
-        return lessons;
+        return blocksWithLinks.stream()
+                .flatMap(block -> getBlockGroupsLessons(block).stream())
+                .collect(Collectors.toList());
     }
 
     private List<GroupLessons> getBlockGroupsLessons(Element blockWithLink) {
-        List<GroupLessons> lessons = new ArrayList<>();
-        for (Element link : blockWithLink.getElementsByTag("a")) {
-            if (link.attr("href").contains("group")) {
-                lessons.add(getGroupLessons(link));
-            }
-        }
-        return lessons;
+        return blockWithLink.getElementsByTag("a").stream()
+                .filter(link -> link.attr("href").contains("group"))
+                .map(this::getGroupLessons)
+                .collect(Collectors.toList());
     }
 
     private GroupLessons getGroupLessons(Element link) {

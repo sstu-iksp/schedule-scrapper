@@ -3,7 +3,7 @@ package edu.put_the_machine.scrapper.model
 import javax.persistence.*
 
 @Entity
-class University(
+data class University(
     @Column(unique = true)
     val name: String,
 ) {

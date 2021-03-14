@@ -9,7 +9,7 @@ import javax.persistence.Table
 
 @Entity
 @Table(name = "`group`")
-class Group(
+data class Group(
     val name: String,
     @ManyToOne
     val university: University

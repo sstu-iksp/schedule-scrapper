@@ -3,7 +3,7 @@ package edu.put_the_machine.scrapper.model
 import javax.persistence.*
 
 @Entity
-class Teacher(
+data class Teacher(
     val name: String,
     val url: String?,
     @ManyToOne

@@ -10,7 +10,7 @@ import javax.persistence.Id
 import javax.persistence.ManyToOne
 
 @Entity
-class Lesson(
+data class Lesson(
     val subject: String,
     val type: String,
     val date: LocalDate,
