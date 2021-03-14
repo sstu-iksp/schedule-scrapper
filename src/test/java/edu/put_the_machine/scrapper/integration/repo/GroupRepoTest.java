@@ -2,7 +2,7 @@ package edu.put_the_machine.scrapper.integration.repo;
 
 import edu.put_the_machine.scrapper.model.Group;
 import edu.put_the_machine.scrapper.model.University;
-import edu.put_the_machine.scrapper.repo.GroupRepo;
+import edu.put_the_machine.scrapper.repository.GroupRepository;
 import instruments.factory.interfaces.EntitiesDbFactory;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,7 +18,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class GroupRepoTest extends RepositoryTest {
     private @Autowired
-    GroupRepo groupRepo;
+    GroupRepository groupRepo;
     @SuppressWarnings("SpringJavaInjectionPointsAutowiringInspection")
     private @Autowired
     EntitiesDbFactory entitiesDbFactory;

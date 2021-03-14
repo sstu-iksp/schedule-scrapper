@@ -1,11 +1,11 @@
 package edu.put_the_machine.scrapper.services.parsers;
 
-import edu.put_the_machine.scrapper.model.dto.ScheduleDayDto;
+import edu.put_the_machine.scrapper.model.dto.parser.dto.GroupLessons;
+import edu.put_the_machine.scrapper.service.impl.parsers.sstu.SstuDateTimeParser;
 import edu.put_the_machine.scrapper.services.ParserServiceTest;
-import edu.put_the_machine.scrapper.services.impl.parsers.JsoupHelperImpl;
-import edu.put_the_machine.scrapper.services.impl.parsers.sstu.SstuDateTimeParser;
-import edu.put_the_machine.scrapper.services.impl.parsers.sstu.SstuGroupScheduleParser;
-import edu.put_the_machine.scrapper.services.interfaces.UrlToPageResolver;
+import edu.put_the_machine.scrapper.service.impl.parsers.JsoupHelperImpl;
+import edu.put_the_machine.scrapper.service.impl.parsers.sstu.SstuGroupScheduleParser;
+import edu.put_the_machine.scrapper.service.interfaces.UrlToPageResolver;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;
@@ -14,7 +14,6 @@ import org.mockito.Mock;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
-import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.mockito.Mockito.when;
@@ -27,7 +26,7 @@ public class SstuGroupScheduleParserTest extends ParserServiceTest {
     @BeforeEach
     public void init() {
         SstuDateTimeParser dateTimeParser = new SstuDateTimeParser(jsoupHelper);
-        parser = new SstuGroupScheduleParser(jsoupHelper, dateTimeParser, "SSTU");
+        parser = new SstuGroupScheduleParser(jsoupHelper, dateTimeParser);
     }
 
     @Test
@@ -68,9 +67,9 @@ public class SstuGroupScheduleParserTest extends ParserServiceTest {
     private void parseTest(String jsonResultPath, String rawDataPath) throws IOException {
         when(urlToPageResolver.getBodyAsString(rawDataPath)).thenReturn(Files.readString(Path.of(rawDataPath)));
 
-        List<ScheduleDayDto> returnedScheduleDays = parser.parse(rawDataPath);
-        List<ScheduleDayDto> expectedScheduleDays = getExpectedScheduleDaysFromJsonFile(jsonResultPath);
+        GroupLessons returnedLessons = parser.parse(rawDataPath);
+        GroupLessons expectedLessons = getExpectedScheduleDaysFromJsonFile(jsonResultPath);
 
-        assertEquals(expectedScheduleDays, returnedScheduleDays);
+        assertEquals(expectedLessons, returnedLessons);
     }
 }
