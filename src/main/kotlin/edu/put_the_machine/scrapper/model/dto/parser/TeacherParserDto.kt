@@ -1,4 +1,4 @@
-package edu.put_the_machine.scrapper.model.dto.parser.dto
+package edu.put_the_machine.scrapper.model.dto.parser
 
 data class TeacherParserDto(
     val name: String,

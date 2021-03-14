@@ -1,20 +1,20 @@
 package edu.put_the_machine.scrapper.service.impl.parsers.sstu;
 
 import edu.put_the_machine.scrapper.exceptions.ParserException;
-import edu.put_the_machine.scrapper.model.dto.parser.dto.GroupLessons;
-import edu.put_the_machine.scrapper.model.dto.parser.dto.LessonParserDto;
-import edu.put_the_machine.scrapper.model.dto.parser.dto.LessonTimeInterval;
-import edu.put_the_machine.scrapper.model.dto.parser.dto.TeacherParserDto;
+import edu.put_the_machine.scrapper.model.dto.parser.GroupLessons;
+import edu.put_the_machine.scrapper.model.dto.parser.LessonParserDto;
+import edu.put_the_machine.scrapper.model.dto.parser.LessonTimeInterval;
+import edu.put_the_machine.scrapper.model.dto.parser.TeacherParserDto;
 import edu.put_the_machine.scrapper.service.interfaces.parser.DateTimeParser;
 import edu.put_the_machine.scrapper.service.interfaces.parser.GroupScheduleParser;
 import edu.put_the_machine.scrapper.service.interfaces.parser.JsoupHelper;
+import lombok.val;
 import org.jetbrains.annotations.NotNull;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.util.comparator.Comparators;
 
 import java.time.LocalDate;
 import java.util.List;
@@ -38,16 +38,15 @@ public class SstuGroupScheduleParser implements GroupScheduleParser {
         Elements scheduleCols = document.select("div.rasp-table-col");
         String groupName = getGroupName(document);
         List<LessonParserDto> lessons = getLessonsFromColumns(scheduleCols);
-        LocalDate start = getLessonsStartDate(lessons);
-        LocalDate end = getLessonsEndDate(lessons);
 
-        return new GroupLessons(groupName, lessons, start, end);
+        return new GroupLessons(groupName, lessons);
     }
 
     @NotNull
     private String getGroupName(Document document) {
         //Format: Расписание GroupName
-        return getTextByQueryOrThrowException(document, "div.h2").substring(11);
+        val header = getTextByQueryOrThrowException(document, "div.h2");
+        return header.substring(header.lastIndexOf(" ") + 1);
     }
 
     private List<LessonParserDto> getLessonsFromColumns(Elements scheduleCols) {
@@ -149,19 +148,4 @@ public class SstuGroupScheduleParser implements GroupScheduleParser {
         throw new ParserException("Wrong HTML. There is no tag by query " + query);
     }
 
-    private LocalDate getLessonsStartDate(List<LessonParserDto> lessons) {
-        return lessons
-                .stream()
-                .map(les -> les.getLessonTimeInterval().getWhen())
-                .min(Comparators.comparable())
-                .orElse(null);
-    }
-
-    private LocalDate getLessonsEndDate(List<LessonParserDto> lessons) {
-        return lessons
-                .stream()
-                .map(les -> les.getLessonTimeInterval().getWhen())
-                .max(Comparators.comparable())
-                .orElse(null);
-    }
 }
