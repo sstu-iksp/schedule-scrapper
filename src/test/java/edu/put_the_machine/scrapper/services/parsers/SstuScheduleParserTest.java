@@ -1,7 +1,7 @@
 package edu.put_the_machine.scrapper.services.parsers;
 
-import edu.put_the_machine.scrapper.model.dto.parser.dto.GroupLessons;
-import edu.put_the_machine.scrapper.model.dto.parser.dto.UniversityLessons;
+import edu.put_the_machine.scrapper.model.dto.parser.GroupLessons;
+import edu.put_the_machine.scrapper.model.dto.parser.UniversityLessons;
 import edu.put_the_machine.scrapper.services.ParserServiceTest;
 import edu.put_the_machine.scrapper.service.impl.parsers.sstu.SstuScheduleParser;
 import edu.put_the_machine.scrapper.service.interfaces.parser.GroupScheduleParser;

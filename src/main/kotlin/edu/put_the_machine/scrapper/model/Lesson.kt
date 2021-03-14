@@ -8,6 +8,7 @@ import javax.persistence.GeneratedValue
 import javax.persistence.GenerationType
 import javax.persistence.Id
 import javax.persistence.ManyToOne
+import javax.persistence.SequenceGenerator
 
 @Entity
 data class Lesson(
@@ -20,10 +21,15 @@ data class Lesson(
     val group: Group,
     @ManyToOne
     val teacher: Teacher?,
-    val location: String,
+    val location: String?,
     val lastCheck: LocalDateTime
 ) {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @SequenceGenerator(name = GENERATOR_NAME, sequenceName = GENERATOR_NAME)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = GENERATOR_NAME)
     val id: Long? = null
+
+    companion object {
+        const val GENERATOR_NAME = "lesson_id_generator"
+    }
 }

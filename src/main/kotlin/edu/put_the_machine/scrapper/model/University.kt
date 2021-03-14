@@ -8,6 +8,11 @@ data class University(
     val name: String,
 ) {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @SequenceGenerator(name = GENERATOR_NAME, sequenceName = GENERATOR_NAME)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = GENERATOR_NAME)
     val id: Long? = null
+
+    companion object {
+        const val GENERATOR_NAME = "university_id_generator"
+    }
 }

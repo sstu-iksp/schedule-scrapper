@@ -1,7 +1,7 @@
 package edu.put_the_machine.scrapper.service.impl.parsers.sstu;
 
-import edu.put_the_machine.scrapper.model.dto.parser.dto.GroupLessons;
-import edu.put_the_machine.scrapper.model.dto.parser.dto.UniversityLessons;
+import edu.put_the_machine.scrapper.model.dto.parser.GroupLessons;
+import edu.put_the_machine.scrapper.model.dto.parser.UniversityLessons;
 import edu.put_the_machine.scrapper.service.interfaces.parser.GroupScheduleParser;
 import edu.put_the_machine.scrapper.service.interfaces.parser.JsoupHelper;
 import edu.put_the_machine.scrapper.service.interfaces.parser.ScheduleParser;
@@ -43,7 +43,7 @@ public class SstuScheduleParser implements ScheduleParser {
 
     @NotNull
     private List<GroupLessons> parseLessons(Elements blocksWithLinks) {
-        return blocksWithLinks.stream()
+        return blocksWithLinks.parallelStream()
                 .flatMap(block -> getBlockGroupsLessons(block).stream())
                 .collect(Collectors.toList());
     }

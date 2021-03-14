@@ -5,6 +5,7 @@ import javax.persistence.GeneratedValue
 import javax.persistence.GenerationType
 import javax.persistence.Id
 import javax.persistence.ManyToOne
+import javax.persistence.SequenceGenerator
 import javax.persistence.Table
 
 @Entity
@@ -15,6 +16,11 @@ data class Group(
     val university: University
 ) {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @SequenceGenerator(name = GENERATOR_NAME, sequenceName = GENERATOR_NAME)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = GENERATOR_NAME)
     val id: Long? = null
+
+    companion object {
+        const val GENERATOR_NAME = "group_id_generator"
+    }
 }

@@ -1,4 +1,4 @@
-package edu.put_the_machine.scrapper.service.impl;
+package edu.put_the_machine.scrapper.sceduler;
 
 import edu.put_the_machine.scrapper.service.interfaces.ScrapperService;
 import org.springframework.scheduling.annotation.Scheduled;

@@ -10,6 +10,11 @@ data class Teacher(
     val university: University
 ) {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @SequenceGenerator(name = GENERATOR_NAME, sequenceName = GENERATOR_NAME)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = GENERATOR_NAME)
     val id: Long? = null
+
+    companion object {
+        const val GENERATOR_NAME = "teacher_id_generator"
+    }
 }
