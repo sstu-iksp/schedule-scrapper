@@ -64,6 +64,7 @@ class UniversityScheduleResolverImpl(
             .forEach { (teacher, teacherToResolve) -> teacherService.updateUrl(teacher.id, teacherToResolve?.url) }
 
         val nonExistsTeacherDtos = teachersToResolve
+            .distinctBy { it.name }
             .filter { teacher -> !existsTeachers.map { it.name }.contains(teacher.name) }
             .map { teacher -> TeacherDto(teacher.name, teacher.url, university.id!!) }
 
