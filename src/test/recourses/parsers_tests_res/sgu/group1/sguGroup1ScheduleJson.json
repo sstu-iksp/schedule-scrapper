@@ -1,0 +1,316 @@
+{
+  "groupName" : "И-т искусств 101",
+  "lessons" : [ {
+    "subject" : "Иностранный яз.",
+    "type" : "лек.",
+    "location" : "523, корпус 12",
+    "teacher" : {
+      "name" : "Генералова Н. П.",
+      "url" : null
+    },
+    "lessonTimeInterval" : {
+      "start" : [ 8, 20 ],
+      "end" : [ 9, 50 ],
+      "date" : [ 2021, 3, 23 ]
+    }
+  }, {
+    "subject" : "Иностранный яз.",
+    "type" : "лек.",
+    "location" : "523, корпус 12",
+    "teacher" : {
+      "name" : "Генералова Н. П.",
+      "url" : null
+    },
+    "lessonTimeInterval" : {
+      "start" : [ 8, 20 ],
+      "end" : [ 9, 50 ],
+      "date" : [ 2021, 3, 30 ]
+    }
+  }, {
+    "subject" : "Прикладная физическая культура",
+    "type" : "пр.",
+    "location" : "106, корпус 16",
+    "teacher" : {
+      "name" : "Латухин С. А.",
+      "url" : "https://www.sgu.ru/person/latuhin-sergey-aleksandrovich"
+    },
+    "lessonTimeInterval" : {
+      "start" : [ 10, 0 ],
+      "end" : [ 11, 35 ],
+      "date" : [ 2021, 3, 22 ]
+    }
+  }, {
+    "subject" : "Прикладная физическая культура",
+    "type" : "пр.",
+    "location" : "106, корпус 16",
+    "teacher" : {
+      "name" : "Латухин С. А.",
+      "url" : "https://www.sgu.ru/person/latuhin-sergey-aleksandrovich"
+    },
+    "lessonTimeInterval" : {
+      "start" : [ 10, 0 ],
+      "end" : [ 11, 35 ],
+      "date" : [ 2021, 3, 29 ]
+    }
+  }, {
+    "subject" : "Психология",
+    "type" : "лек.",
+    "location" : "дистанционно",
+    "teacher" : {
+      "name" : "Тарасова Л. Е.",
+      "url" : "https://www.sgu.ru/person/tarasova-lyudmila-evgenevna"
+    },
+    "lessonTimeInterval" : {
+      "start" : [ 10, 0 ],
+      "end" : [ 11, 35 ],
+      "date" : [ 2021, 3, 27 ]
+    }
+  }, {
+    "subject" : "Психология",
+    "type" : "лек.",
+    "location" : "дистанционно",
+    "teacher" : {
+      "name" : "Тарасова Л. Е.",
+      "url" : "https://www.sgu.ru/person/tarasova-lyudmila-evgenevna"
+    },
+    "lessonTimeInterval" : {
+      "start" : [ 10, 0 ],
+      "end" : [ 11, 35 ],
+      "date" : [ 2021, 4, 3 ]
+    }
+  }, {
+    "subject" : "Основы научно-исследовательской деятельности",
+    "type" : "лек.",
+    "location" : "1, корпус 17",
+    "teacher" : {
+      "name" : "Попов Д. А.",
+      "url" : "https://www.sgu.ru/person/popov-denis-aleksandrovich"
+    },
+    "lessonTimeInterval" : {
+      "start" : [ 12, 5 ],
+      "end" : [ 13, 40 ],
+      "date" : [ 2021, 3, 22 ]
+    }
+  }, {
+    "subject" : "Основы научно-исследовательской деятельности",
+    "type" : "лек.",
+    "location" : "1, корпус 17",
+    "teacher" : {
+      "name" : "Попов Д. А.",
+      "url" : "https://www.sgu.ru/person/popov-denis-aleksandrovich"
+    },
+    "lessonTimeInterval" : {
+      "start" : [ 12, 5 ],
+      "end" : [ 13, 40 ],
+      "date" : [ 2021, 3, 29 ]
+    }
+  }, {
+    "subject" : "Хоровой класс",
+    "type" : "пр.",
+    "location" : "зал",
+    "teacher" : {
+      "name" : "Васильева Д. Н.",
+      "url" : "https://www.sgu.ru/person/vasileva-dina-nikolaevna"
+    },
+    "lessonTimeInterval" : {
+      "start" : [ 12, 5 ],
+      "end" : [ 13, 40 ],
+      "date" : [ 2021, 3, 23 ]
+    }
+  }, {
+    "subject" : "Хоровой класс",
+    "type" : "пр.",
+    "location" : "зал",
+    "teacher" : {
+      "name" : "Васильева Д. Н.",
+      "url" : "https://www.sgu.ru/person/vasileva-dina-nikolaevna"
+    },
+    "lessonTimeInterval" : {
+      "start" : [ 12, 5 ],
+      "end" : [ 13, 40 ],
+      "date" : [ 2021, 3, 30 ]
+    }
+  }, {
+    "subject" : "Безопасность жизнедеятельности",
+    "type" : "лек.",
+    "location" : "",
+    "teacher" : {
+      "name" : "Кузьмина Н. В.",
+      "url" : "https://www.sgu.ru/person/kuzmina-nina-vladimirovna"
+    },
+    "lessonTimeInterval" : {
+      "start" : [ 12, 5 ],
+      "end" : [ 13, 40 ],
+      "date" : [ 2021, 3, 26 ]
+    }
+  }, {
+    "subject" : "Безопасность жизнедеятельности",
+    "type" : "лек.",
+    "location" : "",
+    "teacher" : {
+      "name" : "Кузьмина Н. В.",
+      "url" : "https://www.sgu.ru/person/kuzmina-nina-vladimirovna"
+    },
+    "lessonTimeInterval" : {
+      "start" : [ 12, 5 ],
+      "end" : [ 13, 40 ],
+      "date" : [ 2021, 4, 2 ]
+    }
+  }, {
+    "subject" : "Иностранный яз.",
+    "type" : "пр.",
+    "location" : "6, корпус 17",
+    "teacher" : {
+      "name" : "Кузнецова Т. Г.",
+      "url" : "https://www.sgu.ru/person/kuznecova-tatyana-grigorevna"
+    },
+    "lessonTimeInterval" : {
+      "start" : [ 13, 50 ],
+      "end" : [ 15, 25 ],
+      "date" : [ 2021, 3, 23 ]
+    }
+  }, {
+    "subject" : "Иностранный яз.",
+    "type" : "пр.",
+    "location" : "6, корпус 17",
+    "teacher" : {
+      "name" : "Кузнецова Т. Г.",
+      "url" : "https://www.sgu.ru/person/kuznecova-tatyana-grigorevna"
+    },
+    "lessonTimeInterval" : {
+      "start" : [ 13, 50 ],
+      "end" : [ 15, 25 ],
+      "date" : [ 2021, 3, 30 ]
+    }
+  }, {
+    "subject" : "Основы гармонии",
+    "type" : "пр.",
+    "location" : "1, корпус 17",
+    "teacher" : {
+      "name" : "Иванова Н. А.",
+      "url" : "https://www.sgu.ru/person/ivanova-natalya-aleksandrovna"
+    },
+    "lessonTimeInterval" : {
+      "start" : [ 13, 50 ],
+      "end" : [ 15, 25 ],
+      "date" : [ 2021, 3, 24 ]
+    }
+  }, {
+    "subject" : "Основы гармонии",
+    "type" : "пр.",
+    "location" : "1, корпус 17",
+    "teacher" : {
+      "name" : "Иванова Н. А.",
+      "url" : "https://www.sgu.ru/person/ivanova-natalya-aleksandrovna"
+    },
+    "lessonTimeInterval" : {
+      "start" : [ 13, 50 ],
+      "end" : [ 15, 25 ],
+      "date" : [ 2021, 3, 31 ]
+    }
+  }, {
+    "subject" : "Хоровой класс",
+    "type" : "пр.",
+    "location" : "зал",
+    "teacher" : {
+      "name" : "Васильева Д. Н.",
+      "url" : "https://www.sgu.ru/person/vasileva-dina-nikolaevna"
+    },
+    "lessonTimeInterval" : {
+      "start" : [ 13, 50 ],
+      "end" : [ 15, 25 ],
+      "date" : [ 2021, 3, 25 ]
+    }
+  }, {
+    "subject" : "Хоровой класс",
+    "type" : "пр.",
+    "location" : "зал",
+    "teacher" : {
+      "name" : "Васильева Д. Н.",
+      "url" : "https://www.sgu.ru/person/vasileva-dina-nikolaevna"
+    },
+    "lessonTimeInterval" : {
+      "start" : [ 13, 50 ],
+      "end" : [ 15, 25 ],
+      "date" : [ 2021, 4, 1 ]
+    }
+  }, {
+    "subject" : "Философия",
+    "type" : "пр.",
+    "location" : "1, корпус 17",
+    "teacher" : {
+      "name" : "Кузнецов А. С.",
+      "url" : "https://www.sgu.ru/person/kuznecov-aleksandr-sergeevich"
+    },
+    "lessonTimeInterval" : {
+      "start" : [ 15, 35 ],
+      "end" : [ 17, 10 ],
+      "date" : [ 2021, 3, 22 ]
+    }
+  }, {
+    "subject" : "Философия",
+    "type" : "пр.",
+    "location" : "1, корпус 17",
+    "teacher" : {
+      "name" : "Кузнецов А. С.",
+      "url" : "https://www.sgu.ru/person/kuznecov-aleksandr-sergeevich"
+    },
+    "lessonTimeInterval" : {
+      "start" : [ 15, 35 ],
+      "end" : [ 17, 10 ],
+      "date" : [ 2021, 3, 29 ]
+    }
+  }, {
+    "subject" : "Психология",
+    "type" : "пр.",
+    "location" : "1, корпус 17",
+    "teacher" : {
+      "name" : "Бочарова Е. Е.",
+      "url" : "https://www.sgu.ru/person/bocharova-elena-evgenevna"
+    },
+    "lessonTimeInterval" : {
+      "start" : [ 15, 35 ],
+      "end" : [ 17, 10 ],
+      "date" : [ 2021, 3, 23 ]
+    }
+  }, {
+    "subject" : "Психология",
+    "type" : "пр.",
+    "location" : "1, корпус 17",
+    "teacher" : {
+      "name" : "Бочарова Е. Е.",
+      "url" : "https://www.sgu.ru/person/bocharova-elena-evgenevna"
+    },
+    "lessonTimeInterval" : {
+      "start" : [ 15, 35 ],
+      "end" : [ 17, 10 ],
+      "date" : [ 2021, 3, 30 ]
+    }
+  }, {
+    "subject" : "Иностранный язык",
+    "type" : "пр.",
+    "location" : "6, корпус 17",
+    "teacher" : {
+      "name" : "Воронова Е. Н.",
+      "url" : "https://www.sgu.ru/person/voronova-elena-nikolaevna"
+    },
+    "lessonTimeInterval" : {
+      "start" : [ 15, 35 ],
+      "end" : [ 17, 10 ],
+      "date" : [ 2021, 3, 26 ]
+    }
+  }, {
+    "subject" : "Иностранный язык",
+    "type" : "пр.",
+    "location" : "6, корпус 17",
+    "teacher" : {
+      "name" : "Воронова Е. Н.",
+      "url" : "https://www.sgu.ru/person/voronova-elena-nikolaevna"
+    },
+    "lessonTimeInterval" : {
+      "start" : [ 15, 35 ],
+      "end" : [ 17, 10 ],
+      "date" : [ 2021, 4, 2 ]
+    }
+  } ]
+}
