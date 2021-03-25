@@ -9,6 +9,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
+import org.springframework.test.util.ReflectionTestUtils;
 
 import java.io.IOException;
 import java.nio.file.Files;
@@ -28,7 +29,8 @@ public class SguGroupScheduleParserTest extends ParserServiceTest {
 
     @BeforeEach
     public void init() {
-        parser = new SguGroupScheduleParser(jsoupHelper, FIXED_DATE);
+        parser = new SguGroupScheduleParser(jsoupHelper);
+        ReflectionTestUtils.setField(parser, "currentDate", FIXED_DATE);
     }
 
     @Test

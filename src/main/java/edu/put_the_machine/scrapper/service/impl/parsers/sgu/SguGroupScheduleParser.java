@@ -1,6 +1,5 @@
 package edu.put_the_machine.scrapper.service.impl.parsers.sgu;
 
-import edu.put_the_machine.scrapper.exceptions.ParserException;
 import edu.put_the_machine.scrapper.model.dto.parser.GroupLessons;
 import edu.put_the_machine.scrapper.model.dto.parser.LessonParserDto;
 import edu.put_the_machine.scrapper.model.dto.parser.LessonTimeInterval;
@@ -26,20 +25,23 @@ import java.util.Locale;
 @Service
 public class SguGroupScheduleParser implements GroupScheduleParser {
     private final JsoupHelper jsoupHelper;
-    private final LocalDate currentDate;
+    private LocalDate currentDate;
 
     @Autowired
-    public SguGroupScheduleParser(JsoupHelper jsoupHelper, LocalDate currentDate) {
+    public SguGroupScheduleParser(JsoupHelper jsoupHelper) {
         this.jsoupHelper = jsoupHelper;
-        this.currentDate = currentDate;
     }
 
     @Override
     public GroupLessons parse(String path) {
+        if (currentDate == null) {
+            currentDate = LocalDate.now();
+        }
         Document document = jsoupHelper.getDocumentFromPath(path);
         Elements scheduleRows = document.select("table#schedule > tbody > tr");
         String groupName = getGroupName(document);
         List<LessonParserDto> lessons = getLessonsFromRows(scheduleRows);
+        currentDate = null;
         return new GroupLessons(groupName, lessons);
     }
 
@@ -63,7 +65,7 @@ public class SguGroupScheduleParser implements GroupScheduleParser {
 
     private List<LessonParserDto> createLessons(Element scheduleRow, LocalDate evenWeekDate, LocalDate oddWeekDate) {
         val lessons = new ArrayList<LessonParserDto>();
-        String[] time = getTextByQueryOrThrowException(scheduleRow, "th").split(" ");
+        String[] time = jsoupHelper.getTextByQueryOrThrowException(scheduleRow, "th").split(" ");
         val start = LocalTime.parse(time[0]);
         val end = LocalTime.parse(time[1]);
         Elements lessonsCells = scheduleRow.select("td");
@@ -82,14 +84,14 @@ public class SguGroupScheduleParser implements GroupScheduleParser {
 
     private List<LessonParserDto> createLessonForTwoWeeks(Element lessonElement, LessonTimeInterval evenInterval, LessonTimeInterval oddInterval) {
         val lessons = new ArrayList<LessonParserDto>();
-        String subject = getTextByQueryOrThrowException(lessonElement, "div.l-dn");
-        String type = getTextByQueryOrThrowException(lessonElement, "div.l-pr-t");
-        String week = getTextByQueryOrThrowException(lessonElement, "div.l-pr-r");
-        String location = getTextByQueryOrThrowException(lessonElement, "div.l-p");
+        String subject = jsoupHelper.getTextByQueryOrThrowException(lessonElement, "div.l-dn");
+        String type = jsoupHelper.getTextByQueryOrThrowException(lessonElement, "div.l-pr-t");
+        String week = jsoupHelper.getTextByQueryOrThrowException(lessonElement, "div.l-pr-r");
+        String location = jsoupHelper.getTextByQueryOrThrowException(lessonElement, "div.l-p");
         String teacherName, teacherURL = null;
         Element teacherEl = lessonElement.select("div.l-tn > a").first();
         if (teacherEl == null) {
-            teacherName = getTextByQueryOrThrowException(lessonElement, "div.l-tn");
+            teacherName = jsoupHelper.getTextByQueryOrThrowException(lessonElement, "div.l-tn");
         } else {
             teacherName = teacherEl.text();
             teacherURL = teacherEl.attr("href");
@@ -110,14 +112,5 @@ public class SguGroupScheduleParser implements GroupScheduleParser {
         //Format: ДНЕВНОЕ ОТДЕЛЕНИЕ: GroupName Группа
         String instituteName = document.select("div.breadcrumbs a").last().text();
         return instituteName + " " + document.select("h1.page-title").first().text().split(" ")[2];
-    }
-
-    private String getTextByQueryOrThrowException(Element cell, String query) {
-        Element element = cell.select(query).first();
-
-        if (element != null)
-            return element.text();
-
-        throw new ParserException("Wrong HTML. There is no tag by query " + query);
     }
 }
