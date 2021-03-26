@@ -5,6 +5,7 @@ import edu.put_the_machine.scrapper.model.dto.toDto
 import edu.put_the_machine.scrapper.service.LessonService
 import org.springframework.data.domain.Pageable
 import org.springframework.format.annotation.DateTimeFormat
+import org.springframework.http.MediaType
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.RequestMapping
 import org.springframework.web.bind.annotation.RequestParam
@@ -15,7 +16,7 @@ import java.util.stream.Collectors
 @RestController
 @RequestMapping("/api")
 class LessonController(private val lessonService: LessonService) {
-    @GetMapping("/lessons")
+    @GetMapping("/lessons", produces = [MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE])
     fun getLessons(
         @RequestParam(value = "universityId", required = false) universityId: Long?,
         @RequestParam(value = "teacherId", required = false) teacherId: Long?,

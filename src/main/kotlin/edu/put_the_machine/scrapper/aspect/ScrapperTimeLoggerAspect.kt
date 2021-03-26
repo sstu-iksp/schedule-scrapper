@@ -13,9 +13,10 @@ class ScrapperTimeLoggerAspect {
     private val log = LogManager.getLogger(ScrapperTimeLoggerAspect::class.java)
 
     @Around("execution(* edu.put_the_machine.scrapper.service.impl.parsers.sstu.SstuScheduleParser.parse(..))")
-    fun logSstuScheduleParseTime(joinPoint: ProceedingJoinPoint) {
+    fun logSstuScheduleParseTime(joinPoint: ProceedingJoinPoint): Any? {
         val start = System.currentTimeMillis()
-        joinPoint.proceed()
+        val result = joinPoint.proceed()
         log.info("SstuScheduleParser parse time: ${System.currentTimeMillis() - start} millis")
+        return result
     }
 }

@@ -2,6 +2,7 @@ package edu.put_the_machine.scrapper.controller;
 
 import edu.put_the_machine.scrapper.model.University;
 import edu.put_the_machine.scrapper.service.interfaces.UniversityService;
+import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -15,7 +16,7 @@ public class UniversityController {
         this.universityService = universityService;
     }
 
-    @GetMapping("/universities")
+    @GetMapping(value = "/universities", produces = {MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE})
     public Iterable<University> getUniversities() {
         return universityService.getUniversities();
     }
