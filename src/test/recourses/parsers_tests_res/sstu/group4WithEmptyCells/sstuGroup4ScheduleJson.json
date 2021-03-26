@@ -1,0 +1,1013 @@
+{
+  "groupName": "б-АТПП-21",
+  "lessons": [
+    {
+      "subject": "Иностранный язык для профессионального общения",
+      "type": "(прак)",
+      "location": "5/425",
+      "teacher": {
+        "name": "Еремеева Валентина Дмитриевна",
+        "url": "http://www.sstu.ru/teachers/33802-eremeeva_valentina_dmitrievna.html"
+      },
+      "lessonTimeInterval": {
+        "start": [
+          8,
+          0
+        ],
+        "end": [
+          9,
+          30
+        ],
+        "date": [
+          2021,
+          2,
+          22
+        ]
+      }
+    },
+    {
+      "subject": "Иностранный язык для профессионального общения",
+      "type": "(прак)",
+      "location": "5/434",
+      "teacher": {
+        "name": "Потапова Анастасия Сергеевна",
+        "url": "http://www.sstu.ru/teachers/41886-potapova_anastasiya_sergeevna.html"
+      },
+      "lessonTimeInterval": {
+        "start": [
+          8,
+          0
+        ],
+        "end": [
+          9,
+          30
+        ],
+        "date": [
+          2021,
+          2,
+          22
+        ]
+      }
+    },
+    {
+      "subject": "3D-моделирование и основы САПР",
+      "type": "(прак)",
+      "location": "4/309",
+      "teacher": {
+        "name": "Рязанов Сергей Анатольевич",
+        "url": "http://www.sstu.ru/teachers/41887-ryazanov_sergey_anatolevich.html"
+      },
+      "lessonTimeInterval": {
+        "start": [
+          9,
+          45
+        ],
+        "end": [
+          11,
+          15
+        ],
+        "date": [
+          2021,
+          2,
+          22
+        ]
+      }
+    },
+    {
+      "subject": "Игровые виды спорта (элективная дисциплина)",
+      "type": "(прак)",
+      "location": "СЗ-2",
+      "teacher": {
+        "name": "Пилюшкина Влада Леонидовна",
+        "url": "http://www.sstu.ru/teachers/36285-pilyushkina_vlada_leonidovna.html"
+      },
+      "lessonTimeInterval": {
+        "start": [
+          11,
+          30
+        ],
+        "end": [
+          13,
+          0
+        ],
+        "date": [
+          2021,
+          2,
+          22
+        ]
+      }
+    },
+    {
+      "subject": "Инжиниринг технических систем автоматизированных процессов",
+      "type": "(лекц)",
+      "location": "1/261",
+      "teacher": {
+        "name": "Добряков Владимир Анатольевич",
+        "url": "http://www.sstu.ru/teachers/1678-dobryakov_vladimir_anatolevich.html"
+      },
+      "lessonTimeInterval": {
+        "start": [
+          13,
+          40
+        ],
+        "end": [
+          15,
+          10
+        ],
+        "date": [
+          2021,
+          2,
+          22
+        ]
+      }
+    },
+    {
+      "subject": "Электротехника и электроника",
+      "type": "(лекц)",
+      "location": "1/147",
+      "teacher": {
+        "name": "Пыльская Елена Константиновна",
+        "url": "http://www.sstu.ru/teachers/2279-plskaya_elena_konstantinovna.html"
+      },
+      "lessonTimeInterval": {
+        "start": [
+          9,
+          45
+        ],
+        "end": [
+          11,
+          15
+        ],
+        "date": [
+          2021,
+          2,
+          23
+        ]
+      }
+    },
+    {
+      "subject": "Прикладная механика",
+      "type": "(лекц)",
+      "location": "1/229",
+      "teacher": {
+        "name": "Горбачев Валерий Олегович",
+        "url": "http://www.sstu.ru/teachers/25562-gorbachev_valeriy_olegovich.html"
+      },
+      "lessonTimeInterval": {
+        "start": [
+          11,
+          30
+        ],
+        "end": [
+          13,
+          0
+        ],
+        "date": [
+          2021,
+          2,
+          23
+        ]
+      }
+    },
+    {
+      "subject": "Экономика и управление производством",
+      "type": "(лекц)",
+      "location": "1/337",
+      "teacher": {
+        "name": "Плотников Денис Анатольевич",
+        "url": "http://www.sstu.ru/teachers/2165-plotnikov_denis_anatolevich.html"
+      },
+      "lessonTimeInterval": {
+        "start": [
+          13,
+          40
+        ],
+        "end": [
+          15,
+          10
+        ],
+        "date": [
+          2021,
+          2,
+          23
+        ]
+      }
+    },
+    {
+      "subject": "Русский язык как иностранный",
+      "type": "(прак)",
+      "location": "11/405",
+      "teacher": {
+        "name": "Табоякова Юлия Викторовна",
+        "url": "http://www.sstu.ru/teachers/861-taboyakova_yuliya_viktorovna.html"
+      },
+      "lessonTimeInterval": {
+        "start": [
+          15,
+          20
+        ],
+        "end": [
+          16,
+          50
+        ],
+        "date": [
+          2021,
+          2,
+          23
+        ]
+      }
+    },
+    {
+      "subject": "Военная подготовка",
+      "type": "(прак)",
+      "location": "ВК8",
+      "teacher": {
+        "name": "Сарсенгалиев Айдос Миргенгалиевич",
+        "url": null
+      },
+      "lessonTimeInterval": {
+        "start": [
+          8,
+          0
+        ],
+        "end": [
+          9,
+          30
+        ],
+        "date": [
+          2021,
+          2,
+          24
+        ]
+      }
+    },
+    {
+      "subject": "Военная подготовка",
+      "type": "(прак)",
+      "location": "ВК8",
+      "teacher": {
+        "name": "Сарсенгалиев Айдос Миргенгалиевич",
+        "url": null
+      },
+      "lessonTimeInterval": {
+        "start": [
+          9,
+          45
+        ],
+        "end": [
+          11,
+          15
+        ],
+        "date": [
+          2021,
+          2,
+          24
+        ]
+      }
+    },
+    {
+      "subject": "Военная подготовка",
+      "type": "(прак)",
+      "location": "ВК8",
+      "teacher": {
+        "name": "Сарсенгалиев Айдос Миргенгалиевич",
+        "url": null
+      },
+      "lessonTimeInterval": {
+        "start": [
+          11,
+          30
+        ],
+        "end": [
+          13,
+          0
+        ],
+        "date": [
+          2021,
+          2,
+          24
+        ]
+      }
+    },
+    {
+      "subject": "Игровые виды спорта (элективная дисциплина)",
+      "type": "(прак)",
+      "location": "СЗ-2",
+      "teacher": {
+        "name": "Пилюшкина Влада Леонидовна",
+        "url": "http://www.sstu.ru/teachers/36285-pilyushkina_vlada_leonidovna.html"
+      },
+      "lessonTimeInterval": {
+        "start": [
+          9,
+          45
+        ],
+        "end": [
+          11,
+          15
+        ],
+        "date": [
+          2021,
+          2,
+          25
+        ]
+      }
+    },
+    {
+      "subject": "Прикладная механика",
+      "type": "(прак)",
+      "location": "1/262",
+      "teacher": {
+        "name": "Горбачев Валерий Олегович",
+        "url": "http://www.sstu.ru/teachers/25562-gorbachev_valeriy_olegovich.html"
+      },
+      "lessonTimeInterval": {
+        "start": [
+          11,
+          30
+        ],
+        "end": [
+          13,
+          0
+        ],
+        "date": [
+          2021,
+          2,
+          25
+        ]
+      }
+    },
+    {
+      "subject": "Инжиниринг технических систем автоматизированных процессов",
+      "type": "(лаб)",
+      "location": "1/261",
+      "teacher": {
+        "name": "Добряков Владимир Анатольевич",
+        "url": "http://www.sstu.ru/teachers/1678-dobryakov_vladimir_anatolevich.html"
+      },
+      "lessonTimeInterval": {
+        "start": [
+          13,
+          40
+        ],
+        "end": [
+          15,
+          10
+        ],
+        "date": [
+          2021,
+          2,
+          25
+        ]
+      }
+    },
+    {
+      "subject": "Технические средства автоматизации",
+      "type": "(лекц)",
+      "location": "1/011",
+      "teacher": {
+        "name": "Добряков Владимир Анатольевич",
+        "url": "http://www.sstu.ru/teachers/1678-dobryakov_vladimir_anatolevich.html"
+      },
+      "lessonTimeInterval": {
+        "start": [
+          9,
+          45
+        ],
+        "end": [
+          11,
+          15
+        ],
+        "date": [
+          2021,
+          2,
+          26
+        ]
+      }
+    },
+    {
+      "subject": "Технические средства автоматизации",
+      "type": "(лекц)",
+      "location": "1/011",
+      "teacher": {
+        "name": "Добряков Владимир Анатольевич",
+        "url": "http://www.sstu.ru/teachers/1678-dobryakov_vladimir_anatolevich.html"
+      },
+      "lessonTimeInterval": {
+        "start": [
+          11,
+          30
+        ],
+        "end": [
+          13,
+          0
+        ],
+        "date": [
+          2021,
+          2,
+          26
+        ]
+      }
+    },
+    {
+      "subject": "Технические средства автоматизации",
+      "type": "(лаб)",
+      "location": "1/011",
+      "teacher": {
+        "name": "Добряков Владимир Анатольевич",
+        "url": "http://www.sstu.ru/teachers/1678-dobryakov_vladimir_anatolevich.html"
+      },
+      "lessonTimeInterval": {
+        "start": [
+          13,
+          40
+        ],
+        "end": [
+          15,
+          10
+        ],
+        "date": [
+          2021,
+          2,
+          26
+        ]
+      }
+    },
+    {
+      "subject": "Экономика и управление производством",
+      "type": "(прак)",
+      "location": "1/337",
+      "teacher": {
+        "name": "Плотников Денис Анатольевич",
+        "url": "http://www.sstu.ru/teachers/2165-plotnikov_denis_anatolevich.html"
+      },
+      "lessonTimeInterval": {
+        "start": [
+          8,
+          0
+        ],
+        "end": [
+          9,
+          30
+        ],
+        "date": [
+          2021,
+          2,
+          27
+        ]
+      }
+    },
+    {
+      "subject": "Математическое моделирование информационно-управляющих систем",
+      "type": "(лекц)",
+      "location": "1/003",
+      "teacher": {
+        "name": "Слесарев Сергей Валентинович",
+        "url": "http://www.sstu.ru/teachers/2300-slesarev_sergey_valentinovich.html"
+      },
+      "lessonTimeInterval": {
+        "start": [
+          9,
+          45
+        ],
+        "end": [
+          11,
+          15
+        ],
+        "date": [
+          2021,
+          2,
+          27
+        ]
+      }
+    },
+    {
+      "subject": "Математическое моделирование информационно-управляющих систем",
+      "type": "(прак)",
+      "location": "1/003",
+      "teacher": {
+        "name": "Слесарев Сергей Валентинович",
+        "url": "http://www.sstu.ru/teachers/2300-slesarev_sergey_valentinovich.html"
+      },
+      "lessonTimeInterval": {
+        "start": [
+          11,
+          30
+        ],
+        "end": [
+          13,
+          0
+        ],
+        "date": [
+          2021,
+          2,
+          27
+        ]
+      }
+    },
+    {
+      "subject": "Электротехника и электроника",
+      "type": "(прак)",
+      "location": "1/220",
+      "teacher": {
+        "name": "Сивак Антон Сергеевич",
+        "url": "http://www.sstu.ru/teachers/41888-sivak_anton_sergeevich.html"
+      },
+      "lessonTimeInterval": {
+        "start": [
+          8,
+          0
+        ],
+        "end": [
+          9,
+          30
+        ],
+        "date": [
+          2021,
+          3,
+          1
+        ]
+      }
+    },
+    {
+      "subject": "Экономика и управление производством",
+      "type": "(прак)",
+      "location": "1/337",
+      "teacher": {
+        "name": "Плотников Денис Анатольевич",
+        "url": "http://www.sstu.ru/teachers/2165-plotnikov_denis_anatolevich.html"
+      },
+      "lessonTimeInterval": {
+        "start": [
+          9,
+          45
+        ],
+        "end": [
+          11,
+          15
+        ],
+        "date": [
+          2021,
+          3,
+          1
+        ]
+      }
+    },
+    {
+      "subject": "Игровые виды спорта (элективная дисциплина)",
+      "type": "(прак)",
+      "location": "СЗ-2",
+      "teacher": {
+        "name": "Пилюшкина Влада Леонидовна",
+        "url": "http://www.sstu.ru/teachers/36285-pilyushkina_vlada_leonidovna.html"
+      },
+      "lessonTimeInterval": {
+        "start": [
+          11,
+          30
+        ],
+        "end": [
+          13,
+          0
+        ],
+        "date": [
+          2021,
+          3,
+          1
+        ]
+      }
+    },
+    {
+      "subject": "Иностранный язык для профессионального общения",
+      "type": "(прак)",
+      "location": "5/435",
+      "teacher": {
+        "name": "Потапова Анастасия Сергеевна",
+        "url": "http://www.sstu.ru/teachers/41886-potapova_anastasiya_sergeevna.html"
+      },
+      "lessonTimeInterval": {
+        "start": [
+          13,
+          40
+        ],
+        "end": [
+          15,
+          10
+        ],
+        "date": [
+          2021,
+          3,
+          1
+        ]
+      }
+    },
+    {
+      "subject": "Иностранный язык для профессионального общения",
+      "type": "(прак)",
+      "location": "5/425",
+      "teacher": {
+        "name": "Еремеева Валентина Дмитриевна",
+        "url": "http://www.sstu.ru/teachers/33802-eremeeva_valentina_dmitrievna.html"
+      },
+      "lessonTimeInterval": {
+        "start": [
+          13,
+          40
+        ],
+        "end": [
+          15,
+          10
+        ],
+        "date": [
+          2021,
+          3,
+          1
+        ]
+      }
+    },
+    {
+      "subject": "Инжиниринг технических систем автоматизированных процессов",
+      "type": "(прак)",
+      "location": "1/261",
+      "teacher": {
+        "name": "Добряков Владимир Анатольевич",
+        "url": "http://www.sstu.ru/teachers/1678-dobryakov_vladimir_anatolevich.html"
+      },
+      "lessonTimeInterval": {
+        "start": [
+          8,
+          0
+        ],
+        "end": [
+          9,
+          30
+        ],
+        "date": [
+          2021,
+          3,
+          2
+        ]
+      }
+    },
+    {
+      "subject": "Электротехника и электроника",
+      "type": "(лекц)",
+      "location": "1/220",
+      "teacher": {
+        "name": "Пыльская Елена Константиновна",
+        "url": "http://www.sstu.ru/teachers/2279-plskaya_elena_konstantinovna.html"
+      },
+      "lessonTimeInterval": {
+        "start": [
+          9,
+          45
+        ],
+        "end": [
+          11,
+          15
+        ],
+        "date": [
+          2021,
+          3,
+          2
+        ]
+      }
+    },
+    {
+      "subject": "Военная подготовка",
+      "type": "(прак)",
+      "location": "ВК8",
+      "teacher": {
+        "name": "Сарсенгалиев Айдос Миргенгалиевич",
+        "url": null
+      },
+      "lessonTimeInterval": {
+        "start": [
+          8,
+          0
+        ],
+        "end": [
+          9,
+          30
+        ],
+        "date": [
+          2021,
+          3,
+          3
+        ]
+      }
+    },
+    {
+      "subject": "Военная подготовка",
+      "type": "(прак)",
+      "location": "ВК8",
+      "teacher": {
+        "name": "Сарсенгалиев Айдос Миргенгалиевич",
+        "url": null
+      },
+      "lessonTimeInterval": {
+        "start": [
+          9,
+          45
+        ],
+        "end": [
+          11,
+          15
+        ],
+        "date": [
+          2021,
+          3,
+          3
+        ]
+      }
+    },
+    {
+      "subject": "Военная подготовка",
+      "type": "(прак)",
+      "location": "ВК8",
+      "teacher": {
+        "name": "Сарсенгалиев Айдос Миргенгалиевич",
+        "url": null
+      },
+      "lessonTimeInterval": {
+        "start": [
+          11,
+          30
+        ],
+        "end": [
+          13,
+          0
+        ],
+        "date": [
+          2021,
+          3,
+          3
+        ]
+      }
+    },
+    {
+      "subject": "Русский язык как иностранный",
+      "type": "(прак)",
+      "location": "11/405",
+      "teacher": {
+        "name": "Табоякова Юлия Викторовна",
+        "url": "http://www.sstu.ru/teachers/861-taboyakova_yuliya_viktorovna.html"
+      },
+      "lessonTimeInterval": {
+        "start": [
+          15,
+          20
+        ],
+        "end": [
+          16,
+          50
+        ],
+        "date": [
+          2021,
+          3,
+          3
+        ]
+      }
+    },
+    {
+      "subject": "Игровые виды спорта (элективная дисциплина)",
+      "type": "(прак)",
+      "location": "СЗ-2",
+      "teacher": {
+        "name": "Пилюшкина Влада Леонидовна",
+        "url": "http://www.sstu.ru/teachers/36285-pilyushkina_vlada_leonidovna.html"
+      },
+      "lessonTimeInterval": {
+        "start": [
+          9,
+          45
+        ],
+        "end": [
+          11,
+          15
+        ],
+        "date": [
+          2021,
+          3,
+          4
+        ]
+      }
+    },
+    {
+      "subject": "Прикладная механика",
+      "type": "(прак)",
+      "location": "1/259",
+      "teacher": {
+        "name": "Горбачев Валерий Олегович",
+        "url": "http://www.sstu.ru/teachers/25562-gorbachev_valeriy_olegovich.html"
+      },
+      "lessonTimeInterval": {
+        "start": [
+          11,
+          30
+        ],
+        "end": [
+          13,
+          0
+        ],
+        "date": [
+          2021,
+          3,
+          4
+        ]
+      }
+    },
+    {
+      "subject": "3D-моделирование и основы САПР",
+      "type": "(прак)",
+      "location": "4/309",
+      "teacher": {
+        "name": "Рязанов Сергей Анатольевич",
+        "url": "http://www.sstu.ru/teachers/41887-ryazanov_sergey_anatolevich.html"
+      },
+      "lessonTimeInterval": {
+        "start": [
+          13,
+          40
+        ],
+        "end": [
+          15,
+          10
+        ],
+        "date": [
+          2021,
+          3,
+          4
+        ]
+      }
+    },
+    {
+      "subject": "Технические средства автоматизации",
+      "type": "(лаб)",
+      "location": "1/011",
+      "teacher": {
+        "name": "Добряков Владимир Анатольевич",
+        "url": "http://www.sstu.ru/teachers/1678-dobryakov_vladimir_anatolevich.html"
+      },
+      "lessonTimeInterval": {
+        "start": [
+          8,
+          0
+        ],
+        "end": [
+          9,
+          30
+        ],
+        "date": [
+          2021,
+          3,
+          5
+        ]
+      }
+    },
+    {
+      "subject": "Электротехника и электроника",
+      "type": "(лаб)",
+      "location": "1/220",
+      "teacher": {
+        "name": "Сивак Антон Сергеевич",
+        "url": "http://www.sstu.ru/teachers/41888-sivak_anton_sergeevich.html"
+      },
+      "lessonTimeInterval": {
+        "start": [
+          9,
+          45
+        ],
+        "end": [
+          11,
+          15
+        ],
+        "date": [
+          2021,
+          3,
+          5
+        ]
+      }
+    },
+    {
+      "subject": "Электротехника и электроника",
+      "type": "(лаб)",
+      "location": "1/220",
+      "teacher": {
+        "name": "Сивак Антон Сергеевич",
+        "url": "http://www.sstu.ru/teachers/41888-sivak_anton_sergeevich.html"
+      },
+      "lessonTimeInterval": {
+        "start": [
+          11,
+          30
+        ],
+        "end": [
+          13,
+          0
+        ],
+        "date": [
+          2021,
+          3,
+          5
+        ]
+      }
+    },
+    {
+      "subject": "Основы технологии машиностроения",
+      "type": "(прак)",
+      "location": "Д-114",
+      "teacher": {
+        "name": "Васин Алексей Николаевич",
+        "url": "http://www.sstu.ru/teachers/1567-vasin_aleksey_nikolaevich.html"
+      },
+      "lessonTimeInterval": {
+        "start": [
+          8,
+          0
+        ],
+        "end": [
+          9,
+          30
+        ],
+        "date": [
+          2021,
+          3,
+          6
+        ]
+      }
+    },
+    {
+      "subject": "Основы технологии машиностроения",
+      "type": "(прак)",
+      "location": "Д-124",
+      "teacher": {
+        "name": "Васин Алексей Николаевич",
+        "url": "http://www.sstu.ru/teachers/1567-vasin_aleksey_nikolaevich.html"
+      },
+      "lessonTimeInterval": {
+        "start": [
+          9,
+          45
+        ],
+        "end": [
+          11,
+          15
+        ],
+        "date": [
+          2021,
+          3,
+          6
+        ]
+      }
+    },
+    {
+      "subject": "Основы технологии машиностроения",
+      "type": "(лекц)",
+      "location": "Д-120",
+      "teacher": {
+        "name": "Васин Алексей Николаевич",
+        "url": "http://www.sstu.ru/teachers/1567-vasin_aleksey_nikolaevich.html"
+      },
+      "lessonTimeInterval": {
+        "start": [
+          11,
+          30
+        ],
+        "end": [
+          13,
+          0
+        ],
+        "date": [
+          2021,
+          3,
+          6
+        ]
+      }
+    },
+    {
+      "subject": "Основы технологии машиностроения",
+      "type": "(лекц)",
+      "location": "Д-122",
+      "teacher": {
+        "name": "Васин Алексей Николаевич",
+        "url": "http://www.sstu.ru/teachers/1567-vasin_aleksey_nikolaevich.html"
+      },
+      "lessonTimeInterval": {
+        "start": [
+          13,
+          40
+        ],
+        "end": [
+          15,
+          10
+        ],
+        "date": [
+          2021,
+          3,
+          6
+        ]
+      }
+    }
+  ]
+}

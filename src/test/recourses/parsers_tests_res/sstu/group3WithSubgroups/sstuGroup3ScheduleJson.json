@@ -1,0 +1,869 @@
+{
+  "groupName": "б-АТПП-11",
+  "lessons": [
+    {
+      "subject": "Технические измерения и приборы",
+      "type": "(прак)",
+      "location": "1/261",
+      "teacher": {
+        "name": "Добряков Владимир Анатольевич",
+        "url": "http://www.sstu.ru/teachers/1678-dobryakov_vladimir_anatolevich.html"
+      },
+      "lessonTimeInterval": {
+        "start": [
+          11,
+          30
+        ],
+        "end": [
+          13,
+          0
+        ],
+        "date": [
+          2021,
+          2,
+          22
+        ]
+      }
+    },
+    {
+      "subject": "Физическая культура",
+      "type": "(прак)",
+      "location": "СЗ-1",
+      "teacher": {
+        "name": "Пилюшкина Влада Леонидовна",
+        "url": "http://www.sstu.ru/teachers/36285-pilyushkina_vlada_leonidovna.html"
+      },
+      "lessonTimeInterval": {
+        "start": [
+          13,
+          40
+        ],
+        "end": [
+          15,
+          10
+        ],
+        "date": [
+          2021,
+          2,
+          22
+        ]
+      }
+    },
+    {
+      "subject": "Правовое государство: история и современность",
+      "type": "(лекц)",
+      "location": "1/229",
+      "teacher": {
+        "name": "Кирюшкина Виктория Викторовна",
+        "url": "http://www.sstu.ru/teachers/1821-kiryushkina_viktoriya_viktorovna.html"
+      },
+      "lessonTimeInterval": {
+        "start": [
+          8,
+          0
+        ],
+        "end": [
+          9,
+          30
+        ],
+        "date": [
+          2021,
+          2,
+          23
+        ]
+      }
+    },
+    {
+      "subject": "Иностранный язык",
+      "type": "(прак)",
+      "location": "1/230",
+      "teacher": {
+        "name": "Дмитриева Александра Геннадиевна",
+        "url": "http://www.sstu.ru/teachers/36346-dmitrieva_aleksandra_gennadievna.html"
+      },
+      "lessonTimeInterval": {
+        "start": [
+          9,
+          45
+        ],
+        "end": [
+          11,
+          15
+        ],
+        "date": [
+          2021,
+          2,
+          23
+        ]
+      }
+    },
+    {
+      "subject": "Иностранный язык",
+      "type": "(прак)",
+      "location": "5/425",
+      "teacher": {
+        "name": "Герасимова Вера Александровна",
+        "url": "http://www.sstu.ru/teachers/22682-gerasimova_vera_aleksandrovna.html"
+      },
+      "lessonTimeInterval": {
+        "start": [
+          9,
+          45
+        ],
+        "end": [
+          11,
+          15
+        ],
+        "date": [
+          2021,
+          2,
+          23
+        ]
+      }
+    },
+    {
+      "subject": "Начертательная геометрия и компьютерная графика",
+      "type": "(прак)",
+      "location": "4/304",
+      "teacher": {
+        "name": "Скотникова Алла Александровна",
+        "url": "http://www.sstu.ru/teachers/22665-skotnikova_alla_aleksandrovna.html"
+      },
+      "lessonTimeInterval": {
+        "start": [
+          11,
+          30
+        ],
+        "end": [
+          13,
+          0
+        ],
+        "date": [
+          2021,
+          2,
+          23
+        ]
+      }
+    },
+    {
+      "subject": "Начертательная геометрия и компьютерная графика",
+      "type": "(лекц)",
+      "location": "4/206",
+      "teacher": {
+        "name": "Скотникова Алла Александровна",
+        "url": "http://www.sstu.ru/teachers/22665-skotnikova_alla_aleksandrovna.html"
+      },
+      "lessonTimeInterval": {
+        "start": [
+          9,
+          45
+        ],
+        "end": [
+          11,
+          15
+        ],
+        "date": [
+          2021,
+          2,
+          24
+        ]
+      }
+    },
+    {
+      "subject": "Технические измерения и приборы",
+      "type": "(лекц)",
+      "location": "1/261",
+      "teacher": {
+        "name": "Добряков Владимир Анатольевич",
+        "url": "http://www.sstu.ru/teachers/1678-dobryakov_vladimir_anatolevich.html"
+      },
+      "lessonTimeInterval": {
+        "start": [
+          11,
+          30
+        ],
+        "end": [
+          13,
+          0
+        ],
+        "date": [
+          2021,
+          2,
+          24
+        ]
+      }
+    },
+    {
+      "subject": "Физическая культура",
+      "type": "(прак)",
+      "location": "СЗ-2",
+      "teacher": {
+        "name": "Пилюшкина Влада Леонидовна",
+        "url": "http://www.sstu.ru/teachers/36285-pilyushkina_vlada_leonidovna.html"
+      },
+      "lessonTimeInterval": {
+        "start": [
+          8,
+          0
+        ],
+        "end": [
+          9,
+          30
+        ],
+        "date": [
+          2021,
+          2,
+          25
+        ]
+      }
+    },
+    {
+      "subject": "Физические процессы обработки материалов",
+      "type": "(прак)",
+      "location": "1/261",
+      "teacher": {
+        "name": "Приказчиков Сергей Яковлевич",
+        "url": "http://www.sstu.ru/teachers/2197-prikazchikov_sergey_yakovlevich.html"
+      },
+      "lessonTimeInterval": {
+        "start": [
+          9,
+          45
+        ],
+        "end": [
+          11,
+          15
+        ],
+        "date": [
+          2021,
+          2,
+          25
+        ]
+      }
+    },
+    {
+      "subject": "Материаловедение",
+      "type": "(лекц)",
+      "location": "Д-369",
+      "teacher": {
+        "name": "Мельникова Ираида Прокопьевна",
+        "url": "http://www.sstu.ru/teachers/2014-melnikova_iraida_prokopevna.html"
+      },
+      "lessonTimeInterval": {
+        "start": [
+          9,
+          45
+        ],
+        "end": [
+          11,
+          15
+        ],
+        "date": [
+          2021,
+          2,
+          26
+        ]
+      }
+    },
+    {
+      "subject": "Материаловедение",
+      "type": "(лаб)",
+      "location": "Д-369",
+      "teacher": {
+        "name": "Мельникова Ираида Прокопьевна",
+        "url": "http://www.sstu.ru/teachers/2014-melnikova_iraida_prokopevna.html"
+      },
+      "lessonTimeInterval": {
+        "start": [
+          11,
+          30
+        ],
+        "end": [
+          13,
+          0
+        ],
+        "date": [
+          2021,
+          2,
+          26
+        ]
+      }
+    },
+    {
+      "subject": "Современные проблемы автоматизации",
+      "type": "(лекц)",
+      "location": "1/253",
+      "teacher": {
+        "name": "Яковишин Александр Сергеевич",
+        "url": "http://www.sstu.ru/teachers/33790-yakovishin_aleksandr_sergeevich.html"
+      },
+      "lessonTimeInterval": {
+        "start": [
+          9,
+          45
+        ],
+        "end": [
+          11,
+          15
+        ],
+        "date": [
+          2021,
+          2,
+          27
+        ]
+      }
+    },
+    {
+      "subject": "Технические измерения и приборы",
+      "type": "(прак)",
+      "location": "1/261",
+      "teacher": {
+        "name": "Добряков Владимир Анатольевич",
+        "url": "http://www.sstu.ru/teachers/1678-dobryakov_vladimir_anatolevich.html"
+      },
+      "lessonTimeInterval": {
+        "start": [
+          11,
+          30
+        ],
+        "end": [
+          13,
+          0
+        ],
+        "date": [
+          2021,
+          2,
+          27
+        ]
+      }
+    },
+    {
+      "subject": "Иностранный язык",
+      "type": "(прак)",
+      "location": "5/433",
+      "teacher": {
+        "name": "Дмитриева Александра Геннадиевна",
+        "url": "http://www.sstu.ru/teachers/36346-dmitrieva_aleksandra_gennadievna.html"
+      },
+      "lessonTimeInterval": {
+        "start": [
+          13,
+          40
+        ],
+        "end": [
+          15,
+          10
+        ],
+        "date": [
+          2021,
+          2,
+          27
+        ]
+      }
+    },
+    {
+      "subject": "Иностранный язык",
+      "type": "(прак)",
+      "location": "5/425",
+      "teacher": {
+        "name": "Герасимова Вера Александровна",
+        "url": "http://www.sstu.ru/teachers/22682-gerasimova_vera_aleksandrovna.html"
+      },
+      "lessonTimeInterval": {
+        "start": [
+          13,
+          40
+        ],
+        "end": [
+          15,
+          10
+        ],
+        "date": [
+          2021,
+          2,
+          27
+        ]
+      }
+    },
+    {
+      "subject": "Правовое государство: история и современность",
+      "type": "(прак)",
+      "location": "1/337",
+      "teacher": {
+        "name": "Кирюшкина Виктория Викторовна",
+        "url": "http://www.sstu.ru/teachers/1821-kiryushkina_viktoriya_viktorovna.html"
+      },
+      "lessonTimeInterval": {
+        "start": [
+          8,
+          0
+        ],
+        "end": [
+          9,
+          30
+        ],
+        "date": [
+          2021,
+          3,
+          1
+        ]
+      }
+    },
+    {
+      "subject": "Физические процессы обработки материалов",
+      "type": "(лекц)",
+      "location": "1/261",
+      "teacher": {
+        "name": "Приказчиков Сергей Яковлевич",
+        "url": "http://www.sstu.ru/teachers/2197-prikazchikov_sergey_yakovlevich.html"
+      },
+      "lessonTimeInterval": {
+        "start": [
+          9,
+          45
+        ],
+        "end": [
+          11,
+          15
+        ],
+        "date": [
+          2021,
+          3,
+          1
+        ]
+      }
+    },
+    {
+      "subject": "Физика",
+      "type": "(лекц)",
+      "location": "1/278",
+      "teacher": {
+        "name": "Гестрин Сергей Геннадьевич",
+        "url": "http://www.sstu.ru/teachers/1602-gestrin_sergey_gennadevich.html"
+      },
+      "lessonTimeInterval": {
+        "start": [
+          11,
+          30
+        ],
+        "end": [
+          13,
+          0
+        ],
+        "date": [
+          2021,
+          3,
+          1
+        ]
+      }
+    },
+    {
+      "subject": "Физическая культура",
+      "type": "(прак)",
+      "location": "СЗ-1",
+      "teacher": {
+        "name": "Пилюшкина Влада Леонидовна",
+        "url": "http://www.sstu.ru/teachers/36285-pilyushkina_vlada_leonidovna.html"
+      },
+      "lessonTimeInterval": {
+        "start": [
+          13,
+          40
+        ],
+        "end": [
+          15,
+          10
+        ],
+        "date": [
+          2021,
+          3,
+          1
+        ]
+      }
+    },
+    {
+      "subject": "Информационные технологии",
+      "type": "(лекц)",
+      "location": "1/337",
+      "teacher": {
+        "name": "Гулевич Наталья Анатольевна",
+        "url": "http://www.sstu.ru/teachers/1641-gulevich_natalya_anatolevna.html"
+      },
+      "lessonTimeInterval": {
+        "start": [
+          11,
+          30
+        ],
+        "end": [
+          13,
+          0
+        ],
+        "date": [
+          2021,
+          3,
+          2
+        ]
+      }
+    },
+    {
+      "subject": "Технические измерения и приборы",
+      "type": "(лекц)",
+      "location": "1/261",
+      "teacher": {
+        "name": "Добряков Владимир Анатольевич",
+        "url": "http://www.sstu.ru/teachers/1678-dobryakov_vladimir_anatolevich.html"
+      },
+      "lessonTimeInterval": {
+        "start": [
+          13,
+          40
+        ],
+        "end": [
+          15,
+          10
+        ],
+        "date": [
+          2021,
+          3,
+          2
+        ]
+      }
+    },
+    {
+      "subject": "Начертательная геометрия и компьютерная графика",
+      "type": "(прак)",
+      "location": "4/304",
+      "teacher": {
+        "name": "Скотникова Алла Александровна",
+        "url": "http://www.sstu.ru/teachers/22665-skotnikova_alla_aleksandrovna.html"
+      },
+      "lessonTimeInterval": {
+        "start": [
+          9,
+          45
+        ],
+        "end": [
+          11,
+          15
+        ],
+        "date": [
+          2021,
+          3,
+          3
+        ]
+      }
+    },
+    {
+      "subject": "Информационные технологии (1 пп)",
+      "type": "(прак)",
+      "location": "1/240",
+      "teacher": {
+        "name": "Гулевич Наталья Анатольевна",
+        "url": "http://www.sstu.ru/teachers/1641-gulevich_natalya_anatolevna.html"
+      },
+      "lessonTimeInterval": {
+        "start": [
+          11,
+          30
+        ],
+        "end": [
+          13,
+          0
+        ],
+        "date": [
+          2021,
+          3,
+          3
+        ]
+      }
+    },
+    {
+      "subject": "Информационные технологии (1 пп)",
+      "type": "(прак)",
+      "location": "1/240",
+      "teacher": {
+        "name": "Гулевич Наталья Анатольевна",
+        "url": "http://www.sstu.ru/teachers/1641-gulevich_natalya_anatolevna.html"
+      },
+      "lessonTimeInterval": {
+        "start": [
+          13,
+          40
+        ],
+        "end": [
+          15,
+          10
+        ],
+        "date": [
+          2021,
+          3,
+          3
+        ]
+      }
+    },
+    {
+      "subject": "Физическая культура",
+      "type": "(прак)",
+      "location": "СЗ-2",
+      "teacher": {
+        "name": "Пилюшкина Влада Леонидовна",
+        "url": "http://www.sstu.ru/teachers/36285-pilyushkina_vlada_leonidovna.html"
+      },
+      "lessonTimeInterval": {
+        "start": [
+          8,
+          0
+        ],
+        "end": [
+          9,
+          30
+        ],
+        "date": [
+          2021,
+          3,
+          4
+        ]
+      }
+    },
+    {
+      "subject": "Физика",
+      "type": "(лаб)",
+      "location": "1/356Б",
+      "teacher": {
+        "name": "Мельников Андрей Геннадьевич",
+        "url": "http://www.sstu.ru/teachers/2011-melnikov_andrey_gennadevich.html"
+      },
+      "lessonTimeInterval": {
+        "start": [
+          9,
+          45
+        ],
+        "end": [
+          11,
+          15
+        ],
+        "date": [
+          2021,
+          3,
+          4
+        ]
+      }
+    },
+    {
+      "subject": "Физика",
+      "type": "(лаб)",
+      "location": "1/356Б",
+      "teacher": {
+        "name": "Мельников Андрей Геннадьевич",
+        "url": "http://www.sstu.ru/teachers/2011-melnikov_andrey_gennadevich.html"
+      },
+      "lessonTimeInterval": {
+        "start": [
+          11,
+          30
+        ],
+        "end": [
+          13,
+          0
+        ],
+        "date": [
+          2021,
+          3,
+          4
+        ]
+      }
+    },
+    {
+      "subject": "Математика",
+      "type": "(лекц)",
+      "location": "Д-101",
+      "teacher": {
+        "name": "Мицкевич Светлана Александровна",
+        "url": "http://www.sstu.ru/teachers/2033-mickevich_svetlana_aleksandrovna.html"
+      },
+      "lessonTimeInterval": {
+        "start": [
+          8,
+          0
+        ],
+        "end": [
+          9,
+          30
+        ],
+        "date": [
+          2021,
+          3,
+          5
+        ]
+      }
+    },
+    {
+      "subject": "Математика",
+      "type": "(лекц)",
+      "location": "Д-369",
+      "teacher": {
+        "name": "Мицкевич Светлана Александровна",
+        "url": "http://www.sstu.ru/teachers/2033-mickevich_svetlana_aleksandrovna.html"
+      },
+      "lessonTimeInterval": {
+        "start": [
+          9,
+          45
+        ],
+        "end": [
+          11,
+          15
+        ],
+        "date": [
+          2021,
+          3,
+          5
+        ]
+      }
+    },
+    {
+      "subject": "Математика",
+      "type": "(прак)",
+      "location": "Д-368",
+      "teacher": {
+        "name": "Мицкевич Светлана Александровна",
+        "url": "http://www.sstu.ru/teachers/2033-mickevich_svetlana_aleksandrovna.html"
+      },
+      "lessonTimeInterval": {
+        "start": [
+          11,
+          30
+        ],
+        "end": [
+          13,
+          0
+        ],
+        "date": [
+          2021,
+          3,
+          5
+        ]
+      }
+    },
+    {
+      "subject": "Математика",
+      "type": "(прак)",
+      "location": "Д-369",
+      "teacher": {
+        "name": "Мицкевич Светлана Александровна",
+        "url": "http://www.sstu.ru/teachers/2033-mickevich_svetlana_aleksandrovna.html"
+      },
+      "lessonTimeInterval": {
+        "start": [
+          13,
+          40
+        ],
+        "end": [
+          15,
+          10
+        ],
+        "date": [
+          2021,
+          3,
+          5
+        ]
+      }
+    },
+    {
+      "subject": "Современные проблемы автоматизации",
+      "type": "(лаб)",
+      "location": "1/009",
+      "teacher": {
+        "name": "Яковишин Александр Сергеевич",
+        "url": "http://www.sstu.ru/teachers/33790-yakovishin_aleksandr_sergeevich.html"
+      },
+      "lessonTimeInterval": {
+        "start": [
+          9,
+          45
+        ],
+        "end": [
+          11,
+          15
+        ],
+        "date": [
+          2021,
+          3,
+          6
+        ]
+      }
+    },
+    {
+      "subject": "Современные проблемы автоматизации",
+      "type": "(лаб)",
+      "location": "1/009",
+      "teacher": {
+        "name": "Яковишин Александр Сергеевич",
+        "url": "http://www.sstu.ru/teachers/33790-yakovishin_aleksandr_sergeevich.html"
+      },
+      "lessonTimeInterval": {
+        "start": [
+          11,
+          30
+        ],
+        "end": [
+          13,
+          0
+        ],
+        "date": [
+          2021,
+          3,
+          6
+        ]
+      }
+    },
+    {
+      "subject": "Иностранный язык",
+      "type": "(прак)",
+      "location": "5/434",
+      "teacher": {
+        "name": "Дмитриева Александра Геннадиевна",
+        "url": "http://www.sstu.ru/teachers/36346-dmitrieva_aleksandra_gennadievna.html"
+      },
+      "lessonTimeInterval": {
+        "start": [
+          13,
+          40
+        ],
+        "end": [
+          15,
+          10
+        ],
+        "date": [
+          2021,
+          3,
+          6
+        ]
+      }
+    },
+    {
+      "subject": "Иностранный язык",
+      "type": "(прак)",
+      "location": "5/435",
+      "teacher": {
+        "name": "Герасимова Вера Александровна",
+        "url": "http://www.sstu.ru/teachers/22682-gerasimova_vera_aleksandrovna.html"
+      },
+      "lessonTimeInterval": {
+        "start": [
+          13,
+          40
+        ],
+        "end": [
+          15,
+          10
+        ],
+        "date": [
+          2021,
+          3,
+          6
+        ]
+      }
+    }
+  ]
+}

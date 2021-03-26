@@ -1,0 +1,797 @@
+{
+  "groupName": "б2-ИФСТ-31",
+  "lessons": [
+    {
+      "subject": "Архитектура информационных систем",
+      "type": "(прак)",
+      "location": "Д-104",
+      "teacher": {
+        "name": "Файфель Борис Леонидович",
+        "url": "http://www.sstu.ru/teachers/2412-fayfel_boris_leonidovich.html"
+      },
+      "lessonTimeInterval": {
+        "start": [
+          13,
+          40
+        ],
+        "end": [
+          15,
+          10
+        ],
+        "date": [
+          2021,
+          2,
+          22
+        ]
+      }
+    },
+    {
+      "subject": "Архитектура информационных систем",
+      "type": "(прак)",
+      "location": "Д-121",
+      "teacher": {
+        "name": "Файфель Борис Леонидович",
+        "url": "http://www.sstu.ru/teachers/2412-fayfel_boris_leonidovich.html"
+      },
+      "lessonTimeInterval": {
+        "start": [
+          15,
+          20
+        ],
+        "end": [
+          16,
+          50
+        ],
+        "date": [
+          2021,
+          2,
+          22
+        ]
+      }
+    },
+    {
+      "subject": "Разработка мобильных приложений",
+      "type": "(прак)",
+      "location": "1/432",
+      "teacher": {
+        "name": "Кулакова Екатерина Михайловна",
+        "url": "http://www.sstu.ru/teachers/22706-kulakova_ekaterina_mihaylovna.html"
+      },
+      "lessonTimeInterval": {
+        "start": [
+          11,
+          30
+        ],
+        "end": [
+          13,
+          0
+        ],
+        "date": [
+          2021,
+          2,
+          23
+        ]
+      }
+    },
+    {
+      "subject": "Разработка мобильных приложений",
+      "type": "(прак)",
+      "location": "1/432",
+      "teacher": {
+        "name": "Кулакова Екатерина Михайловна",
+        "url": "http://www.sstu.ru/teachers/22706-kulakova_ekaterina_mihaylovna.html"
+      },
+      "lessonTimeInterval": {
+        "start": [
+          13,
+          40
+        ],
+        "end": [
+          15,
+          10
+        ],
+        "date": [
+          2021,
+          2,
+          23
+        ]
+      }
+    },
+    {
+      "subject": "Компьютерные методы моделирования искусственных нейронных сетей",
+      "type": "(лекц)",
+      "location": "1/461",
+      "teacher": {
+        "name": "Кузьмин Алексей Константинович",
+        "url": "http://www.sstu.ru/teachers/1923-kuzmin_aleksey_konstantinovich.html"
+      },
+      "lessonTimeInterval": {
+        "start": [
+          8,
+          0
+        ],
+        "end": [
+          9,
+          30
+        ],
+        "date": [
+          2021,
+          2,
+          24
+        ]
+      }
+    },
+    {
+      "subject": "Разработка мобильных приложений",
+      "type": "(лекц)",
+      "location": "1/316",
+      "teacher": {
+        "name": "Кулакова Екатерина Михайловна",
+        "url": "http://www.sstu.ru/teachers/22706-kulakova_ekaterina_mihaylovna.html"
+      },
+      "lessonTimeInterval": {
+        "start": [
+          9,
+          45
+        ],
+        "end": [
+          11,
+          15
+        ],
+        "date": [
+          2021,
+          2,
+          24
+        ]
+      }
+    },
+    {
+      "subject": "Компьютерные технологии обработки видеоизображения",
+      "type": "(прак)",
+      "location": "1/411",
+      "teacher": {
+        "name": "Кумова Светлана Валентиновна",
+        "url": "http://www.sstu.ru/teachers/1932-kumova_svetlana_valentinovna.html"
+      },
+      "lessonTimeInterval": {
+        "start": [
+          11,
+          30
+        ],
+        "end": [
+          13,
+          0
+        ],
+        "date": [
+          2021,
+          2,
+          24
+        ]
+      }
+    },
+    {
+      "subject": "Компьютерные технологии обработки видеоизображения",
+      "type": "(лекц)",
+      "location": "1/316",
+      "teacher": {
+        "name": "Кумова Светлана Валентиновна",
+        "url": "http://www.sstu.ru/teachers/1932-kumova_svetlana_valentinovna.html"
+      },
+      "lessonTimeInterval": {
+        "start": [
+          13,
+          40
+        ],
+        "end": [
+          15,
+          10
+        ],
+        "date": [
+          2021,
+          2,
+          24
+        ]
+      }
+    },
+    {
+      "subject": "Компьютерные технологии обработки видеоизображения",
+      "type": "(лекц)",
+      "location": "1/427",
+      "teacher": {
+        "name": "Кумова Светлана Валентиновна",
+        "url": "http://www.sstu.ru/teachers/1932-kumova_svetlana_valentinovna.html"
+      },
+      "lessonTimeInterval": {
+        "start": [
+          8,
+          0
+        ],
+        "end": [
+          9,
+          30
+        ],
+        "date": [
+          2021,
+          2,
+          25
+        ]
+      }
+    },
+    {
+      "subject": "Компьютерные технологии создания изображения",
+      "type": "(лекц)",
+      "location": "1/427",
+      "teacher": {
+        "name": "Кумова Светлана Валентиновна",
+        "url": "http://www.sstu.ru/teachers/1932-kumova_svetlana_valentinovna.html"
+      },
+      "lessonTimeInterval": {
+        "start": [
+          9,
+          45
+        ],
+        "end": [
+          11,
+          15
+        ],
+        "date": [
+          2021,
+          2,
+          25
+        ]
+      }
+    },
+    {
+      "subject": "Военная подготовка",
+      "type": "(прак)",
+      "location": "ВК7",
+      "teacher": {
+        "name": "Преподаватель 432 взвод",
+        "url": null
+      },
+      "lessonTimeInterval": {
+        "start": [
+          8,
+          0
+        ],
+        "end": [
+          9,
+          30
+        ],
+        "date": [
+          2021,
+          2,
+          26
+        ]
+      }
+    },
+    {
+      "subject": "Военная подготовка",
+      "type": "(прак)",
+      "location": "ВК7",
+      "teacher": {
+        "name": "Преподаватель 432 взвод",
+        "url": null
+      },
+      "lessonTimeInterval": {
+        "start": [
+          9,
+          45
+        ],
+        "end": [
+          11,
+          15
+        ],
+        "date": [
+          2021,
+          2,
+          26
+        ]
+      }
+    },
+    {
+      "subject": "Военная подготовка",
+      "type": "(прак)",
+      "location": "ВК7",
+      "teacher": {
+        "name": "Преподаватель 432 взвод",
+        "url": null
+      },
+      "lessonTimeInterval": {
+        "start": [
+          11,
+          30
+        ],
+        "end": [
+          13,
+          0
+        ],
+        "date": [
+          2021,
+          2,
+          26
+        ]
+      }
+    },
+    {
+      "subject": "Компьютерные методы моделирования искусственных нейронных сетей",
+      "type": "(прак)",
+      "location": "1/418А",
+      "teacher": {
+        "name": "Кузьмин Алексей Константинович",
+        "url": "http://www.sstu.ru/teachers/1923-kuzmin_aleksey_konstantinovich.html"
+      },
+      "lessonTimeInterval": {
+        "start": [
+          9,
+          45
+        ],
+        "end": [
+          11,
+          15
+        ],
+        "date": [
+          2021,
+          2,
+          27
+        ]
+      }
+    },
+    {
+      "subject": "Игровые виды спорта (элективная дисциплина)",
+      "type": "(прак)",
+      "location": "СЗ-1",
+      "teacher": {
+        "name": "Гордеев Игорь Владимирович",
+        "url": "http://www.sstu.ru/teachers/33741-gordeev_igor_vladimirovich.html"
+      },
+      "lessonTimeInterval": {
+        "start": [
+          11,
+          30
+        ],
+        "end": [
+          13,
+          0
+        ],
+        "date": [
+          2021,
+          2,
+          27
+        ]
+      }
+    },
+    {
+      "subject": "Компьютерные технологии создания изображения",
+      "type": "(прак)",
+      "location": "1/411",
+      "teacher": {
+        "name": "Кумова Светлана Валентиновна",
+        "url": "http://www.sstu.ru/teachers/1932-kumova_svetlana_valentinovna.html"
+      },
+      "lessonTimeInterval": {
+        "start": [
+          8,
+          0
+        ],
+        "end": [
+          9,
+          30
+        ],
+        "date": [
+          2021,
+          3,
+          1
+        ]
+      }
+    },
+    {
+      "subject": "Компьютерные технологии создания изображения",
+      "type": "(прак)",
+      "location": "1/411",
+      "teacher": {
+        "name": "Кумова Светлана Валентиновна",
+        "url": "http://www.sstu.ru/teachers/1932-kumova_svetlana_valentinovna.html"
+      },
+      "lessonTimeInterval": {
+        "start": [
+          9,
+          45
+        ],
+        "end": [
+          11,
+          15
+        ],
+        "date": [
+          2021,
+          3,
+          1
+        ]
+      }
+    },
+    {
+      "subject": "Философия науки и техники",
+      "type": "(лекц)",
+      "location": "1/414",
+      "teacher": {
+        "name": "Архипова Юлия Валерьевна",
+        "url": "http://www.sstu.ru/teachers/1466-arhipova_yuliya_valerevna.html"
+      },
+      "lessonTimeInterval": {
+        "start": [
+          11,
+          30
+        ],
+        "end": [
+          13,
+          0
+        ],
+        "date": [
+          2021,
+          3,
+          1
+        ]
+      }
+    },
+    {
+      "subject": "Философия науки и техники",
+      "type": "(прак)",
+      "location": "1/419А",
+      "teacher": {
+        "name": "Архипова Юлия Валерьевна",
+        "url": "http://www.sstu.ru/teachers/1466-arhipova_yuliya_valerevna.html"
+      },
+      "lessonTimeInterval": {
+        "start": [
+          9,
+          45
+        ],
+        "end": [
+          11,
+          15
+        ],
+        "date": [
+          2021,
+          3,
+          2
+        ]
+      }
+    },
+    {
+      "subject": "Компьютерные методы моделирования искусственных нейронных сетей",
+      "type": "(прак)",
+      "location": "1/418А",
+      "teacher": {
+        "name": "Кузьмин Алексей Константинович",
+        "url": "http://www.sstu.ru/teachers/1923-kuzmin_aleksey_konstantinovich.html"
+      },
+      "lessonTimeInterval": {
+        "start": [
+          11,
+          30
+        ],
+        "end": [
+          13,
+          0
+        ],
+        "date": [
+          2021,
+          3,
+          2
+        ]
+      }
+    },
+    {
+      "subject": "Компьютерные технологии обработки видеоизображения",
+      "type": "(прак)",
+      "location": "1/322",
+      "teacher": {
+        "name": "Кумова Светлана Валентиновна",
+        "url": "http://www.sstu.ru/teachers/1932-kumova_svetlana_valentinovna.html"
+      },
+      "lessonTimeInterval": {
+        "start": [
+          8,
+          0
+        ],
+        "end": [
+          9,
+          30
+        ],
+        "date": [
+          2021,
+          3,
+          3
+        ]
+      }
+    },
+    {
+      "subject": "Компьютерные технологии создания изображения",
+      "type": "(лекц)",
+      "location": "1/419А",
+      "teacher": {
+        "name": "Кумова Светлана Валентиновна",
+        "url": "http://www.sstu.ru/teachers/1932-kumova_svetlana_valentinovna.html"
+      },
+      "lessonTimeInterval": {
+        "start": [
+          9,
+          45
+        ],
+        "end": [
+          11,
+          15
+        ],
+        "date": [
+          2021,
+          3,
+          3
+        ]
+      }
+    },
+    {
+      "subject": "Разработка мобильных приложений",
+      "type": "(лекц)",
+      "location": "1/419А",
+      "teacher": {
+        "name": "Кулакова Екатерина Михайловна",
+        "url": "http://www.sstu.ru/teachers/22706-kulakova_ekaterina_mihaylovna.html"
+      },
+      "lessonTimeInterval": {
+        "start": [
+          11,
+          30
+        ],
+        "end": [
+          13,
+          0
+        ],
+        "date": [
+          2021,
+          3,
+          3
+        ]
+      }
+    },
+    {
+      "subject": "Компьютерные методы моделирования искусственных нейронных сетей",
+      "type": "(лекц)",
+      "location": "1/414",
+      "teacher": {
+        "name": "Кузьмин Алексей Константинович",
+        "url": "http://www.sstu.ru/teachers/1923-kuzmin_aleksey_konstantinovich.html"
+      },
+      "lessonTimeInterval": {
+        "start": [
+          13,
+          40
+        ],
+        "end": [
+          15,
+          10
+        ],
+        "date": [
+          2021,
+          3,
+          3
+        ]
+      }
+    },
+    {
+      "subject": "Архитектура ЭВМ",
+      "type": "(прак)",
+      "location": "Д-113",
+      "teacher": {
+        "name": "Дауров Станислав Константинович",
+        "url": "http://www.sstu.ru/teachers/1659-daurov_stanislav_konstantinovich.html"
+      },
+      "lessonTimeInterval": {
+        "start": [
+          9,
+          45
+        ],
+        "end": [
+          11,
+          15
+        ],
+        "date": [
+          2021,
+          3,
+          4
+        ]
+      }
+    },
+    {
+      "subject": "Архитектура информационных систем",
+      "type": "(лекц)",
+      "location": "Д-113",
+      "teacher": {
+        "name": "Файфель Борис Леонидович",
+        "url": "http://www.sstu.ru/teachers/2412-fayfel_boris_leonidovich.html"
+      },
+      "lessonTimeInterval": {
+        "start": [
+          11,
+          30
+        ],
+        "end": [
+          13,
+          0
+        ],
+        "date": [
+          2021,
+          3,
+          4
+        ]
+      }
+    },
+    {
+      "subject": "Архитектура информационных систем",
+      "type": "(лекц)",
+      "location": "Д-121",
+      "teacher": {
+        "name": "Файфель Борис Леонидович",
+        "url": "http://www.sstu.ru/teachers/2412-fayfel_boris_leonidovich.html"
+      },
+      "lessonTimeInterval": {
+        "start": [
+          13,
+          40
+        ],
+        "end": [
+          15,
+          10
+        ],
+        "date": [
+          2021,
+          3,
+          4
+        ]
+      }
+    },
+    {
+      "subject": "Архитектура ЭВМ",
+      "type": "(лекц)",
+      "location": "Д-101",
+      "teacher": {
+        "name": "Дауров Станислав Константинович",
+        "url": "http://www.sstu.ru/teachers/1659-daurov_stanislav_konstantinovich.html"
+      },
+      "lessonTimeInterval": {
+        "start": [
+          15,
+          20
+        ],
+        "end": [
+          16,
+          50
+        ],
+        "date": [
+          2021,
+          3,
+          4
+        ]
+      }
+    },
+    {
+      "subject": "Военная подготовка",
+      "type": "(прак)",
+      "location": "ВК7",
+      "teacher": {
+        "name": "Преподаватель 432 взвод",
+        "url": null
+      },
+      "lessonTimeInterval": {
+        "start": [
+          8,
+          0
+        ],
+        "end": [
+          9,
+          30
+        ],
+        "date": [
+          2021,
+          3,
+          5
+        ]
+      }
+    },
+    {
+      "subject": "Военная подготовка",
+      "type": "(прак)",
+      "location": "ВК7",
+      "teacher": {
+        "name": "Преподаватель 432 взвод",
+        "url": null
+      },
+      "lessonTimeInterval": {
+        "start": [
+          9,
+          45
+        ],
+        "end": [
+          11,
+          15
+        ],
+        "date": [
+          2021,
+          3,
+          5
+        ]
+      }
+    },
+    {
+      "subject": "Военная подготовка",
+      "type": "(прак)",
+      "location": "ВК7",
+      "teacher": {
+        "name": "Преподаватель 432 взвод",
+        "url": null
+      },
+      "lessonTimeInterval": {
+        "start": [
+          11,
+          30
+        ],
+        "end": [
+          13,
+          0
+        ],
+        "date": [
+          2021,
+          3,
+          5
+        ]
+      }
+    },
+    {
+      "subject": "Компьютерные методы моделирования искусственных нейронных сетей",
+      "type": "(прак)",
+      "location": "1/416",
+      "teacher": {
+        "name": "Кузьмин Алексей Константинович",
+        "url": "http://www.sstu.ru/teachers/1923-kuzmin_aleksey_konstantinovich.html"
+      },
+      "lessonTimeInterval": {
+        "start": [
+          9,
+          45
+        ],
+        "end": [
+          11,
+          15
+        ],
+        "date": [
+          2021,
+          3,
+          6
+        ]
+      }
+    },
+    {
+      "subject": "Игровые виды спорта (элективная дисциплина)",
+      "type": "(прак)",
+      "location": "СЗ-1",
+      "teacher": {
+        "name": "Гордеев Игорь Владимирович",
+        "url": "http://www.sstu.ru/teachers/33741-gordeev_igor_vladimirovich.html"
+      },
+      "lessonTimeInterval": {
+        "start": [
+          11,
+          30
+        ],
+        "end": [
+          13,
+          0
+        ],
+        "date": [
+          2021,
+          3,
+          6
+        ]
+      }
+    }
+  ]
+}
