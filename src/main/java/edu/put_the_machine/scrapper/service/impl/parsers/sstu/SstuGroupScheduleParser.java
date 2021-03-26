@@ -90,7 +90,7 @@ public class SstuGroupScheduleParser implements GroupScheduleParser {
     private List<LessonParserDto> createSubgroupLessons(Element lessonElement, LocalDate date) {
 
         String subject = parseSubgroupLessonSubject(lessonElement);
-        String type = getTextByQueryOrThrowException(lessonElement, "span.type");
+        String type = createType(lessonElement, "span.type");
         LessonTimeInterval lessonTimeInterval = sstuDateTimeParser.getLessonTimeInterval(lessonElement, date);
 
         return lessonElement.select("div.subgroup-info").stream()
@@ -115,13 +115,20 @@ public class SstuGroupScheduleParser implements GroupScheduleParser {
 
     private LessonParserDto createLesson(Element lessonElement, LocalDate date) {
         String subject = getTextByQueryOrThrowException(lessonElement, "div.subject");
-        String type = getTextByQueryOrThrowException(lessonElement, "div.type");
+        String type = createType(lessonElement, "div.type");
         LessonTimeInterval lessonTimeInterval = sstuDateTimeParser.getLessonTimeInterval(lessonElement, date);
         TeacherParserDto teacher = createTeacherIfExists(lessonElement);
         String location = getTextByQueryOrThrowException(lessonElement, "div.aud");
 
         return new LessonParserDto(subject, type, location, teacher, lessonTimeInterval);
     }
+
+    private String createType(Element lessonElement, String divType) {
+        return getTextByQueryOrThrowException(lessonElement, divType)
+                .replace("(","")
+                .replace(")", "");
+    }
+
 
     private TeacherParserDto createTeacherIfExists(Element lessonElement) {
         Element teacherElement = lessonElement.select("div.teacher").last();

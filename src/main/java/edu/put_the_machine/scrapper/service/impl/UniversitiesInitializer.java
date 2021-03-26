@@ -4,11 +4,13 @@ import edu.put_the_machine.scrapper.model.University;
 import edu.put_the_machine.scrapper.repository.UniversityRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
+import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Service;
 
 import java.util.Map;
 
 @Service
+@Order(0)
 public class UniversitiesInitializer implements CommandLineRunner {
     private final UniversityRepository universityRepository;
     private final Map<String, String> universitiesNames;
