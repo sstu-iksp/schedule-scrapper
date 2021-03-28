@@ -1,0 +1,745 @@
+{
+  "groupName" : "КНиИТ 311",
+  "lessons" : [ {
+    "subject" : "Элективные дисциплины по физической культуре и спорту",
+    "type" : "пр.",
+    "location" : "стадион Локомотив",
+    "teacher" : {
+      "name" : "Кудрявцева Е. В.",
+      "url" : "https://www.sgu.ru/person/kudryavceva-elena-vladimirovna"
+    },
+    "lessonTimeInterval" : {
+      "start" : [ 10, 0 ],
+      "end" : [ 11, 35 ],
+      "date" : [ 2021, 3, 22 ]
+    }
+  }, {
+    "subject" : "Элективные дисциплины по физической культуре и спорту",
+    "type" : "пр.",
+    "location" : "стадион Локомотив",
+    "teacher" : {
+      "name" : "Кудрявцева Е. В.",
+      "url" : "https://www.sgu.ru/person/kudryavceva-elena-vladimirovna"
+    },
+    "lessonTimeInterval" : {
+      "start" : [ 10, 0 ],
+      "end" : [ 11, 35 ],
+      "date" : [ 2021, 3, 29 ]
+    }
+  }, {
+    "subject" : "Прикладная универсальная алгебра",
+    "type" : "пр.",
+    "location" : "12 корпус ауд.314",
+    "teacher" : {
+      "name" : "Жаркова А. В.",
+      "url" : "https://www.sgu.ru/person/zharkova-anastasiya-vladimirovna"
+    },
+    "lessonTimeInterval" : {
+      "start" : [ 10, 0 ],
+      "end" : [ 11, 35 ],
+      "date" : [ 2021, 3, 30 ]
+    }
+  }, {
+    "subject" : "Прикладная универсальная алгебра",
+    "type" : "пр.",
+    "location" : "12 корпус ауд.414",
+    "teacher" : {
+      "name" : "Гераськин А. С.",
+      "url" : "https://www.sgu.ru/person/geraskin-aleksey-sergeevich"
+    },
+    "lessonTimeInterval" : {
+      "start" : [ 10, 0 ],
+      "end" : [ 11, 35 ],
+      "date" : [ 2021, 3, 24 ]
+    }
+  }, {
+    "subject" : "Прикладная универсальная алгебра",
+    "type" : "пр.",
+    "location" : "12 корпус ауд.414",
+    "teacher" : {
+      "name" : "Гераськин А. С.",
+      "url" : "https://www.sgu.ru/person/geraskin-aleksey-sergeevich"
+    },
+    "lessonTimeInterval" : {
+      "start" : [ 10, 0 ],
+      "end" : [ 11, 35 ],
+      "date" : [ 2021, 3, 31 ]
+    }
+  }, {
+    "subject" : "Прикладная универсальная алгебра",
+    "type" : "пр.",
+    "location" : "12 корпус ауд.314",
+    "teacher" : {
+      "name" : "Жаркова А. В.",
+      "url" : "https://www.sgu.ru/person/zharkova-anastasiya-vladimirovna"
+    },
+    "lessonTimeInterval" : {
+      "start" : [ 10, 0 ],
+      "end" : [ 11, 35 ],
+      "date" : [ 2021, 3, 24 ]
+    }
+  }, {
+    "subject" : "Математические основы искусственного интеллекта",
+    "type" : "пр.",
+    "location" : "12 корпус ауд.313",
+    "teacher" : {
+      "name" : "Иванов А. С.",
+      "url" : "https://www.sgu.ru/person/ivanov-aleksandr-sergeevich"
+    },
+    "lessonTimeInterval" : {
+      "start" : [ 10, 0 ],
+      "end" : [ 11, 35 ],
+      "date" : [ 2021, 3, 26 ]
+    }
+  }, {
+    "subject" : "Математические основы искусственного интеллекта",
+    "type" : "пр.",
+    "location" : "12 корпус ауд.313",
+    "teacher" : {
+      "name" : "Иванов А. С.",
+      "url" : "https://www.sgu.ru/person/ivanov-aleksandr-sergeevich"
+    },
+    "lessonTimeInterval" : {
+      "start" : [ 10, 0 ],
+      "end" : [ 11, 35 ],
+      "date" : [ 2021, 4, 2 ]
+    }
+  }, {
+    "subject" : "Элективные дисциплины по физической культуре и спорту",
+    "type" : "пр.",
+    "location" : "стадион Локомотив",
+    "teacher" : {
+      "name" : "Кудрявцева Е. В.",
+      "url" : "https://www.sgu.ru/person/kudryavceva-elena-vladimirovna"
+    },
+    "lessonTimeInterval" : {
+      "start" : [ 12, 5 ],
+      "end" : [ 13, 40 ],
+      "date" : [ 2021, 3, 22 ]
+    }
+  }, {
+    "subject" : "Элективные дисциплины по физической культуре и спорту",
+    "type" : "пр.",
+    "location" : "стадион Локомотив",
+    "teacher" : {
+      "name" : "Кудрявцева Е. В.",
+      "url" : "https://www.sgu.ru/person/kudryavceva-elena-vladimirovna"
+    },
+    "lessonTimeInterval" : {
+      "start" : [ 12, 5 ],
+      "end" : [ 13, 40 ],
+      "date" : [ 2021, 3, 29 ]
+    }
+  }, {
+    "subject" : "Математические основы искусственного интеллекта",
+    "type" : "лек.",
+    "location" : "12 корпус ауд. 304",
+    "teacher" : {
+      "name" : "Иванов А. С.",
+      "url" : "https://www.sgu.ru/person/ivanov-aleksandr-sergeevich"
+    },
+    "lessonTimeInterval" : {
+      "start" : [ 12, 5 ],
+      "end" : [ 13, 40 ],
+      "date" : [ 2021, 3, 30 ]
+    }
+  }, {
+    "subject" : "Философия",
+    "type" : "лек.",
+    "location" : "12 корпус ауд.224",
+    "teacher" : {
+      "name" : "Серебрякова М. А.",
+      "url" : "https://www.sgu.ru/person/serebryakova-marina-aleksandrovna"
+    },
+    "lessonTimeInterval" : {
+      "start" : [ 12, 5 ],
+      "end" : [ 13, 40 ],
+      "date" : [ 2021, 3, 24 ]
+    }
+  }, {
+    "subject" : "Философия",
+    "type" : "лек.",
+    "location" : "12 корпус ауд.224",
+    "teacher" : {
+      "name" : "Серебрякова М. А.",
+      "url" : "https://www.sgu.ru/person/serebryakova-marina-aleksandrovna"
+    },
+    "lessonTimeInterval" : {
+      "start" : [ 12, 5 ],
+      "end" : [ 13, 40 ],
+      "date" : [ 2021, 3, 31 ]
+    }
+  }, {
+    "subject" : "Параллельное и распределенное программирование",
+    "type" : "лек.",
+    "location" : "12 корпус ауд.420",
+    "teacher" : {
+      "name" : "Купцов П. В.",
+      "url" : null
+    },
+    "lessonTimeInterval" : {
+      "start" : [ 12, 5 ],
+      "end" : [ 13, 40 ],
+      "date" : [ 2021, 3, 26 ]
+    }
+  }, {
+    "subject" : "Параллельное и распределенное программирование",
+    "type" : "лек.",
+    "location" : "12 корпус ауд.420",
+    "teacher" : {
+      "name" : "Купцов П. В.",
+      "url" : null
+    },
+    "lessonTimeInterval" : {
+      "start" : [ 12, 5 ],
+      "end" : [ 13, 40 ],
+      "date" : [ 2021, 4, 2 ]
+    }
+  }, {
+    "subject" : "Английский язык (перевод.)",
+    "type" : "пр.",
+    "location" : "12 корпус ауд.225В",
+    "teacher" : {
+      "name" : "Михралиева . .",
+      "url" : null
+    },
+    "lessonTimeInterval" : {
+      "start" : [ 13, 50 ],
+      "end" : [ 15, 25 ],
+      "date" : [ 2021, 3, 22 ]
+    }
+  }, {
+    "subject" : "Английский язык (перевод.)",
+    "type" : "пр.",
+    "location" : "12 корпус ауд.225В",
+    "teacher" : {
+      "name" : "Михралиева . .",
+      "url" : null
+    },
+    "lessonTimeInterval" : {
+      "start" : [ 13, 50 ],
+      "end" : [ 15, 25 ],
+      "date" : [ 2021, 3, 29 ]
+    }
+  }, {
+    "subject" : "Английский язык (перевод.)",
+    "type" : "пр.",
+    "location" : "12 корпус ауд.215",
+    "teacher" : {
+      "name" : "Алексеева Д. А.",
+      "url" : "https://www.sgu.ru/person/alekseeva-dina-alekseevna"
+    },
+    "lessonTimeInterval" : {
+      "start" : [ 13, 50 ],
+      "end" : [ 15, 25 ],
+      "date" : [ 2021, 3, 22 ]
+    }
+  }, {
+    "subject" : "Английский язык (перевод.)",
+    "type" : "пр.",
+    "location" : "12 корпус ауд.215",
+    "teacher" : {
+      "name" : "Алексеева Д. А.",
+      "url" : "https://www.sgu.ru/person/alekseeva-dina-alekseevna"
+    },
+    "lessonTimeInterval" : {
+      "start" : [ 13, 50 ],
+      "end" : [ 15, 25 ],
+      "date" : [ 2021, 3, 29 ]
+    }
+  }, {
+    "subject" : "Английский язык (перевод.)",
+    "type" : "пр.",
+    "location" : "ауд. 402",
+    "teacher" : {
+      "name" : "Павлова О. В.",
+      "url" : "https://www.sgu.ru/person/pavlova-olga-vyacheslavovna"
+    },
+    "lessonTimeInterval" : {
+      "start" : [ 13, 50 ],
+      "end" : [ 15, 25 ],
+      "date" : [ 2021, 3, 22 ]
+    }
+  }, {
+    "subject" : "Английский язык (перевод.)",
+    "type" : "пр.",
+    "location" : "ауд. 402",
+    "teacher" : {
+      "name" : "Павлова О. В.",
+      "url" : "https://www.sgu.ru/person/pavlova-olga-vyacheslavovna"
+    },
+    "lessonTimeInterval" : {
+      "start" : [ 13, 50 ],
+      "end" : [ 15, 25 ],
+      "date" : [ 2021, 3, 29 ]
+    }
+  }, {
+    "subject" : "Английский язык (перевод.)",
+    "type" : "пр.",
+    "location" : "12 корпус ауд.415",
+    "teacher" : {
+      "name" : "Косарева С. А.",
+      "url" : null
+    },
+    "lessonTimeInterval" : {
+      "start" : [ 13, 50 ],
+      "end" : [ 15, 25 ],
+      "date" : [ 2021, 3, 22 ]
+    }
+  }, {
+    "subject" : "Английский язык (перевод.)",
+    "type" : "пр.",
+    "location" : "12 корпус ауд.415",
+    "teacher" : {
+      "name" : "Косарева С. А.",
+      "url" : null
+    },
+    "lessonTimeInterval" : {
+      "start" : [ 13, 50 ],
+      "end" : [ 15, 25 ],
+      "date" : [ 2021, 3, 29 ]
+    }
+  }, {
+    "subject" : "Английский язык (перевод.)",
+    "type" : "пр.",
+    "location" : "12 корпус ауд.125",
+    "teacher" : {
+      "name" : "Шилова С. А.",
+      "url" : "https://www.sgu.ru/person/shilova-svetlana-alekseevna"
+    },
+    "lessonTimeInterval" : {
+      "start" : [ 13, 50 ],
+      "end" : [ 15, 25 ],
+      "date" : [ 2021, 3, 22 ]
+    }
+  }, {
+    "subject" : "Английский язык (перевод.)",
+    "type" : "пр.",
+    "location" : "12 корпус ауд.125",
+    "teacher" : {
+      "name" : "Шилова С. А.",
+      "url" : "https://www.sgu.ru/person/shilova-svetlana-alekseevna"
+    },
+    "lessonTimeInterval" : {
+      "start" : [ 13, 50 ],
+      "end" : [ 15, 25 ],
+      "date" : [ 2021, 3, 29 ]
+    }
+  }, {
+    "subject" : "Английский язык (перевод.)",
+    "type" : "пр.",
+    "location" : "12 корпус ауд.414",
+    "teacher" : {
+      "name" : "Алмаева Н. Ю.",
+      "url" : null
+    },
+    "lessonTimeInterval" : {
+      "start" : [ 13, 50 ],
+      "end" : [ 15, 25 ],
+      "date" : [ 2021, 3, 22 ]
+    }
+  }, {
+    "subject" : "Английский язык (перевод.)",
+    "type" : "пр.",
+    "location" : "12 корпус ауд.414",
+    "teacher" : {
+      "name" : "Алмаева Н. Ю.",
+      "url" : null
+    },
+    "lessonTimeInterval" : {
+      "start" : [ 13, 50 ],
+      "end" : [ 15, 25 ],
+      "date" : [ 2021, 3, 29 ]
+    }
+  }, {
+    "subject" : "Технологии программирования",
+    "type" : "пр.",
+    "location" : "12 корпус ауд.415",
+    "teacher" : {
+      "name" : "Кондратова Ю. Н.",
+      "url" : "https://www.sgu.ru/person/kondratova-yuliya-nikolaevna"
+    },
+    "lessonTimeInterval" : {
+      "start" : [ 13, 50 ],
+      "end" : [ 15, 25 ],
+      "date" : [ 2021, 3, 23 ]
+    }
+  }, {
+    "subject" : "Технологии программирования",
+    "type" : "пр.",
+    "location" : "12 корпус ауд.415",
+    "teacher" : {
+      "name" : "Кондратова Ю. Н.",
+      "url" : "https://www.sgu.ru/person/kondratova-yuliya-nikolaevna"
+    },
+    "lessonTimeInterval" : {
+      "start" : [ 13, 50 ],
+      "end" : [ 15, 25 ],
+      "date" : [ 2021, 3, 30 ]
+    }
+  }, {
+    "subject" : "Параллельное и распределенное программирование",
+    "type" : "пр.",
+    "location" : "12 корпус ауд.230",
+    "teacher" : {
+      "name" : "Портенко М. С.",
+      "url" : "https://www.sgu.ru/person/portenko-marina-sergeevna"
+    },
+    "lessonTimeInterval" : {
+      "start" : [ 13, 50 ],
+      "end" : [ 15, 25 ],
+      "date" : [ 2021, 3, 23 ]
+    }
+  }, {
+    "subject" : "Параллельное и распределенное программирование",
+    "type" : "пр.",
+    "location" : "12 корпус ауд.230",
+    "teacher" : {
+      "name" : "Портенко М. С.",
+      "url" : "https://www.sgu.ru/person/portenko-marina-sergeevna"
+    },
+    "lessonTimeInterval" : {
+      "start" : [ 13, 50 ],
+      "end" : [ 15, 25 ],
+      "date" : [ 2021, 3, 30 ]
+    }
+  }, {
+    "subject" : "Английский язык (перевод.)",
+    "type" : "пр.",
+    "location" : "12 корпус ауд.426в",
+    "teacher" : {
+      "name" : "Алмаева Н. Ю.",
+      "url" : null
+    },
+    "lessonTimeInterval" : {
+      "start" : [ 13, 50 ],
+      "end" : [ 15, 25 ],
+      "date" : [ 2021, 3, 24 ]
+    }
+  }, {
+    "subject" : "Английский язык (перевод.)",
+    "type" : "пр.",
+    "location" : "12 корпус ауд.426в",
+    "teacher" : {
+      "name" : "Алмаева Н. Ю.",
+      "url" : null
+    },
+    "lessonTimeInterval" : {
+      "start" : [ 13, 50 ],
+      "end" : [ 15, 25 ],
+      "date" : [ 2021, 3, 31 ]
+    }
+  }, {
+    "subject" : "Английский язык (перевод.)",
+    "type" : "пр.",
+    "location" : "12 корпус ауд.125",
+    "teacher" : {
+      "name" : "Шилова С. А.",
+      "url" : "https://www.sgu.ru/person/shilova-svetlana-alekseevna"
+    },
+    "lessonTimeInterval" : {
+      "start" : [ 13, 50 ],
+      "end" : [ 15, 25 ],
+      "date" : [ 2021, 3, 24 ]
+    }
+  }, {
+    "subject" : "Английский язык (перевод.)",
+    "type" : "пр.",
+    "location" : "12 корпус ауд.125",
+    "teacher" : {
+      "name" : "Шилова С. А.",
+      "url" : "https://www.sgu.ru/person/shilova-svetlana-alekseevna"
+    },
+    "lessonTimeInterval" : {
+      "start" : [ 13, 50 ],
+      "end" : [ 15, 25 ],
+      "date" : [ 2021, 3, 31 ]
+    }
+  }, {
+    "subject" : "Английский язык (перевод.)",
+    "type" : "пр.",
+    "location" : "12 корпус ауд.302",
+    "teacher" : {
+      "name" : "Косарева С. А.",
+      "url" : null
+    },
+    "lessonTimeInterval" : {
+      "start" : [ 13, 50 ],
+      "end" : [ 15, 25 ],
+      "date" : [ 2021, 3, 24 ]
+    }
+  }, {
+    "subject" : "Английский язык (перевод.)",
+    "type" : "пр.",
+    "location" : "12 корпус ауд.302",
+    "teacher" : {
+      "name" : "Косарева С. А.",
+      "url" : null
+    },
+    "lessonTimeInterval" : {
+      "start" : [ 13, 50 ],
+      "end" : [ 15, 25 ],
+      "date" : [ 2021, 3, 31 ]
+    }
+  }, {
+    "subject" : "Английский язык (перевод.)",
+    "type" : "пр.",
+    "location" : "12 корпус ауд.300",
+    "teacher" : {
+      "name" : "Михралиева . .",
+      "url" : null
+    },
+    "lessonTimeInterval" : {
+      "start" : [ 13, 50 ],
+      "end" : [ 15, 25 ],
+      "date" : [ 2021, 3, 24 ]
+    }
+  }, {
+    "subject" : "Английский язык (перевод.)",
+    "type" : "пр.",
+    "location" : "12 корпус ауд.300",
+    "teacher" : {
+      "name" : "Михралиева . .",
+      "url" : null
+    },
+    "lessonTimeInterval" : {
+      "start" : [ 13, 50 ],
+      "end" : [ 15, 25 ],
+      "date" : [ 2021, 3, 31 ]
+    }
+  }, {
+    "subject" : "Английский язык (перевод.)",
+    "type" : "пр.",
+    "location" : "12 корпус ауд.224",
+    "teacher" : {
+      "name" : "Павлова О. В.",
+      "url" : "https://www.sgu.ru/person/pavlova-olga-vyacheslavovna"
+    },
+    "lessonTimeInterval" : {
+      "start" : [ 13, 50 ],
+      "end" : [ 15, 25 ],
+      "date" : [ 2021, 3, 24 ]
+    }
+  }, {
+    "subject" : "Английский язык (перевод.)",
+    "type" : "пр.",
+    "location" : "12 корпус ауд.224",
+    "teacher" : {
+      "name" : "Павлова О. В.",
+      "url" : "https://www.sgu.ru/person/pavlova-olga-vyacheslavovna"
+    },
+    "lessonTimeInterval" : {
+      "start" : [ 13, 50 ],
+      "end" : [ 15, 25 ],
+      "date" : [ 2021, 3, 31 ]
+    }
+  }, {
+    "subject" : "Английский язык (перевод.)",
+    "type" : "пр.",
+    "location" : "ауд. 402",
+    "teacher" : {
+      "name" : "Алексеева Д. А.",
+      "url" : "https://www.sgu.ru/person/alekseeva-dina-alekseevna"
+    },
+    "lessonTimeInterval" : {
+      "start" : [ 13, 50 ],
+      "end" : [ 15, 25 ],
+      "date" : [ 2021, 3, 24 ]
+    }
+  }, {
+    "subject" : "Английский язык (перевод.)",
+    "type" : "пр.",
+    "location" : "ауд. 402",
+    "teacher" : {
+      "name" : "Алексеева Д. А.",
+      "url" : "https://www.sgu.ru/person/alekseeva-dina-alekseevna"
+    },
+    "lessonTimeInterval" : {
+      "start" : [ 13, 50 ],
+      "end" : [ 15, 25 ],
+      "date" : [ 2021, 3, 31 ]
+    }
+  }, {
+    "subject" : "Философия",
+    "type" : "пр.",
+    "location" : "12 корпус ауд.302",
+    "teacher" : {
+      "name" : "Серебрякова М. А.",
+      "url" : "https://www.sgu.ru/person/serebryakova-marina-aleksandrovna"
+    },
+    "lessonTimeInterval" : {
+      "start" : [ 13, 50 ],
+      "end" : [ 15, 25 ],
+      "date" : [ 2021, 4, 2 ]
+    }
+  }, {
+    "subject" : "Технологии программирования",
+    "type" : "лек.",
+    "location" : "12 корпус ауд.333",
+    "teacher" : {
+      "name" : "Кондратова Ю. Н.",
+      "url" : "https://www.sgu.ru/person/kondratova-yuliya-nikolaevna"
+    },
+    "lessonTimeInterval" : {
+      "start" : [ 13, 50 ],
+      "end" : [ 15, 25 ],
+      "date" : [ 2021, 3, 26 ]
+    }
+  }, {
+    "subject" : "Тестирование программного обеспечения",
+    "type" : "лек.",
+    "location" : "12 корпус ауд.303",
+    "teacher" : {
+      "name" : "",
+      "url" : null
+    },
+    "lessonTimeInterval" : {
+      "start" : [ 13, 50 ],
+      "end" : [ 15, 25 ],
+      "date" : [ 2021, 3, 27 ]
+    }
+  }, {
+    "subject" : "Тестирование программного обеспечения",
+    "type" : "лек.",
+    "location" : "12 корпус ауд.303",
+    "teacher" : {
+      "name" : "",
+      "url" : null
+    },
+    "lessonTimeInterval" : {
+      "start" : [ 13, 50 ],
+      "end" : [ 15, 25 ],
+      "date" : [ 2021, 4, 3 ]
+    }
+  }, {
+    "subject" : "Английский язык (перевод.)",
+    "type" : "лек.",
+    "location" : "12 корпус ауд. 304",
+    "teacher" : {
+      "name" : "",
+      "url" : null
+    },
+    "lessonTimeInterval" : {
+      "start" : [ 15, 35 ],
+      "end" : [ 17, 10 ],
+      "date" : [ 2021, 3, 22 ]
+    }
+  }, {
+    "subject" : "Английский язык (перевод.)",
+    "type" : "лек.",
+    "location" : "12 корпус ауд. 304",
+    "teacher" : {
+      "name" : "",
+      "url" : null
+    },
+    "lessonTimeInterval" : {
+      "start" : [ 15, 35 ],
+      "end" : [ 17, 10 ],
+      "date" : [ 2021, 3, 29 ]
+    }
+  }, {
+    "subject" : "Параллельное и распределенное программирование",
+    "type" : "пр.",
+    "location" : "12 корпус ауд.229",
+    "teacher" : {
+      "name" : "Портенко М. С.",
+      "url" : "https://www.sgu.ru/person/portenko-marina-sergeevna"
+    },
+    "lessonTimeInterval" : {
+      "start" : [ 15, 35 ],
+      "end" : [ 17, 10 ],
+      "date" : [ 2021, 3, 23 ]
+    }
+  }, {
+    "subject" : "Параллельное и распределенное программирование",
+    "type" : "пр.",
+    "location" : "12 корпус ауд.229",
+    "teacher" : {
+      "name" : "Портенко М. С.",
+      "url" : "https://www.sgu.ru/person/portenko-marina-sergeevna"
+    },
+    "lessonTimeInterval" : {
+      "start" : [ 15, 35 ],
+      "end" : [ 17, 10 ],
+      "date" : [ 2021, 3, 30 ]
+    }
+  }, {
+    "subject" : "Технологии программирования",
+    "type" : "пр.",
+    "location" : "12 корпус ауд.414",
+    "teacher" : {
+      "name" : "Кондратова Ю. Н.",
+      "url" : "https://www.sgu.ru/person/kondratova-yuliya-nikolaevna"
+    },
+    "lessonTimeInterval" : {
+      "start" : [ 15, 35 ],
+      "end" : [ 17, 10 ],
+      "date" : [ 2021, 3, 23 ]
+    }
+  }, {
+    "subject" : "Технологии программирования",
+    "type" : "пр.",
+    "location" : "12 корпус ауд.414",
+    "teacher" : {
+      "name" : "Кондратова Ю. Н.",
+      "url" : "https://www.sgu.ru/person/kondratova-yuliya-nikolaevna"
+    },
+    "lessonTimeInterval" : {
+      "start" : [ 15, 35 ],
+      "end" : [ 17, 10 ],
+      "date" : [ 2021, 3, 30 ]
+    }
+  }, {
+    "subject" : "Прикладная универсальная алгебра",
+    "type" : "лек.",
+    "location" : "Дистанционно",
+    "teacher" : {
+      "name" : "Молчанов В. А.",
+      "url" : "https://www.sgu.ru/person/molchanov-vladimir-aleksandrovich"
+    },
+    "lessonTimeInterval" : {
+      "start" : [ 15, 35 ],
+      "end" : [ 17, 10 ],
+      "date" : [ 2021, 3, 25 ]
+    }
+  }, {
+    "subject" : "Прикладная универсальная алгебра",
+    "type" : "лек.",
+    "location" : "Дистанционно",
+    "teacher" : {
+      "name" : "Молчанов В. А.",
+      "url" : "https://www.sgu.ru/person/molchanov-vladimir-aleksandrovich"
+    },
+    "lessonTimeInterval" : {
+      "start" : [ 15, 35 ],
+      "end" : [ 17, 10 ],
+      "date" : [ 2021, 4, 1 ]
+    }
+  }, {
+    "subject" : "Тестирование программного обеспечения",
+    "type" : "пр.",
+    "location" : "12 корпус ауд.418а",
+    "teacher" : {
+      "name" : "Краснокуцкая А. А.",
+      "url" : null
+    },
+    "lessonTimeInterval" : {
+      "start" : [ 15, 35 ],
+      "end" : [ 17, 10 ],
+      "date" : [ 2021, 3, 27 ]
+    }
+  }, {
+    "subject" : "Тестирование программного обеспечения",
+    "type" : "пр.",
+    "location" : "12 корпус ауд.418а",
+    "teacher" : {
+      "name" : "Краснокуцкая А. А.",
+      "url" : null
+    },
+    "lessonTimeInterval" : {
+      "start" : [ 15, 35 ],
+      "end" : [ 17, 10 ],
+      "date" : [ 2021, 4, 3 ]
+    }
+  } ]
+}

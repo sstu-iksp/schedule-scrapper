@@ -1,0 +1,433 @@
+{
+  "groupName" : "Географический фак-т 211",
+  "lessons" : [ {
+    "subject" : "Методы и средства гидрометеорологических измерений",
+    "type" : "лек.",
+    "location" : "4 - 47",
+    "teacher" : {
+      "name" : "Семенова Н. В.",
+      "url" : "https://www.sgu.ru/person/semenova-nataliya-vladimirovna"
+    },
+    "lessonTimeInterval" : {
+      "start" : [ 10, 0 ],
+      "end" : [ 11, 35 ],
+      "date" : [ 2021, 3, 23 ]
+    }
+  }, {
+    "subject" : "Методы и средства гидрометеорологических измерений",
+    "type" : "лек.",
+    "location" : "4 - 47",
+    "teacher" : {
+      "name" : "Семенова Н. В.",
+      "url" : "https://www.sgu.ru/person/semenova-nataliya-vladimirovna"
+    },
+    "lessonTimeInterval" : {
+      "start" : [ 10, 0 ],
+      "end" : [ 11, 35 ],
+      "date" : [ 2021, 3, 30 ]
+    }
+  }, {
+    "subject" : "Методы зондирования окружающей среды",
+    "type" : "лаб.",
+    "location" : "4 - 30",
+    "teacher" : {
+      "name" : "Червяков М. Ю.",
+      "url" : "https://www.sgu.ru/person/chervyakov-maksim-yurevich"
+    },
+    "lessonTimeInterval" : {
+      "start" : [ 10, 0 ],
+      "end" : [ 11, 35 ],
+      "date" : [ 2021, 3, 24 ]
+    }
+  }, {
+    "subject" : "Методы зондирования окружающей среды",
+    "type" : "лаб.",
+    "location" : "4 - 30",
+    "teacher" : {
+      "name" : "Червяков М. Ю.",
+      "url" : "https://www.sgu.ru/person/chervyakov-maksim-yurevich"
+    },
+    "lessonTimeInterval" : {
+      "start" : [ 10, 0 ],
+      "end" : [ 11, 35 ],
+      "date" : [ 2021, 3, 31 ]
+    }
+  }, {
+    "subject" : "Экономика",
+    "type" : "пр.",
+    "location" : "4 - 2",
+    "teacher" : {
+      "name" : "Савинова О. В.",
+      "url" : null
+    },
+    "lessonTimeInterval" : {
+      "start" : [ 10, 0 ],
+      "end" : [ 11, 35 ],
+      "date" : [ 2021, 4, 2 ]
+    }
+  }, {
+    "subject" : "Геофизическая гидродинамика",
+    "type" : "лек.",
+    "location" : "4 - 44",
+    "teacher" : {
+      "name" : "Алимпиева М. А.",
+      "url" : "https://www.sgu.ru/person/alimpieva-mariya-aleksandrovna"
+    },
+    "lessonTimeInterval" : {
+      "start" : [ 10, 0 ],
+      "end" : [ 11, 35 ],
+      "date" : [ 2021, 3, 26 ]
+    }
+  }, {
+    "subject" : "Динамическая метеорология",
+    "type" : "лек.",
+    "location" : "4 - 30",
+    "teacher" : {
+      "name" : "Семенова Н. В.",
+      "url" : "https://www.sgu.ru/person/semenova-nataliya-vladimirovna"
+    },
+    "lessonTimeInterval" : {
+      "start" : [ 10, 0 ],
+      "end" : [ 11, 35 ],
+      "date" : [ 2021, 3, 27 ]
+    }
+  }, {
+    "subject" : "Динамическая метеорология",
+    "type" : "лек.",
+    "location" : "4 - 30",
+    "teacher" : {
+      "name" : "Семенова Н. В.",
+      "url" : "https://www.sgu.ru/person/semenova-nataliya-vladimirovna"
+    },
+    "lessonTimeInterval" : {
+      "start" : [ 10, 0 ],
+      "end" : [ 11, 35 ],
+      "date" : [ 2021, 4, 3 ]
+    }
+  }, {
+    "subject" : "Элективные дисциплины по физической культуре и спорту",
+    "type" : "пр.",
+    "location" : "Лыжная база СГУ",
+    "teacher" : {
+      "name" : "Коннов А. А.",
+      "url" : "https://www.sgu.ru/person/konnov-aleksandr-aleksandrovich"
+    },
+    "lessonTimeInterval" : {
+      "start" : [ 12, 5 ],
+      "end" : [ 13, 40 ],
+      "date" : [ 2021, 3, 22 ]
+    }
+  }, {
+    "subject" : "Элективные дисциплины по физической культуре и спорту",
+    "type" : "пр.",
+    "location" : "Лыжная база СГУ",
+    "teacher" : {
+      "name" : "Коннов А. А.",
+      "url" : "https://www.sgu.ru/person/konnov-aleksandr-aleksandrovich"
+    },
+    "lessonTimeInterval" : {
+      "start" : [ 12, 5 ],
+      "end" : [ 13, 40 ],
+      "date" : [ 2021, 3, 29 ]
+    }
+  }, {
+    "subject" : "Методы и средства гидрометеорологических измерений",
+    "type" : "лаб.",
+    "location" : "4 - 47",
+    "teacher" : {
+      "name" : "Семенова Н. В.",
+      "url" : "https://www.sgu.ru/person/semenova-nataliya-vladimirovna"
+    },
+    "lessonTimeInterval" : {
+      "start" : [ 12, 5 ],
+      "end" : [ 13, 40 ],
+      "date" : [ 2021, 3, 23 ]
+    }
+  }, {
+    "subject" : "Методы и средства гидрометеорологических измерений",
+    "type" : "лаб.",
+    "location" : "4 - 47",
+    "teacher" : {
+      "name" : "Семенова Н. В.",
+      "url" : "https://www.sgu.ru/person/semenova-nataliya-vladimirovna"
+    },
+    "lessonTimeInterval" : {
+      "start" : [ 12, 5 ],
+      "end" : [ 13, 40 ],
+      "date" : [ 2021, 3, 30 ]
+    }
+  }, {
+    "subject" : "Методы зондирования окружающей среды",
+    "type" : "лек.",
+    "location" : "4 - 30",
+    "teacher" : {
+      "name" : "Червяков М. Ю.",
+      "url" : "https://www.sgu.ru/person/chervyakov-maksim-yurevich"
+    },
+    "lessonTimeInterval" : {
+      "start" : [ 12, 5 ],
+      "end" : [ 13, 40 ],
+      "date" : [ 2021, 3, 31 ]
+    }
+  }, {
+    "subject" : "Основы агрометеорологии",
+    "type" : "лек.",
+    "location" : "Дистанционно",
+    "teacher" : {
+      "name" : "Пряхина С. И.",
+      "url" : "https://www.sgu.ru/person/pryahina-sofya-ivanovna"
+    },
+    "lessonTimeInterval" : {
+      "start" : [ 12, 5 ],
+      "end" : [ 13, 40 ],
+      "date" : [ 2021, 3, 24 ]
+    }
+  }, {
+    "subject" : "Иностранный язык (французский язык)",
+    "type" : "пр.",
+    "location" : "Дистанционно",
+    "teacher" : {
+      "name" : "Богомолова С. И.",
+      "url" : "https://www.sgu.ru/person/bogomolova-svetlana-ivanovna"
+    },
+    "lessonTimeInterval" : {
+      "start" : [ 12, 5 ],
+      "end" : [ 13, 40 ],
+      "date" : [ 2021, 3, 25 ]
+    }
+  }, {
+    "subject" : "Иностранный язык (французский язык)",
+    "type" : "пр.",
+    "location" : "Дистанционно",
+    "teacher" : {
+      "name" : "Богомолова С. И.",
+      "url" : "https://www.sgu.ru/person/bogomolova-svetlana-ivanovna"
+    },
+    "lessonTimeInterval" : {
+      "start" : [ 12, 5 ],
+      "end" : [ 13, 40 ],
+      "date" : [ 2021, 4, 1 ]
+    }
+  }, {
+    "subject" : "Иностранный язык (немецкий язык)",
+    "type" : "пр.",
+    "location" : "7 - 417",
+    "teacher" : {
+      "name" : "Кольцова О. В.",
+      "url" : "https://www.sgu.ru/person/kolcova-olga-vyacheslavovna"
+    },
+    "lessonTimeInterval" : {
+      "start" : [ 12, 5 ],
+      "end" : [ 13, 40 ],
+      "date" : [ 2021, 3, 25 ]
+    }
+  }, {
+    "subject" : "Иностранный язык (немецкий язык)",
+    "type" : "пр.",
+    "location" : "7 - 417",
+    "teacher" : {
+      "name" : "Кольцова О. В.",
+      "url" : "https://www.sgu.ru/person/kolcova-olga-vyacheslavovna"
+    },
+    "lessonTimeInterval" : {
+      "start" : [ 12, 5 ],
+      "end" : [ 13, 40 ],
+      "date" : [ 2021, 4, 1 ]
+    }
+  }, {
+    "subject" : "Иностранный язык (английский язык)",
+    "type" : "пр.",
+    "location" : "4 - 11 А",
+    "teacher" : {
+      "name" : "Кузьмина С. В.",
+      "url" : "https://www.sgu.ru/person/kuzmina-svetlana-vitalevna"
+    },
+    "lessonTimeInterval" : {
+      "start" : [ 12, 5 ],
+      "end" : [ 13, 40 ],
+      "date" : [ 2021, 3, 26 ]
+    }
+  }, {
+    "subject" : "Иностранный язык (английский язык)",
+    "type" : "пр.",
+    "location" : "4 - 11 А",
+    "teacher" : {
+      "name" : "Кузьмина С. В.",
+      "url" : "https://www.sgu.ru/person/kuzmina-svetlana-vitalevna"
+    },
+    "lessonTimeInterval" : {
+      "start" : [ 12, 5 ],
+      "end" : [ 13, 40 ],
+      "date" : [ 2021, 4, 2 ]
+    }
+  }, {
+    "subject" : "Динамическая метеорология",
+    "type" : "лек.",
+    "location" : "4 - 30",
+    "teacher" : {
+      "name" : "Семенова Н. В.",
+      "url" : "https://www.sgu.ru/person/semenova-nataliya-vladimirovna"
+    },
+    "lessonTimeInterval" : {
+      "start" : [ 12, 5 ],
+      "end" : [ 13, 40 ],
+      "date" : [ 2021, 3, 27 ]
+    }
+  }, {
+    "subject" : "Динамическая метеорология",
+    "type" : "лек.",
+    "location" : "4 - 30",
+    "teacher" : {
+      "name" : "Семенова Н. В.",
+      "url" : "https://www.sgu.ru/person/semenova-nataliya-vladimirovna"
+    },
+    "lessonTimeInterval" : {
+      "start" : [ 12, 5 ],
+      "end" : [ 13, 40 ],
+      "date" : [ 2021, 4, 3 ]
+    }
+  }, {
+    "subject" : "Элективные дисциплины по физической культуре и спорту",
+    "type" : "пр.",
+    "location" : "Лыжная база СГУ",
+    "teacher" : {
+      "name" : "Коннов А. А.",
+      "url" : "https://www.sgu.ru/person/konnov-aleksandr-aleksandrovich"
+    },
+    "lessonTimeInterval" : {
+      "start" : [ 13, 50 ],
+      "end" : [ 15, 25 ],
+      "date" : [ 2021, 3, 22 ]
+    }
+  }, {
+    "subject" : "Элективные дисциплины по физической культуре и спорту",
+    "type" : "пр.",
+    "location" : "Лыжная база СГУ",
+    "teacher" : {
+      "name" : "Коннов А. А.",
+      "url" : "https://www.sgu.ru/person/konnov-aleksandr-aleksandrovich"
+    },
+    "lessonTimeInterval" : {
+      "start" : [ 13, 50 ],
+      "end" : [ 15, 25 ],
+      "date" : [ 2021, 3, 29 ]
+    }
+  }, {
+    "subject" : "Основы агрометеорологии",
+    "type" : "пр.",
+    "location" : "Дистанционно",
+    "teacher" : {
+      "name" : "Пряхина С. И.",
+      "url" : "https://www.sgu.ru/person/pryahina-sofya-ivanovna"
+    },
+    "lessonTimeInterval" : {
+      "start" : [ 13, 50 ],
+      "end" : [ 15, 25 ],
+      "date" : [ 2021, 3, 24 ]
+    }
+  }, {
+    "subject" : "Основы агрометеорологии",
+    "type" : "пр.",
+    "location" : "Дистанционно",
+    "teacher" : {
+      "name" : "Пряхина С. И.",
+      "url" : "https://www.sgu.ru/person/pryahina-sofya-ivanovna"
+    },
+    "lessonTimeInterval" : {
+      "start" : [ 13, 50 ],
+      "end" : [ 15, 25 ],
+      "date" : [ 2021, 3, 25 ]
+    }
+  }, {
+    "subject" : "Основы агрометеорологии",
+    "type" : "пр.",
+    "location" : "Дистанционно",
+    "teacher" : {
+      "name" : "Пряхина С. И.",
+      "url" : "https://www.sgu.ru/person/pryahina-sofya-ivanovna"
+    },
+    "lessonTimeInterval" : {
+      "start" : [ 13, 50 ],
+      "end" : [ 15, 25 ],
+      "date" : [ 2021, 4, 1 ]
+    }
+  }, {
+    "subject" : "Геофизическая гидродинамика",
+    "type" : "лаб.",
+    "location" : "4 - 44",
+    "teacher" : {
+      "name" : "Алимпиева М. А.",
+      "url" : "https://www.sgu.ru/person/alimpieva-mariya-aleksandrovna"
+    },
+    "lessonTimeInterval" : {
+      "start" : [ 13, 50 ],
+      "end" : [ 15, 25 ],
+      "date" : [ 2021, 3, 26 ]
+    }
+  }, {
+    "subject" : "Геофизическая гидродинамика",
+    "type" : "лаб.",
+    "location" : "4 - 44",
+    "teacher" : {
+      "name" : "Алимпиева М. А.",
+      "url" : "https://www.sgu.ru/person/alimpieva-mariya-aleksandrovna"
+    },
+    "lessonTimeInterval" : {
+      "start" : [ 13, 50 ],
+      "end" : [ 15, 25 ],
+      "date" : [ 2021, 4, 2 ]
+    }
+  }, {
+    "subject" : "Физическая культура и спорт",
+    "type" : "пр.",
+    "location" : "Дистанционно",
+    "teacher" : {
+      "name" : "Коннов А. А.",
+      "url" : "https://www.sgu.ru/person/konnov-aleksandr-aleksandrovich"
+    },
+    "lessonTimeInterval" : {
+      "start" : [ 15, 35 ],
+      "end" : [ 17, 10 ],
+      "date" : [ 2021, 3, 25 ]
+    }
+  }, {
+    "subject" : "Физическая культура и спорт",
+    "type" : "пр.",
+    "location" : "Дистанционно",
+    "teacher" : {
+      "name" : "Коннов А. А.",
+      "url" : "https://www.sgu.ru/person/konnov-aleksandr-aleksandrovich"
+    },
+    "lessonTimeInterval" : {
+      "start" : [ 15, 35 ],
+      "end" : [ 17, 10 ],
+      "date" : [ 2021, 4, 1 ]
+    }
+  }, {
+    "subject" : "Экономика",
+    "type" : "лек.",
+    "location" : "Дистанционно",
+    "teacher" : {
+      "name" : "Шлякова О. А.",
+      "url" : "https://www.sgu.ru/person/shlyakova-olga-anatolevna"
+    },
+    "lessonTimeInterval" : {
+      "start" : [ 17, 20 ],
+      "end" : [ 18, 40 ],
+      "date" : [ 2021, 3, 25 ]
+    }
+  }, {
+    "subject" : "Экономика",
+    "type" : "лек.",
+    "location" : "Дистанционно",
+    "teacher" : {
+      "name" : "Шлякова О. А.",
+      "url" : "https://www.sgu.ru/person/shlyakova-olga-anatolevna"
+    },
+    "lessonTimeInterval" : {
+      "start" : [ 17, 20 ],
+      "end" : [ 18, 40 ],
+      "date" : [ 2021, 4, 1 ]
+    }
+  } ]
+}
